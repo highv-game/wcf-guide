@@ -1,0 +1,5 @@
+:root { --md-text-font: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; --md-code-font: "D2Coding", ui-monospace, Consolas, monospace; }
+body { word-break: keep-all; }
+.md-typeset table:not([class]) { font-size: .72rem; }
+.md-typeset table:not([class]) td, .md-typeset table:not([class]) th { padding: .5em .8em; }
+.md-typeset .grid.cards > ul > li { border-radius: .5rem; }

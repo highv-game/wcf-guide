@@ -1,0 +1,359 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<a href="../" style="position:fixed;top:8px;left:8px;z-index:9999;padding:4px 10px;border-radius:999px;background:rgba(20,20,20,.75);color:#fff;font:13px/1.4 system-ui,sans-serif;text-decoration:none">← 공략 홈</a>
+<title>포에버 약초 지도</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F2F4EF; --surface:#FFFFFF; --ink:#1C2420; --muted:#5B685F; --line:#D5DCD3;
+  --moss:#2F6B4F; --moss-soft:#E1ECE4; --gold:#9A6E14; --gold-soft:#F4EAD2;
+  --zone:#E6EAE3; --zone-line:#C3CCC1; --ally:#3563A8; --horde:#A83A35; --neutral:#8A7B3A;
+  --heat:47,107,79;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#111713; --surface:#19211C; --ink:#E3EAE4; --muted:#9AA89E; --line:#2C3830;
+    --moss:#7FC4A0; --moss-soft:#1F3328; --gold:#E0B85C; --gold-soft:#332A15;
+    --zone:#202A24; --zone-line:#33413A; --ally:#7FA6E6; --horde:#E68480; --neutral:#CDBB6E;
+    --heat:127,196,160;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#111713; --surface:#19211C; --ink:#E3EAE4; --muted:#9AA89E; --line:#2C3830;
+  --moss:#7FC4A0; --moss-soft:#1F3328; --gold:#E0B85C; --gold-soft:#332A15;
+  --zone:#202A24; --zone-line:#33413A; --ally:#7FA6E6; --horde:#E68480; --neutral:#CDBB6E;
+  --heat:127,196,160;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,sans-serif;font-size:15px;line-height:1.65;padding-inline:16px;padding-block:28px 60px}
+.wrap{max-width:1080px;margin:0 auto;display:grid;gap:28px}
+h1,h2{font-family:"Gowun Batang","Noto Serif KR",serif;text-wrap:balance;margin:0;line-height:1.3}
+h1{font-size:30px}
+h2{font-size:21px}
+h3{font-size:16px;margin:0}
+p{margin:0}
+.lede{color:var(--muted);max-width:68ch}
+.note{font-size:13px;color:var(--muted);max-width:75ch}
+a{color:var(--moss)}
+.num{font-variant-numeric:tabular-nums}
+
+/* herb picker */
+.picker{display:flex;flex-wrap:wrap;gap:8px}
+.chip{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px 6px 6px;font:inherit;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.chip .sk{font-size:12px;font-weight:700;min-width:34px;text-align:center;border-radius:999px;padding:1px 6px;background:var(--moss-soft);color:var(--moss)}
+.chip[aria-pressed="true"]{background:var(--moss);border-color:var(--moss);color:var(--bg)}
+.chip[aria-pressed="true"] .sk{background:var(--bg);color:var(--moss)}
+.chip:focus-visible,.zone:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:820px){.main{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.mapbox{overflow-x:auto}
+svg{display:block;width:100%;height:auto;min-width:520px}
+.zone rect{fill:var(--zone);stroke:var(--zone-line);stroke-width:1}
+.zone{cursor:pointer}
+.zone text{fill:var(--muted);font-size:12.5px;font-family:"Noto Sans KR",sans-serif;pointer-events:none}
+.zone.on text{fill:var(--ink);font-weight:700}
+.zone.sel rect{stroke:var(--gold);stroke-width:2.5}
+.cont{fill:var(--muted);font-size:12px;letter-spacing:.08em;font-family:"Noto Sans KR",sans-serif}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin-top:10px;align-items:center}
+.sw{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin-right:4px;border:1px solid var(--zone-line)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:middle}
+
+.herbhead{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.herbname{font-family:"Gowun Batang",serif;font-size:24px;font-weight:700}
+.en{color:var(--muted);font-size:13px}
+.skillbig{font-size:13px;color:var(--gold);background:var(--gold-soft);border-radius:6px;padding:2px 8px;font-weight:700}
+.panel section{display:grid;gap:6px;margin-top:14px}
+.label{font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:700}
+ul.clean{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.use{display:grid;grid-template-columns:1fr auto;gap:8px;font-size:14px;border-bottom:1px dashed var(--line);padding-bottom:5px}
+.use small{color:var(--muted);display:block;font-size:12px}
+.use .req{font-size:12px;color:var(--muted);white-space:nowrap}
+.zrow{display:grid;grid-template-columns:1fr auto auto;gap:10px;font-size:14px;align-items:center}
+.bar{height:6px;border-radius:3px;background:rgb(var(--heat));}
+.lv{font-size:12px;color:var(--muted);white-space:nowrap}
+.tip{font-size:14px;background:var(--moss-soft);border-radius:8px;padding:10px 12px}
+
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:none}
+.fac{font-size:12px;font-weight:700}
+.fac.a{color:var(--ally)}.fac.h{color:var(--horde)}.fac.n{color:var(--neutral)}
+
+.route{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:4px;align-content:start}
+.step .rng{font-weight:700;color:var(--moss)}
+.step p{font-size:14px}
+.dem{font-size:11px;font-weight:700;border-radius:4px;padding:0 5px;vertical-align:1px;white-space:nowrap}
+.dem.d3{background:var(--gold-soft);color:var(--gold)}.dem.d2{background:var(--moss-soft);color:var(--moss)}.dem.d1{background:var(--zone);color:var(--muted)}
+.coin{font-size:11px;font-weight:700;color:var(--gold)}
+.chip[aria-pressed="true"] .coin{color:var(--bg)}
+.advice{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+@media (prefers-reduced-motion:no-preference){.zone rect{transition:fill .2s}}
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:8px">
+    <h1>포에버 약초 지도</h1>
+    <p class="lede">약초를 누르면 그 약초가 나는 지역이 지도에 칠해집니다. 색이 진할수록 노드가 많은 곳입니다. 지역을 누르면 그 지역의 몹 레벨과 거기서 나는 약초가 보입니다.</p>
+  </header>
+
+  <div style="display:grid;gap:6px"><div class="picker" id="picker" role="group" aria-label="약초 선택"></div><p class="note"><span class="coin">●</span> 표시는 경매장 수요가 높은 약초입니다. 가치는 아래 <a href="#money">돈 되는 약초와 물약</a>에 모아 두었습니다.</p></div>
+
+  <div class="main">
+    <div class="panel">
+      <div class="mapbox"><svg id="map" viewBox="0 0 760 520" role="img" aria-label="칼림도어와 동부 왕국 개략 지도"></svg></div>
+      <div class="legend">
+        <span><span class="sw" style="background:rgba(var(--heat),.25)"></span>노드 적음</span>
+        <span><span class="sw" style="background:rgba(var(--heat),.9)"></span>노드 많음</span>
+        <span><span class="dot" style="background:var(--ally)"></span>얼라이언스</span>
+        <span><span class="dot" style="background:var(--horde)"></span>호드</span>
+        <span><span class="dot" style="background:var(--neutral)"></span>분쟁 지역</span>
+      </div>
+      <p class="note" style="margin-top:8px">지역 위치를 알아보기 쉽게 단순화한 개략도입니다. 노드의 정확한 좌표는 오른쪽 패널의 와우헤드 링크 지도에서 볼 수 있습니다.</p>
+    </div>
+    <div class="panel" id="detail" aria-live="polite"></div>
+  </div>
+
+  <section style="display:grid;gap:12px" id="money">
+    <h2>돈 되는 약초와 물약</h2>
+    <div class="advice">
+      <div class="step"><span class="rng">상점에 팔지 마세요</span><p>상점 판매가는 약초 20개 한 묶음에 2~20실버 수준입니다. 연금술을 올리는 사람들이 경매장에서 사 가기 때문에 경매장에 올리는 게 훨씬 낫습니다.</p></div>
+      <div class="step"><span class="rng">물약보다 약초 그대로</span><p>치유 물약의 상점가(75코퍼)가 재료인 생채기풀+찔레가시(50코퍼)와 거의 같습니다. 초반엔 레벨업용 재료 수요가 커서 원재료가 물약보다 비싸게 팔리는 경우가 많습니다.</p></div>
+      <div class="step"><span class="rng">우선순위</span><p>지금 레벨에서는 찔레가시, 생채기풀, 마법초, 토끼엉겅퀴풀, 물속 갈래물풀을 먼저 챙기세요. 연금술이 있다면 치유 물약과 신속의 물약만 만들어 파는 게 좋습니다.</p></div>
+    </div>
+    <div class="tablewrap"><table id="valtable">
+      <thead><tr><th>약초</th><th>경매장 수요</th><th>상점가 (1개 / 20개)</th><th>이유</th></tr></thead><tbody></tbody>
+    </table></div>
+    <div class="tablewrap"><table id="pottable">
+      <thead><tr><th>물약</th><th>경매장 수요</th><th>상점가</th><th>누가 사나</th></tr></thead><tbody></tbody>
+    </table></div>
+    <p class="note">상점가는 와우헤드 클래식 툴팁(2026-09-27 확인) 기준이고 경매장에서 이보다 싸게 팔 이유는 없습니다. 경매장 수요는 클래식 경제를 바탕으로 한 추정입니다. 베타 서버는 막 열려 시세가 크게 흔들리니, 올리기 전에 경매장에서 같은 물건 가격을 꼭 확인하세요.</p>
+  </section>
+
+  <section style="display:grid;gap:12px">
+    <h2>얼라이언스 채집 숙련도 동선 (1~150)</h2>
+    <div class="route">
+      <div class="step"><span class="rng num">1 ~ 50</span><p>시작 지역(엘윈 숲, 던 모로, 텔드랏실)에서 평온초와 은엽수 덤불을 캡니다. 15부터 뱀뿌리도 섞습니다.</p><span class="lv num">몹 1~10</span></div>
+      <div class="step"><span class="rng num">50 ~ 70</span><p>모단 호수, 서부 몰락지대, 어둠의 해안으로 옮겨 마법초를 캡니다.</p><span class="lv num">몹 10~20</span></div>
+      <div class="step"><span class="rng num">70 ~ 100</span><p>찔레가시가 가장 많은 붉은마루 산맥과 서부 몰락지대. 서부 몰락지대 해안 물속의 갈래물풀(85)도 좋습니다.</p><span class="lv num">몹 10~25</span></div>
+      <div class="step"><span class="rng num">100 ~ 125</span><p>붉은마루 산맥과 그늘숲에서 생채기풀. 115부터 저습지의 야생 철쭉, 120부터 그늘숲 묘지의 무덤이끼.</p><span class="lv num">몹 15~30</span></div>
+      <div class="step"><span class="rng num">125 ~ 150</span><p>저습지가 핵심입니다. 왕꽃잎풀, 갈래물풀이 많고 150부터 생명의 뿌리도 납니다.</p><span class="lv num">몹 20~30</span></div>
+    </div>
+    <p class="note">지금 만렙이 20이라 붉은마루 산맥(15~25)까지가 안전하고, 그늘숲과 저습지는 몹이 20~30이라 만렙이 30으로 오르면(10월 초 예정) 편하게 돌 수 있습니다.</p>
+  </section>
+
+  <section style="display:grid;gap:12px">
+    <h2>약초 한눈에 보기</h2>
+    <div class="tablewrap"><table id="herbtable">
+      <thead><tr><th>채집 숙련도</th><th>약초 (노드 이름)</th><th>얼라이언스가 가기 좋은 곳</th><th>대표 용도</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </section>
+
+  <section style="display:grid;gap:12px">
+    <h2>지역별 몹 레벨과 약초</h2>
+    <div class="tablewrap"><table id="zonetable">
+      <thead><tr><th>지역</th><th>몹 레벨</th><th>진영</th><th>나는 약초 (노드 수 많은 순)</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </section>
+
+  <section style="display:grid;gap:6px">
+    <h2 style="font-size:17px">자료에 대해</h2>
+    <p class="note">약초 이름, 채집 숙련도, 지역별 노드 수는 와우헤드 클래식 한국어판의 노드 페이지(2026-09-27 확인) 기준입니다. 불모의 땅 등 칼림도어 일부 지역은 와우헤드에서 별도 노드로 집계돼 초반 약초의 노드 수가 빠져 있을 수 있습니다. 제작품 이름은 와우헤드 한국어판에서 확인했고, 재료 조합과 연금술 숙련도는 클래식 기준입니다. 포에버는 클래식을 바탕으로 한 개편판이라 일부 약초 분포나 제작법이 달라질 수 있으니, 게임 안에서 다르게 보이면 알려주세요.</p>
+  </section>
+</div>
+
+<script>
+const ZONES = {
+  // Kalimdor
+  "텔드랏실":{x:70,y:10,w:90,h:44,lv:"1~10",f:"a"},
+  "어둠의 해안":{x:120,y:62,w:84,h:70,lv:"10~20",f:"a"},
+  "아즈샤라":{x:250,y:62,w:80,h:56,lv:"45~55",f:"n"},
+  "잿빛 골짜기":{x:110,y:140,w:140,h:50,lv:"18~30",f:"n"},
+  "듀로타":{x:260,y:126,w:70,h:84,lv:"1~10",f:"h"},
+  "돌발톱 산맥":{x:50,y:198,w:100,h:50,lv:"15~27",f:"n"},
+  "불모의 땅":{x:160,y:198,w:90,h:140,lv:"10~25",f:"h"},
+  "잊혀진 땅":{x:10,y:256,w:88,h:60,lv:"30~40",f:"n"},
+  "멀고어":{x:104,y:256,w:50,h:76,lv:"1~10",f:"h"},
+  "먼지진흙 습지대":{x:258,y:290,w:76,h:66,lv:"35~45",f:"n"},
+  "페랄라스":{x:10,y:324,w:88,h:70,lv:"40~50",f:"n"},
+  "버섯구름 봉우리":{x:104,y:346,w:150,h:40,lv:"25~35",f:"n"},
+  "타나리스":{x:160,y:394,w:110,h:70,lv:"40~50",f:"n"},
+  // Eastern Kingdoms
+  "티리스팔 숲":{x:440,y:10,w:100,h:44,lv:"1~10",f:"h"},
+  "동부 역병지대":{x:620,y:10,w:110,h:44,lv:"53~60",f:"n"},
+  "은빛소나무 숲":{x:400,y:62,w:72,h:74,lv:"10~20",f:"h"},
+  "알터랙 산맥":{x:480,y:62,w:80,h:40,lv:"30~40",f:"n"},
+  "동부 내륙지":{x:570,y:62,w:90,h:60,lv:"40~50",f:"n"},
+  "힐스브래드 구릉지":{x:480,y:110,w:84,h:44,lv:"20~30",f:"n"},
+  "아라시 고원":{x:572,y:130,w:100,h:44,lv:"30~40",f:"n"},
+  "저습지":{x:560,y:182,w:86,h:56,lv:"20~30",f:"a"},
+  "던 모로":{x:466,y:246,w:94,h:50,lv:"1~10",f:"a"},
+  "모단 호수":{x:570,y:246,w:84,h:44,lv:"10~20",f:"a"},
+  "황야의 땅":{x:612,y:298,w:90,h:44,lv:"35~45",f:"n"},
+  "엘윈 숲":{x:480,y:304,w:100,h:40,lv:"1~10",f:"a"},
+  "서부 몰락지대":{x:410,y:352,w:80,h:56,lv:"10~20",f:"a"},
+  "그늘숲":{x:496,y:352,w:90,h:46,lv:"18~30",f:"a"},
+  "붉은마루 산맥":{x:594,y:350,w:86,h:40,lv:"15~25",f:"a"},
+  "슬픔의 늪":{x:600,y:398,w:84,h:40,lv:"35~45",f:"n"},
+  "가시덤불 골짜기":{x:440,y:416,w:112,h:90,lv:"30~45",f:"n"}
+};
+const SHORT = {"힐스브래드 구릉지":"힐스브래드","먼지진흙 습지대":"먼지진흙","버섯구름 봉우리":"버섯구름 봉우리","동부 역병지대":"동부 역병","은빛소나무 숲":"은빛소나무","가시덤불 골짜기":"가시덤불"};
+
+const HERBS = [
+ {id:"peace",name:"평온초",en:"Peacebloom",skill:1,obj:1618,v:10,d:2,why:"연금술 1~50 레벨업 첫 재료라 꾸준히 팔리지만 캐는 사람이 많아 가격은 낮은 편",
+  z:{"듀로타":117,"티리스팔 숲":117,"텔드랏실":113,"던 모로":106,"멀고어":106,"엘윈 숲":85,"은빛소나무 숲":60,"모단 호수":47,"서부 몰락지대":44,"어둠의 해안":31},
+  uses:[["최하급 치유 물약","평온초 + 은엽수잎",1],["약한 재생의 물약","평온초 + 뱀뿌리",15],["최하급 회복 물약","평온초 + 마법초 꽃잎",40],["최하급 인내의 비약","평온초 + 뱀뿌리 2",50]],
+  tip:"시작 지역 들판 어디에나 있습니다. 얼라이언스는 엘윈 숲, 던 모로, 텔드랏실에서 은엽수와 함께 캐면 50까지 금방 오릅니다."},
+ {id:"silver",name:"은엽수 덤불",item:"은엽수잎",en:"Silverleaf",skill:1,obj:1617,v:10,d:2,why:"평온초와 같은 이유. 초반 물약 대부분에 들어가 묶음으로 잘 나감",
+  z:{"티리스팔 숲":150,"엘윈 숲":140,"텔드랏실":137,"멀고어":123,"던 모로":112,"듀로타":98,"은빛소나무 숲":89,"모단 호수":70,"서부 몰락지대":59,"어둠의 해안":45},
+  uses:[["최하급 치유 물약","평온초 + 은엽수잎",1],["최하급 방어의 비약","은엽수잎 2",1],["사자의 힘 비약","뱀뿌리 + 은엽수잎",1],["최하급 마나 물약","마법초 꽃잎 + 은엽수잎",25],["최하급 민첩의 비약","토끼엉겅퀴풀 + 은엽수잎",50]],
+  tip:"엘윈 숲에 특히 많습니다(140개). 초반 연금술 물약 대부분에 들어가니 넉넉히 모아두세요."},
+ {id:"earth",name:"뱀뿌리",en:"Earthroot",skill:15,obj:1619,v:20,d:1,why:"쓰이는 곳이 사자의 힘 비약 정도라 수요가 약함",
+  z:{"티리스팔 숲":86,"텔드랏실":74,"던 모로":73,"엘윈 숲":69,"붉은마루 산맥":66,"멀고어":65,"듀로타":58,"어둠의 해안":36,"은빛소나무 숲":32,"서부 몰락지대":27,"모단 호수":19},
+  uses:[["사자의 힘 비약","뱀뿌리 + 은엽수잎",1],["약한 재생의 물약","평온초 + 뱀뿌리",15],["최하급 인내의 비약","평온초 + 뱀뿌리 2",50],["오우거 힘의 비약","뱀뿌리 + 왕꽃잎풀",150]],
+  tip:"언덕 경사면, 바위 옆, 동굴과 광산 입구 근처에 납니다. 던 모로와 엘윈 숲의 산기슭을 따라 돌면 잘 보입니다."},
+ {id:"mage",name:"마법초",item:"마법초 꽃잎",en:"Mageroyal",skill:50,obj:1620,v:20,d:3,why:"마나 물약, 회복 물약, 지혜의 비약에 두루 쓰여 연금술 레벨업 수요가 큼",
+  z:{"은빛소나무 숲":92,"모단 호수":87,"서부 몰락지대":85,"붉은마루 산맥":84,"어둠의 해안":68,"저습지":63,"잿빛 골짜기":52,"텔드랏실":45,"그늘숲":43,"돌발톱 산맥":32,"힐스브래드 구릉지":28,"듀로타":23},
+  uses:[["최하급 마나 물약","마법초 꽃잎 + 은엽수잎",25],["최하급 회복 물약","평온초 + 마법초 꽃잎",40],["지혜의 비약","마법초 꽃잎 + 찔레가시",90],["최하급 마법 저항 물약","마법초 꽃잎 + 야생 철쭉",110],["하급 마나 물약","마법초 꽃잎 + 갈래물풀",120]],
+  tip:"모단 호수(87), 서부 몰락지대(85), 붉은마루 산맥(84)이 얼라이언스에게 가깝습니다. 캘 때 약 20% 확률로 토끼엉겅퀴풀이 함께 나옵니다."},
+ {id:"briar",name:"찔레가시",en:"Briarthorn",skill:70,obj:1621,v:25,d:3,why:"치유 물약, 신속의 물약, 하급 치유 물약의 핵심 재료. 초반 약초 중 가장 잘 팔리는 편",
+  z:{"붉은마루 산맥":107,"그늘숲":105,"은빛소나무 숲":98,"서부 몰락지대":94,"힐스브래드 구릉지":87,"저습지":83,"잿빛 골짜기":81,"모단 호수":73,"어둠의 해안":57,"돌발톱 산맥":55},
+  uses:[["하급 치유 물약","최하급 치유 물약 + 찔레가시",55],["신속의 물약","토끼엉겅퀴풀 + 찔레가시",60],["지혜의 비약","마법초 꽃잎 + 찔레가시",90],["치유 물약","생채기풀 + 찔레가시",110],["강한 재생의 물약","생채기풀 + 찔레가시",125]],
+  tip:"붉은마루 산맥이 가장 많습니다(107). 캘 때 약 40% 확률로 토끼엉겅퀴풀이 나와 신속의 물약 재료가 됩니다. 불모의 땅에도 많지만 호드 지역입니다."},
+ {id:"kelp",name:"갈래물풀",en:"Stranglekelp",skill:85,obj:2045,v:100,d:3,why:"물속에서만 캐서 공급이 적음. 하급 마나 물약, 방어의 비약, 수중 호흡의 비약",
+  z:{"가시덤불 골짜기":144,"서부 몰락지대":136,"저습지":121,"힐스브래드 구릉지":100,"잿빛 골짜기":87,"어둠의 해안":80,"잊혀진 땅":74,"슬픔의 늪":68,"동부 내륙지":50,"불모의 땅":50,"은빛소나무 숲":49,"아즈샤라":42,"페랄라스":42,"먼지진흙 습지대":32,"타나리스":29,"알터랙 산맥":13,"아라시 고원":2},
+  uses:[["수중 호흡의 비약","갈래물풀 + 아귀 오일",90],["하급 마나 물약","마법초 꽃잎 + 갈래물풀",120],["방어의 비약","갈래물풀 + 야생 철쭉",130]],
+  tip:"물속(해안, 호수 바닥)에만 납니다. 서부 몰락지대 서쪽 해안이 136개로 얼라이언스 최고의 장소입니다. 숨 게이지를 조심하세요."},
+ {id:"bruise",name:"생채기풀",en:"Bruiseweed",skill:100,obj:1622,v:25,d:3,why:"치유 물약 재료이자 연금술 110~140 구간 필수",
+  z:{"돌발톱 산맥":104,"붉은마루 산맥":95,"그늘숲":84,"잿빛 골짜기":82,"힐스브래드 구릉지":80,"저습지":73,"서부 몰락지대":62,"버섯구름 봉우리":53,"잊혀진 땅":42,"모단 호수":35,"은빛소나무 숲":35,"어둠의 해안":25,"알터랙 산맥":24,"아라시 고원":16},
+  uses:[["치유 물약","생채기풀 + 찔레가시",110],["강한 재생의 물약","생채기풀 + 찔레가시",125]],
+  tip:"붉은마루 산맥(95)이 지금 만렙 20에서 가장 무난합니다. 찔레가시와 같은 동선에서 함께 캘 수 있습니다."},
+ {id:"steel",name:"야생 철쭉",en:"Wild Steelbloom",skill:115,obj:1623,v:50,d:3,why:"방어의 비약, 인내의 비약 재료. 캐는 곳이 20대 이상 지역이라 공급이 적음",
+  z:{"가시덤불 골짜기":100,"돌발톱 산맥":93,"아라시 고원":77,"저습지":53,"버섯구름 봉우리":51,"힐스브래드 구릉지":50,"그늘숲":33,"불모의 땅":31,"황야의 땅":30,"잊혀진 땅":29,"잿빛 골짜기":22,"알터랙 산맥":2},
+  uses:[["최하급 마법 저항 물약","마법초 꽃잎 + 야생 철쭉",110],["방어의 비약","갈래물풀 + 야생 철쭉",130],["인내의 비약","야생 철쭉 + 황금가시",175]],
+  tip:"바위가 많은 산지에 납니다. 얼라이언스는 저습지(53)와 그늘숲(33)이 가깝고, 30 이후엔 아라시 고원(77)이 좋습니다."},
+ {id:"grave",name:"무덤이끼",en:"Grave Moss",skill:120,obj:1628,v:25,d:1,why:"희귀하지만 쓰는 곳이 암흑 오일 정도라 수요가 적음",
+  z:{"잊혀진 땅":39,"그늘숲":35,"저습지":9,"동부 역병지대":4,"불모의 땅":4,"아라시 고원":4,"알터랙 산맥":2},
+  uses:[["암흑 오일","미명초 + 무덤이끼",165]],
+  tip:"묘지와 폐허에만 나는 희귀 약초입니다. 얼라이언스는 그늘숲 서쪽 까마귀 언덕 묘지가 사실상 유일한 장소입니다(몹 20대 언데드)."},
+ {id:"king",name:"왕꽃잎풀",en:"Kingsblood",skill:125,obj:1624,v:30,d:3,why:"연금술 125~150 레벨업과 상급 치유 물약의 핵심 재료",
+  z:{"가시덤불 골짜기":120,"저습지":109,"힐스브래드 구릉지":100,"잿빛 골짜기":92,"돌발톱 산맥":81,"알터랙 산맥":69,"아라시 고원":64,"그늘숲":57,"슬픔의 늪":56,"버섯구름 봉우리":54,"먼지진흙 습지대":49,"불모의 땅":44,"잊혀진 땅":43,"황야의 땅":43},
+  uses:[["오우거 힘의 비약","뱀뿌리 + 왕꽃잎풀",150],["상급 치유 물약","왕꽃잎풀 + 생명의 뿌리",155]],
+  tip:"저습지(109)가 얼라이언스의 주 채집지입니다. 125~150 구간은 저습지 한 곳에서 거의 해결됩니다."},
+ {id:"life",name:"생명의 뿌리",en:"Liferoot",skill:150,obj:2041,v:75,d:3,why:"상급 치유 물약 재료. 30레벨 이후 수요 큼",
+  z:{"먼지진흙 습지대":90,"가시덤불 골짜기":85,"슬픔의 늪":83,"저습지":75,"알터랙 산맥":46,"잊혀진 땅":43,"잿빛 골짜기":34,"페랄라스":32,"아라시 고원":31,"동부 내륙지":16,"힐스브래드 구릉지":15},
+  uses:[["상급 치유 물약","왕꽃잎풀 + 생명의 뿌리",155]],
+  tip:"물가, 늪, 강변에 납니다. 저습지(75)의 물가를 따라 돌면 왕꽃잎풀과 함께 캘 수 있습니다."}
+];
+
+const POT = {"최하급 치유 물약":[5,1,"공급이 많아 거의 안 팔림"],"최하급 방어의 비약":[5,1,"찾는 사람이 거의 없음"],"사자의 힘 비약":[20,1,"전사 일부만 씀"],"약한 재생의 물약":[10,1,"찾는 사람이 거의 없음"],"최하급 마나 물약":[10,1,"10레벨 이하 캐스터만 씀"],"최하급 회복 물약":[15,1,"찾는 사람이 거의 없음"],"최하급 민첩의 비약":[15,1,"찾는 사람이 거의 없음"],"최하급 인내의 비약":[15,1,"찾는 사람이 거의 없음"],"하급 치유 물약":[25,2,"10대 레벨 던전·퀘스트용으로 팔림"],"신속의 물약":[25,3,"도주·전장용. 재료가 귀해서 꾸준히 팔림"],"지혜의 비약":[100,1,"찾는 사람이 거의 없음"],"수중 호흡의 비약":[95,2,"물속 퀘스트용으로 가끔 팔림"],"치유 물약":[75,3,"20대 던전 필수품. 레벨업 인구가 많을 때 가장 잘 팔리는 물약"],"최하급 마법 저항 물약":[20,1,"찾는 사람이 거의 없음"],"하급 마나 물약":[30,2,"20대 힐러·캐스터용"],"강한 재생의 물약":[40,1,"찾는 사람이 거의 없음"],"방어의 비약":[40,2,"탱커용으로 가끔 팔림"],"오우거 힘의 비약":[20,1,"찾는 사람이 거의 없음"],"상급 치유 물약":[125,3,"30대 이후 던전 필수품"],"암흑 오일":[150,2,"무기에 바르는 오일. 보통 수준 수요"],"인내의 비약":[110,2,"탱커용. 보통 수준 수요"]};
+const SWIFT = {name:"토끼엉겅퀴풀",v:15,d:3,why:"찔레가시·마법초를 캘 때 가끔만 나와 귀함. 신속의 물약 재료"};
+function money(c){const s=Math.floor(c/100),r=c%100;return (s?s+"실버":"")+(s&&r?" ":"")+(r||!s?r+"코퍼":"");}
+const DEM=["","낮음","보통","높음"];
+function dem(d){return `<span class="dem d${d}">${DEM[d]}</span>`;}
+const FAC = {a:["얼라이언스","a"],h:["호드","h"],n:["분쟁","n"]};
+const svg = document.getElementById("map");
+const NS = "http://www.w3.org/2000/svg";
+let curHerb = HERBS[0], curZone = null;
+
+function el(tag, attrs, parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);parent&&parent.appendChild(e);return e;}
+
+// continent labels + divider
+el("text",{x:14,y:500,class:"cont"},svg).textContent="칼림도어";
+el("text",{x:660,y:500,class:"cont"},svg).textContent="동부 왕국";
+el("line",{x1:372,y1:10,x2:372,y2:510,stroke:"var(--line)","stroke-dasharray":"4 5"},svg);
+
+const zoneEls = {};
+for (const [name, z] of Object.entries(ZONES)) {
+  const g = el("g",{class:"zone",tabindex:"0",role:"button","aria-label":name+" 몹 "+z.lv},svg);
+  el("rect",{x:z.x,y:z.y,width:z.w,height:z.h,rx:6},g);
+  const col = z.f==="a"?"var(--ally)":z.f==="h"?"var(--horde)":"var(--neutral)";
+  el("circle",{cx:z.x+8,cy:z.y+8,r:3.5,fill:col},g);
+  const t = el("text",{x:z.x+z.w/2,y:z.y+z.h/2-3,"text-anchor":"middle","dominant-baseline":"middle"},g);
+  t.textContent = SHORT[name]||name;
+  const t2 = el("text",{x:z.x+z.w/2,y:z.y+z.h/2+15,"text-anchor":"middle","dominant-baseline":"middle",style:"font-size:11px"},g);
+  t2.textContent = "";
+  g.addEventListener("click",()=>selectZone(name));
+  g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();selectZone(name);}});
+  zoneEls[name]={g,rect:g.querySelector("rect"),count:t2};
+}
+
+function paint(){
+  const max = Math.max(...Object.values(curHerb.z));
+  for (const [name, o] of Object.entries(zoneEls)) {
+    const n = curHerb.z[name];
+    o.g.classList.toggle("on", !!n);
+    o.g.classList.toggle("sel", name===curZone);
+    if (n) { const a = 0.18 + 0.72*(n/max); o.rect.style.fill = `rgba(var(--heat),${a.toFixed(2)})`; o.count.textContent = n+"개"; }
+    else { o.rect.style.fill = ""; o.count.textContent = ""; }
+  }
+}
+
+function herbDetail(h){
+  const zs = Object.entries(h.z).sort((a,b)=>b[1]-a[1]);
+  const max = zs[0][1];
+  const zoneRows = zs.map(([n,c])=>{
+    const z = ZONES[n]; const f = FAC[z.f];
+    return `<div class="zrow"><span>${n} <span class="fac ${f[1]}">${f[0]}</span></span><span class="lv num">몹 ${z.lv}</span><span class="num" style="display:flex;align-items:center;gap:6px;min-width:80px"><span class="bar" style="width:${Math.max(6,Math.round(46*c/max))}px;opacity:${(0.35+0.65*c/max).toFixed(2)}"></span>${c}</span></div>`;
+  }).join("");
+  const uses = h.uses.map(u=>{const p=POT[u[0]];return `<li class="use"><span>${u[0]} ${p?dem(p[1]):""}<small>${u[1]} · 연금술 ${u[2]}</small></span><span class="req num">${p?"상점 "+money(p[0]):""}</span></li>`;}).join("");
+  return `<div class="herbhead"><div><div class="herbname">${h.name}</div><div class="en">${h.en}${h.item?` · 가방에 들어오는 이름: ${h.item}`:""}</div></div><span class="skillbig num">약초 채집 ${h.skill}</span></div>
+  <section><p class="tip">${h.tip}</p></section>
+  <section><span class="label">가치</span><div class="zrow" style="grid-template-columns:1fr auto"><span>경매장 수요 ${dem(h.d)}<small style="display:block;color:var(--muted);font-size:12px">${h.why}</small></span><span class="num" style="text-align:right">상점 ${money(h.v)}<small style="display:block;color:var(--muted);font-size:12px">20개 ${money(h.v*20)}</small></span></div></section>
+  <section><span class="label">나는 지역 (노드 수)</span>${zoneRows}</section>
+  <section><span class="label">주로 만드는 것 (경매장 수요 · 상점 판매가)</span><ul class="clean">${uses}</ul></section>
+  <section><a href="https://www.wowhead.com/classic/ko/object=${h.obj}" target="_blank" rel="noopener">와우헤드에서 정확한 노드 위치 지도 보기</a></section>`;
+}
+
+function zoneDetail(name){
+  const z = ZONES[name]; const f = FAC[z.f];
+  const hs = HERBS.filter(h=>h.z[name]).map(h=>`<li class="use"><span>${h.name}<small>채집 ${h.skill} · 노드 ${h.z[name]}개</small></span><button class="chip" data-h="${h.id}" style="padding:2px 10px">지도에 표시</button></li>`).join("");
+  return `<div class="herbhead"><div><div class="herbname">${name}</div><div class="en"><span class="fac ${f[1]}">${f[0]}</span></div></div><span class="skillbig num">몹 ${z.lv}</span></div>
+  <section><span class="label">이 지역에서 나는 약초</span><ul class="clean">${hs||"<li>이 목록의 약초는 나지 않습니다.</li>"}</ul></section>
+  <section><button class="chip" id="back" style="justify-self:start;padding:4px 12px">${curHerb.name} 설명으로 돌아가기</button></section>`;
+}
+
+const detail = document.getElementById("detail");
+function showHerb(h){ curHerb=h; curZone=null; detail.innerHTML = herbDetail(h); syncChips(); paint(); }
+function selectZone(name){ curZone=name; detail.innerHTML = zoneDetail(name); paint();
+  detail.querySelectorAll("[data-h]").forEach(b=>b.addEventListener("click",()=>showHerb(HERBS.find(x=>x.id===b.dataset.h))));
+  document.getElementById("back").addEventListener("click",()=>showHerb(curHerb));
+}
+
+const picker = document.getElementById("picker");
+HERBS.forEach(h=>{
+  const b=document.createElement("button"); b.className="chip"; b.id="chip-"+h.id;
+  b.innerHTML=`<span class="sk num">${h.skill}</span>${h.name}${h.d===3?'<span class="coin" title="경매장 수요 높음">●</span>':""}`;
+  b.addEventListener("click",()=>showHerb(h)); picker.appendChild(b);
+});
+function syncChips(){ HERBS.forEach(h=>document.getElementById("chip-"+h.id).setAttribute("aria-pressed", h===curHerb)); }
+
+// tables
+const ALLY_OK = ["엘윈 숲","던 모로","텔드랏실","모단 호수","어둠의 해안","서부 몰락지대","붉은마루 산맥","그늘숲","저습지","잿빛 골짜기","돌발톱 산맥","힐스브래드 구릉지","아라시 고원"];
+document.querySelector("#herbtable tbody").innerHTML = HERBS.map(h=>{
+  const best = Object.entries(h.z).filter(([n])=>ALLY_OK.includes(n)).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([n,c])=>`${n} <span class="lv num">(${c}, 몹 ${ZONES[n].lv})</span>`).join("<br>");
+  return `<tr><td class="num"><b>${h.skill}</b></td><td>${h.name}${h.item?`<br><span class="lv">${h.item}</span>`:""}</td><td>${best}</td><td>${h.uses.slice(0,3).map(u=>u[0]).join(", ")}</td></tr>`;
+}).join("");
+
+const zoneOrder = Object.keys(ZONES).sort((a,b)=>parseInt(ZONES[a].lv)-parseInt(ZONES[b].lv) || a.localeCompare(b,"ko"));
+document.querySelector("#zonetable tbody").innerHTML = zoneOrder.map(n=>{
+  const z=ZONES[n], f=FAC[z.f];
+  const hs = HERBS.filter(h=>h.z[n]).sort((a,b)=>b.z[n]-a.z[n]).map(h=>`${h.name} <span class="lv num">${h.z[n]}</span>`).join(", ");
+  return `<tr><td>${n}</td><td class="num">${z.lv}</td><td><span class="fac ${f[1]}">${f[0]}</span></td><td>${hs||"<span class='lv'>목록의 약초 노드 수 미집계</span>"}</td></tr>`;
+}).join("");
+
+const valRows=[...HERBS.map(h=>({n:h.name,v:h.v,d:h.d,w:h.why})),{n:SWIFT.name,v:SWIFT.v,d:SWIFT.d,w:SWIFT.why}].sort((a,b)=>b.d-a.d||b.v-a.v);
+document.querySelector("#valtable tbody").innerHTML=valRows.map(r=>`<tr><td>${r.n}</td><td>${dem(r.d)}</td><td class="num">${money(r.v)} / ${money(r.v*20)}</td><td>${r.w}</td></tr>`).join("");
+document.querySelector("#pottable tbody").innerHTML=Object.entries(POT).sort((a,b)=>b[1][1]-a[1][1]||b[1][0]-a[1][0]).map(([n,p])=>`<tr><td>${n}</td><td>${dem(p[1])}</td><td class="num">${money(p[0])}</td><td>${p[2]}</td></tr>`).join("");
+showHerb(HERBS[0]);
+</script>
+
+</body></html>

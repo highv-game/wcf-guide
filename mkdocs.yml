@@ -1,0 +1,85 @@
+site_name: 하파의 WoW 포에버 공략
+site_description: WoW 클래식 포에버(World of Warcraft Forever) 직업·레벨링·전문기술 공략 모음
+site_url: https://highv-game.github.io/wcf-guide/
+repo_url: https://github.com/highv-game/wcf-guide
+edit_uri: edit/main/docs/
+copyright: 개인 공략 노트 · Claude가 업데이트합니다
+
+theme:
+  name: material
+  language: ko
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드
+  font: false
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: [ko, en]
+      separator: '[\s\-,:!=\[\]()"/]+'
+
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      use_pygments: false
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+nav:
+  - 홈: index.md
+  - 직업 공략:
+      - classes/index.md
+      - 야성 드루이드 (스카이본): classes/druid.md
+      - 고양 주술사 (드워프): classes/shaman.md
+      - 고통 흑마법사 (노움): classes/warlock.md
+      - 암흑 사제 (노움): classes/priest.md
+      - 방어 전사 (드워프): classes/warrior.md
+  - 레벨링:
+      - 빠른 레벨링 14~27: leveling/fast-route-14-27.md
+      - 얼라이언스 1~20 (인터랙티브): tools/alliance-leveling.html
+  - 도구:
+      - 매크로 교본: tools/macro-guide.html
+      - 약초 지도: tools/herb-atlas.html
+  - 업데이트 기록: changelog.md
+  - 지난 문서:
+      - archive/index.md
+      - 스카이본 드루이드 1~20: archive/druid-skyborne-1-20.md
+      - 드루이드 솔로·매크로: archive/druid-solo-macros.md
+      - 드루이드 던전: archive/druid-dungeon.md
+      - 나이트엘프 드루이드 1~20: archive/druid-nightelf-1-20.md

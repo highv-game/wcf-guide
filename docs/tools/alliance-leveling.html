@@ -1,0 +1,358 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<a href="../" style="position:fixed;top:8px;left:8px;z-index:9999;padding:4px 10px;border-radius:999px;background:rgba(20,20,20,.75);color:#fff;font:13px/1.4 system-ui,sans-serif;text-decoration:none">← 공략 홈</a>
+<title>얼라이언스 1~20 육성 동선</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#EDF0F4; --surface:#FFFFFF; --ink:#18223A; --muted:#566178; --line:#D3D9E3;
+  --accent:#1F4E9C; --accent-soft:#DDE7F6; --gold:#9A6A12; --gold-soft:#F4E9D2;
+  --do-bg:#E3F1E8; --do-ink:#1D5B37; --skip-bg:#F8E6E3; --skip-ink:#8A2C1E; --maybe-bg:#F6EED9; --maybe-ink:#6E4F0E;
+  --warn-bg:#FBEFE3; --warn-ink:#7A3F10;
+  --f-display:"IBM Plex Sans KR","Noto Sans KR",system-ui,sans-serif;
+  --f-body:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0F141D; --surface:#171E2B; --ink:#E3E8F1; --muted:#9AA5B8; --line:#283246;
+    --accent:#7FA8EC; --accent-soft:#1B2740; --gold:#E2B155; --gold-soft:#2C2515;
+    --do-bg:#132A1E; --do-ink:#9BDDB5; --skip-bg:#2E1715; --skip-ink:#F2A99C; --maybe-bg:#2B2413; --maybe-ink:#EACB85;
+    --warn-bg:#2B1E12; --warn-ink:#F2C39A;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0F141D; --surface:#171E2B; --ink:#E3E8F1; --muted:#9AA5B8; --line:#283246;
+  --accent:#7FA8EC; --accent-soft:#1B2740; --gold:#E2B155; --gold-soft:#2C2515;
+  --do-bg:#132A1E; --do-ink:#9BDDB5; --skip-bg:#2E1715; --skip-ink:#F2A99C; --maybe-bg:#2B2413; --maybe-ink:#EACB85;
+  --warn-bg:#2B1E12; --warn-ink:#F2C39A;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;padding:0 16px}
+.wrap{max-width:880px;margin:0 auto;padding-block:40px 80px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.3;margin:0}
+h1{font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:24px;font-weight:700;margin-top:60px}
+h3{font-size:18px;font-weight:700;margin-top:30px}
+p{margin:10px 0;max-width:72ch}
+a{color:var(--accent)}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--gold);font-weight:700}
+.lede{color:var(--muted);font-size:17px}
+.note{background:var(--warn-bg);color:var(--warn-ink);border-radius:8px;padding:14px 16px;margin:18px 0;font-size:15px}
+.note b.t{display:block;margin-bottom:2px}
+.note p{margin:4px 0}
+.note ul{margin:6px 0;padding-left:20px}
+.note.info{background:var(--accent-soft);color:var(--ink)}
+section[id],.race{scroll-margin-top:64px}
+
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;margin-top:24px;border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav.toc a{display:inline-block;font-size:14px;text-decoration:none;color:var(--ink);padding:4px 10px;border-radius:999px;margin-right:2px}
+nav.toc a:hover,nav.toc a:focus-visible{background:var(--accent-soft);outline:none}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+
+.tbl{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:700;background:var(--bg);white-space:nowrap}
+td.lv{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700;color:var(--accent)}
+.en{color:var(--muted);font-size:.86em}
+
+/* level track */
+.track{display:grid;grid-template-columns:repeat(20,1fr);gap:2px;margin:6px 0 2px}
+.track span{height:22px;border-radius:3px;font-size:11px;line-height:22px;text-align:center;color:#fff;overflow:hidden;white-space:nowrap}
+.trackrow{margin:16px 0}
+.trackrow .lbl{font-weight:700;font-family:var(--f-display);font-size:15px}
+.ticks{display:grid;grid-template-columns:repeat(20,1fr);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ticks span{text-align:center}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:0}
+
+.crit{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:15px}
+.card b{font-family:var(--f-display)}
+.card p{margin:6px 0 0}
+.card .rule{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:0 9px;margin-top:8px}
+
+.pill{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:0 9px;white-space:nowrap}
+.do{background:var(--do-bg);color:var(--do-ink)}
+.skip{background:var(--skip-bg);color:var(--skip-ink)}
+.maybe{background:var(--maybe-bg);color:var(--maybe-ink)}
+
+.race{margin-top:64px}
+.race h2{margin-top:0;display:flex;align-items:center;gap:10px}
+.race h2 .sw{width:14px;height:14px;border-radius:3px;flex:none}
+.race .sub{color:var(--muted);font-size:14px;margin-top:6px}
+.leg{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin:16px 0;overflow:hidden}
+.leg header{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;padding:12px 16px;border-bottom:1px solid var(--line)}
+.leg header .lvl{font-family:var(--f-display);font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.leg header h3{margin:0;font-size:17px}
+.leg .body{padding:10px 16px 14px;font-size:15px}
+.leg .body p{margin:6px 0}
+.leg .move{background:var(--gold-soft);border-radius:6px;padding:8px 12px;margin:10px 0 4px;font-size:14.5px}
+.leg .move b{color:var(--gold)}
+ul.q{list-style:none;padding:0;margin:8px 0}
+ul.q li{display:grid;grid-template-columns:52px 1fr;gap:8px;padding:5px 0;border-top:1px dashed var(--line)}
+ul.q li:first-child{border-top:0}
+ul.q li .pill{justify-self:start;margin-top:3px}
+ul.plain{padding-left:20px} ul.plain li{margin:6px 0}
+footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+footer ul{padding-left:18px}
+@media (max-width:520px){ .track span{font-size:0} ul.q li{grid-template-columns:1fr;gap:2px} }
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">WORLD OF WARCRAFT: FOREVER · 얼라이언스 · 1~20레벨</div>
+  <h1>얼라이언스 1~20 육성 동선</h1>
+  <p class="lede">종족별 시작 지역에서 언제 어디로 옮기는지, 수많은 퀘스트 중 무엇을 하고 무엇을 버리는지를 정리했습니다. 먼저 <a href="#criteria">퀘스트 고르는 기준</a>을 읽으면 아래 종족별 목록이 왜 그렇게 나뉘었는지 이해가 됩니다.</p>
+
+  <div class="note">
+    <b class="t">포에버에서 확인된 것과 아닌 것</b>
+    <p><b>확인된 사실</b> (여러 공략 사이트 기준, 아래 출처)</p>
+    <ul>
+      <li>베타는 9월 17일 시작, <b>1단계 최고 레벨 20</b>. 10월 1일 전후로 <b>30까지</b> 올라가고, 10월 21일 베타 종료 때 <b>캐릭터는 전부 초기화</b>됩니다. 정식 출시는 11월 4일.</li>
+      <li>레벨업에 필요한 경험치 곡선은 <b>클래식과 동일</b>. 전역 경험치 버프 없음.</li>
+      <li>던전 몬스터 처치 경험치는 <b>줄었고</b>, 던전 퀘스트의 첫 완료 보상은 <b>늘었습니다</b>. 던전 반복보다 필드 퀘스트가 중심이라는 뜻입니다.</li>
+      <li>퀘스트 목록이 <b>20칸 → 40칸</b>. 신규 퀘스트 1,000개 이상(주로 30·40레벨대 빈 구간을 메우는 용도).</li>
+      <li>1~20 구간 신규 던전 2개: <b>왕좌의 전당(Hall of Thanes, 13~18, 아이언포지 아래)</b>, <b>로데론 폐허(Ruins of Lordaeron, 15~20, 티리스팔 숲)</b>.</li>
+      <li>시즌 오브 디스커버리식 <b>직업 퀘스트</b>가 확장되어 돌아옴. 시작 지역에도 새 NPC·퀘스트가 추가됨.</li>
+    </ul>
+    <p><b>확인하지 못한 것:</b> 시작 지역에 추가된 신규 퀘스트의 구체적 목록. 그래서 아래 <b>지역 순서와 퀘스트 목록은 클래식 기준</b>입니다. 같은 마을에서 처음 보는 퀘스트가 나오면 아래 기준으로 판단하세요. 퀘스트 이름은 한글 클라이언트 표기와 다를 수 있어 영문 이름을 같이 적었습니다.</p>
+  </div>
+
+  <nav class="toc" aria-label="목차">
+    <a href="#overview">한눈에 보기</a><a href="#criteria">퀘스트 고르는 기준</a><a href="#human"><span class="dot" style="background:#3E6FC2"></span>인간</a><a href="#dwarf"><span class="dot" style="background:#B7743A"></span>드워프·노움</a><a href="#nelf"><span class="dot" style="background:#7C5CC4"></span>나이트엘프</a><a href="#skyborne"><span class="dot" style="background:#3AA3A0"></span>스카이본</a><a href="#dungeons">던전</a><a href="#cap">20레벨에서</a><a href="#habits">공통 습관</a>
+  </nav>
+
+  <section id="overview">
+    <h2>한눈에 보기</h2>
+    <p>칸 하나가 1레벨입니다. 색이 바뀌는 지점이 지역을 옮기는 시점입니다.</p>
+
+    <div class="trackrow">
+      <div class="lbl">인간</div>
+      <div class="track" aria-label="인간: 노스셔 1-5, 엘윈 숲 6-10, 서부 몰락지대 11-15, 붉은마루 산맥 16-20">
+        <span style="grid-column:span 5;background:#8FA9D6">노스셔</span>
+        <span style="grid-column:span 5;background:#3E6FC2">엘윈 숲</span>
+        <span style="grid-column:span 5;background:#B08A3E">서부 몰락지대</span>
+        <span style="grid-column:span 5;background:#A2503A">붉은마루 산맥</span>
+      </div>
+    </div>
+    <div class="trackrow">
+      <div class="lbl">드워프 · 노움</div>
+      <div class="track" aria-label="드워프 노움: 콜드릿지 1-5, 던 모로 6-11, 모단 호수 12-17, 서부 몰락지대 또는 붉은마루 18-20">
+        <span style="grid-column:span 5;background:#C9A57E">콜드릿지</span>
+        <span style="grid-column:span 6;background:#B7743A">던 모로</span>
+        <span style="grid-column:span 6;background:#5E7F3A">모단 호수</span>
+        <span style="grid-column:span 3;background:#A2503A">붉은마루</span>
+      </div>
+    </div>
+    <div class="trackrow">
+      <div class="lbl">나이트엘프</div>
+      <div class="track" aria-label="나이트엘프: 샤도우글렌 1-5, 텔드랏실 6-11, 어둠의 해안 12-19, 잿빛 골짜기 20">
+        <span style="grid-column:span 5;background:#A996DE">샤도우글렌</span>
+        <span style="grid-column:span 6;background:#7C5CC4">텔드랏실</span>
+        <span style="grid-column:span 8;background:#3D4E8C">어둠의 해안</span>
+        <span style="grid-column:span 1;background:#4F7A5B">잿</span>
+      </div>
+    </div>
+    <div class="ticks" aria-hidden="true"><span>1</span><span></span><span></span><span></span><span>5</span><span></span><span></span><span></span><span></span><span>10</span><span></span><span></span><span></span><span></span><span>15</span><span></span><span></span><span></span><span></span><span>20</span></div>
+    <div class="legend"><span><i style="background:var(--gold)"></i>던전 끼워 넣기: 13~18 왕좌의 전당, 17~20 죽음의 폐광(클래식 기준 입장 가능)</span></div>
+
+    <div class="tbl"><table>
+      <thead><tr><th>종족</th><th>1~5</th><th>6~11</th><th>12~20</th></tr></thead>
+      <tbody>
+        <tr><td><b>인간</b></td><td>노스셔 수도원 <span class="en">Northshire</span></td><td>엘윈 숲, 골드셔 <span class="en">Elwynn / Goldshire</span></td><td>서부 몰락지대 → 붉은마루 산맥 <span class="en">Westfall → Redridge</span></td></tr>
+        <tr><td><b>드워프·노움</b></td><td>콜드릿지 계곡 <span class="en">Coldridge Valley</span></td><td>던 모로, 카라노스 <span class="en">Dun Morogh / Kharanos</span></td><td>모단 호수 → 붉은마루 산맥(또는 서부 몰락지대) <span class="en">Loch Modan → Redridge</span></td></tr>
+        <tr><td><b>나이트엘프</b></td><td>샤도우글렌 <span class="en">Shadowglen</span></td><td>텔드랏실, 돌라나르 <span class="en">Teldrassil / Dolanaar</span></td><td>어둠의 해안(거의 20까지) → 잿빛 골짜기 <span class="en">Darkshore → Ashenvale</span></td></tr>
+        <tr><td><b>스카이본</b></td><td colspan="2">제프라스 섬 1~12 <span class="en">Zephras Isle</span> (확장팩 필요)</td><td>이후 동선은 미확인. <a href="#skyborne">아래 참고</a></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="criteria">
+    <h2>퀘스트 고르는 기준</h2>
+    <p>레벨업 속도는 <b>“분당 경험치”</b>로 결정됩니다. 퀘스트 하나의 보상이 커도 이동에 10분이 걸리면 그동안 몬스터를 잡는 편이 낫습니다. 클래식 계열에서는 자기 레벨의 퀘스트 1개 보상이 대략 같은 레벨 몬스터 10~15마리 분량이라, <b>“이 퀘스트에 드는 추가 시간이 몬스터 10여 마리 잡는 시간보다 짧은가”</b>가 기본 판단선입니다. 아래 여덟 가지는 그 판단을 빨리 하기 위한 규칙입니다.</p>
+    <div class="crit">
+      <div class="card"><b>1. 동선이 겹치면 한다</b><p>같은 사냥터에서 “몬스터 N마리 처치”와 “아이템 N개 수집”이 겹치면 한 번 가서 둘 다 끝냅니다. 마을에서 퀘스트를 <b>한꺼번에 받고</b>, 한 방향으로 돌고, 한꺼번에 반납하는 것이 핵심입니다.</p><span class="rule do">받는 기준</span></div>
+      <div class="card"><b>2. 색으로 거른다</b><p>퀘스트 이름 색이 <b>주황·노랑</b>이면 보상 최대, <b>녹색</b>이면 보상이 줄기 시작하고, <b>회색</b>이면 거의 0입니다. 회색이 된 퀘스트는 목록에서 지우세요.</p><span class="rule skip">버리는 기준</span></div>
+      <div class="card"><b>3. 다음 지역으로 데려가는 퀘스트는 한다</b><p>“○○에게 보고하라” 같은 연결 퀘스트는 어차피 갈 길에 공짜 경험치와 새 퀘스트 줄기를 줍니다. 반대로 <b>안 갈 지역</b>으로 보내는 배달은 버립니다.</p><span class="rule do">받는 기준</span></div>
+      <div class="card"><b>4. 드랍률이 낮은 수집은 “겸사겸사”</b><p>몇 마리를 잡아도 하나 나올까 말까 한 수집 퀘스트는 일부러 파밍하지 않습니다. 받아 두고, 다른 퀘스트 하다 모이면 반납합니다. 40칸 목록 덕분에 받아 두는 부담이 줄었습니다.</p><span class="rule maybe">조건부</span></div>
+      <div class="card"><b>5. 정예(Elite)는 솔로면 버린다</b><p>퀘스트 목록에 “정예”나 “파티”가 붙은 것, 테두리가 금색 용 모양인 몬스터 처치는 혼자면 시간과 수리비만 듭니다. 근처에 같은 퀘스트 하는 사람이 보이면 그때 합니다.</p><span class="rule skip">버리는 기준</span></div>
+      <div class="card"><b>6. 긴 호위는 버린다</b><p>NPC를 따라 걷는 호위 퀘스트는 NPC 속도에 묶이고 실패하면 처음부터입니다. 짧고 가까운 것만 합니다.</p><span class="rule skip">버리는 기준</span></div>
+      <div class="card"><b>7. 보상이 무기면 우선한다</b><p>저레벨에서 가장 큰 전투력 상승은 무기 교체입니다. 무기 보상 퀘스트는 동선이 조금 꼬여도 할 가치가 있습니다. 특히 전사·도적·성기사·사냥꾼.</p><span class="rule do">받는 기준</span></div>
+      <div class="card"><b>8. 직업 퀘스트는 무조건</b><p>포에버는 시즌 오브 디스커버리식 직업 퀘스트를 확장했습니다. 보상이 새 기술이나 룬 같은 영구 성능이라 경험치 효율과 별개로 반드시 합니다. 10레벨 전후로 수도의 직업 조련사를 꼭 들르세요.</p><span class="rule do">받는 기준</span></div>
+    </div>
+    <p>아래 종족별 목록의 표시는 이 기준을 적용한 결과입니다. <span class="pill do">한다</span> 동선에 들어가거나 보상이 큼. <span class="pill maybe">조건부</span> 겸사겸사, 또는 상황에 따라. <span class="pill skip">버림</span> 시간 대비 손해.</p>
+  </section>
+
+  <!-- HUMAN -->
+  <div class="race" id="human">
+    <h2><span class="sw" style="background:#3E6FC2"></span>인간</h2>
+    <div class="sub">동선이 가장 단순합니다. 스톰윈드를 중심으로 서쪽(서부 몰락지대)과 동쪽(붉은마루 산맥)을 차례로 갑니다.</div>
+
+    <div class="leg"><header><span class="lvl">1~5</span><h3>노스셔 수도원 <span class="en">Northshire</span></h3></header><div class="body">
+      <p>계곡 안 퀘스트는 전부 가깝고 짧아서 <b>모두 합니다</b>. 코볼트·늑대·도적(Defias) 처치 퀘스트를 한 번에 받고 계곡을 한 바퀴 돌면 됩니다.</p>
+      <div class="move"><b>이동 시점</b> 계곡 퀘스트를 다 끝내면 5레벨 전후. 마지막에 받는 골드셔 방면 연결 퀘스트를 들고 남쪽 길로 내려가 골드셔로.</div>
+    </div></div>
+
+    <div class="leg"><header><span class="lvl">6~10</span><h3>엘윈 숲 · 골드셔 <span class="en">Elwynn Forest / Goldshire</span></h3></header><div class="body">
+      <ul class="q">
+        <li><span class="pill do">한다</span><span>골드셔 근처 코볼트 광산 줄기 <span class="en">Fargodeep Mine, Kobold Candles, Gold Dust Exchange</span>. 광산 하나에서 처치·수집이 겹칩니다.</span></li>
+        <li><span class="pill do">한다</span><span>동쪽 벌목장·재스퍼로드 광산 <span class="en">Eastvale Logging Camp, The Jasperlode Mine</span>. 동쪽으로 한 번 가서 몰아서 끝냅니다.</span></li>
+        <li><span class="pill do">한다</span><span>서쪽 농장의 멀록·늑대·가시멧돼지 처치, 프린세스 퀘스트 <span class="en">Princess Must Die!</span>. 서부 몰락지대 가는 길목입니다.</span></li>
+        <li><span class="pill maybe">조건부</span><span>강가 멀록 지느러미·노상강도 두건 수집. 드랍이 들쭉날쭉하니 지나가며 모이면 반납.</span></li>
+        <li><span class="pill skip">버림</span><span>호거 처치 <span class="en">Hogger</span>. 정예라 솔로로는 손해. 파티가 보이면 합니다.</span></li>
+        <li><span class="pill skip">버림</span><span>그늘숲까지 가는 배달 <span class="en">Deliveries to Sven</span>. 20레벨 전에는 갈 일이 없는 지역.</span></li>
+      </ul>
+      <div class="move"><b>이동 시점</b> 10레벨이 되면 스톰윈드에서 주문 훈련과 직업 퀘스트를 받고, 서쪽 길로 서부 몰락지대로. 도착하면 <b>감시의 언덕 비행 경로</b>부터 켭니다.</div>
+    </div></div>
+
+    <div class="leg"><header><span class="lvl">11~15</span><h3>서부 몰락지대 <span class="en">Westfall</span></h3></header><div class="body">
+      <ul class="q">
+        <li><span class="pill do">한다</span><span>살데안 농장의 요리 재료 퀘스트 <span class="en">Westfall Stew, Goretusk Liver Pie, Poor Old Blanchy</span>. 농장 주변 짐승만 잡으면 되고 한 곳에서 반납.</span></li>
+        <li><span class="pill do">한다</span><span>감시의 언덕 민병대 줄기 <span class="en">The People's Militia, Patrolling Westfall</span>. 필드의 도적단을 잡는 김에 끝납니다.</span></li>
+        <li><span class="pill do">한다</span><span>데피아스 형제단 줄기 <span class="en">The Defias Brotherhood</span>. 경험치가 크고 죽음의 폐광으로 이어집니다. 던전 전 단계까지만 해 두고 던전은 뒤에.</span></li>
+        <li><span class="pill do">한다</span><span>붉은 가죽 두건 수집 <span class="en">Red Leather Bandanas</span>. 도적단 처치와 완전히 겹침.</span></li>
+        <li><span class="pill maybe">조건부</span><span>해안 멀록 퀘스트. 해안 쪽으로 동선이 나 있을 때만.</span></li>
+        <li><span class="pill skip">버림</span><span>놀 발 현상금 <span class="en">Riverpaw Gnoll Bounty</span>. 드랍률이 낮음.</span></li>
+        <li><span class="pill skip">버림</span><span>샌더 선장의 보물 <span class="en">Captain Sander's Hidden Treasure</span>. 지도 곳곳을 걷기만 하는 긴 줄기.</span></li>
+      </ul>
+      <div class="move"><b>이동 시점</b> 15~16레벨. 남은 퀘스트가 녹색이 되면 감시의 언덕에서 스톰윈드로 날아간 뒤 동쪽 붉은마루 산맥으로. 레이크샤이어 비행 경로를 켭니다.</div>
+    </div></div>
+
+    <div class="leg"><header><span class="lvl">16~20</span><h3>붉은마루 산맥 <span class="en">Redridge Mountains</span></h3></header><div class="body">
+      <ul class="q">
+        <li><span class="pill do">한다</span><span>레이크샤이어 다리·호수 주변 퀘스트 <span class="en">The Everstill Bridge, Redridge Goulash</span>. 마을 코앞의 놀과 짐승 처치.</span></li>
+        <li><span class="pill do">한다</span><span>검은바위 오크 관련 첫 단계 <span class="en">Blackrock Menace</span>. 산 중턱 오크 처치.</span></li>
+        <li><span class="pill skip">버림</span><span>20레벨 이상 몬스터 구역(검은바위 요새 깊은 곳, 솔로몬 법 줄기 <span class="en">Solomon's Law</span>). 1단계 최고 레벨 20이라 30 개방 후로 미룹니다.</span></li>
+      </ul>
+      <p>17~20 사이에 파티가 모이면 서부 몰락지대의 <b>죽음의 폐광</b>을 한 번 돌아 데피아스 줄기를 마무리하세요.</p>
+    </div></div>
+  </div>
+
+  <!-- DWARF / GNOME -->
+  <div class="race" id="dwarf">
+    <h2><span class="sw" style="background:#B7743A"></span>드워프 · 노움</h2>
+    <div class="sub">둘은 같은 콜드릿지 계곡에서 시작합니다. 포에버 신규 던전 <b>왕좌의 전당</b>이 아이언포지 바로 아래에 있어서 13~18 구간이 특히 편합니다.</div>
+
+    <div class="leg"><header><span class="lvl">1~5</span><h3>콜드릿지 계곡 <span class="en">Coldridge Valley</span></h3></header><div class="body">
+      <p>계곡 안 퀘스트는 <b>모두 합니다</b>. 트롤·곰·늑대 처치와 수집이 한 계곡에 모여 있습니다.</p>
+      <div class="move"><b>이동 시점</b> 5~6레벨. 계곡 북쪽 터널을 지나 카라노스로 가는 연결 퀘스트를 들고 이동.</div>
+    </div></div>
+
+    <div class="leg"><header><span class="lvl">6~11</span><h3>던 모로 · 카라노스 <span class="en">Dun Morogh / Kharanos</span></h3></header><div class="body">
+      <ul class="q">
+        <li><span class="pill do">한다</span><span>서리갈기 트롤 줄기 <span class="en">Frostmane Hold, The Troll Cave</span>. 경험치가 크고 동굴 하나에 몰려 있습니다.</span></li>
+        <li><span class="pill do">한다</span><span>카라노스 근처의 도난품 회수와 멧돼지 갈비 요리 <span class="en">Tundra MacGrann's Stolen Stash, Beer Basted Boar Ribs</span>. 카라노스 근처에서 짧게 끝남.</span></li>
+        <li><span class="pill do">한다</span><span>떠도는 노움 처치 <span class="en">Operation Recombobulation</span>. 놈리건 입구 근처 떠돌이 노움 처치. 노움뿐 아니라 드워프도 할 만합니다.</span></li>
+        <li><span class="pill do">한다</span><span>웬디고 동굴 처치 <span class="en">The Grizzled Den</span>.</span></li>
+        <li><span class="pill skip">버림</span><span>바가쉬 처치 <span class="en">Protecting the Herd</span>. 동쪽 끝의 강한 설인 한 마리. 솔로면 위험.</span></li>
+      </ul>
+      <div class="move"><b>이동 시점</b> 10~11레벨. 아이언포지에서 훈련·직업 퀘스트를 받은 뒤 동쪽 터널(남문 방향)을 지나 모단 호수로. 텔사마르에서 <b>비행 경로</b>를 켭니다.</div>
+    </div></div>
+
+    <div class="leg"><header><span class="lvl">12~17</span><h3>모단 호수 <span class="en">Loch Modan</span> + 왕좌의 전당</h3></header><div class="body">
+      <ul class="q">
+        <li><span class="pill do">한다</span><span>텔사마르 수비대의 트로그 처치 <span class="en">In Defense of the King's Lands</span>, 광산 쥐 퀘스트 <span class="en">Filthy Paws</span>. 광산 하나에서 겹칩니다.</span></li>
+        <li><span class="pill do">한다</span><span>텔사마르 핏빛 소시지 <span class="en">Thelsamar Blood Sausages</span>. 호수 주변 짐승 처치와 겹침.</span></li>
+        <li><span class="pill do">한다</span><span>아이언밴드 발굴지 줄기 <span class="en">Ironband's Excavation</span>. 아이언포지 보고 퀘스트는 훈련 갈 때 같이 반납.</span></li>
+        <li><span class="pill maybe">조건부</span><span>빙글스의 잃어버린 도구 <span class="en">Bingles' Missing Supplies</span>. 호숫가 곳곳에 흩어져 있어 동선이 맞을 때만.</span></li>
+        <li><span class="pill skip">버림</span><span>정예 곰 처치 <span class="en">Ol' Sooty</span>. 정예.</span></li>
+        <li><span class="pill skip">버림</span><span>알가즈 관문 <span class="en">The Algaz Gauntlet</span>. 저습지 입구의 20레벨대 구역이라 1단계에서 손해.</span></li>
+      </ul>
+      <p><b>왕좌의 전당(13~18)</b>이 아이언포지 아래라 텔사마르에서 비행기로 금방입니다. 13~15레벨에 파티를 구해 <b>한 번</b> 돌아 던전 퀘스트 경험치와 파란 장비를 챙기고 다시 필드로 돌아오세요.</p>
+      <div class="move"><b>이동 시점</b> 17~18레벨. 모단 호수 퀘스트가 녹색이 되면 아이언포지 깊은굴 지하철로 스톰윈드에 가서 붉은마루 산맥으로(인간 16~20 구간과 같음). 서부 몰락지대 퀘스트도 아직 노랑이면 그쪽을 먼저 해도 됩니다.</div>
+    </div></div>
+  </div>
+
+  <!-- NIGHT ELF -->
+  <div class="race" id="nelf">
+    <h2><span class="sw" style="background:#7C5CC4"></span>나이트엘프</h2>
+    <div class="sub">칼림도어에 따로 떨어져 있어서, 동부 왕국 쪽으로 넘어가기보다 <b>어둠의 해안에서 거의 20까지</b> 끝내는 편이 이동 시간 면에서 유리합니다.</div>
+
+    <div class="leg"><header><span class="lvl">1~5</span><h3>샤도우글렌 <span class="en">Shadowglen</span></h3></header><div class="body">
+      <p>나무 주변 퀘스트는 <b>모두 합니다</b>. 거미 동굴 퀘스트는 처치·수집이 한 동굴에서 겹칩니다.</p>
+      <div class="move"><b>이동 시점</b> 5~6레벨. 돌라나르로 보내는 연결 퀘스트를 들고 길을 따라 남쪽으로.</div>
+    </div></div>
+
+    <div class="leg"><header><span class="lvl">6~11</span><h3>텔드랏실 · 돌라나르 <span class="en">Teldrassil / Dolanaar</span></h3></header><div class="body">
+      <ul class="q">
+        <li><span class="pill do">한다</span><span>자연의 균형 줄기 <span class="en">The Balance of Nature</span>, 알아메스 호수 주변의 나무정령 줄기 <span class="en">Denalan's Earth 등</span>. 돌라나르 가까이에 모여 있음.</span></li>
+        <li><span class="pill do">한다</span><span>마법에 걸린 숲 <span class="en">The Enchanted Glade</span>. 하피 처치와 겹침.</span></li>
+        <li><span class="pill maybe">조건부</span><span>대지의 왕관 줄기 <span class="en">Crown of the Earth</span>. 달샘 물을 떠 오는 여러 단계. 가까운 단계만 하고 멀리 가는 뒷단계는 동선이 맞을 때만.</span></li>
+        <li><span class="pill skip">버림</span><span>다르나서스 안에서만 이어지는 배달 줄기. 도시 이동이 길고 보상이 작습니다. 단, 직업 조련사가 다르나서스에 있으니 훈련 갈 때 받을 수 있는 것은 같이 처리.</span></li>
+      </ul>
+      <div class="move"><b>이동 시점</b> 10~11레벨. 다르나서스에서 훈련·직업 퀘스트 → 루테란 마을 포털 아래 선착장에서 배를 타고 어둠의 해안 <b>아우버다인(Auberdine)</b>으로. 도착하면 비행 경로부터 켭니다.</div>
+    </div></div>
+
+    <div class="leg"><header><span class="lvl">12~19</span><h3>어둠의 해안 <span class="en">Darkshore</span></h3></header><div class="body">
+      <ul class="q">
+        <li><span class="pill do">한다</span><span>해변에 밀려온 것 줄기 <span class="en">Washed Ashore</span>, 해안 짐승 뼈 배달 <span class="en">Beached Sea Creature</span>. 해변을 따라 걷는 김에 끝납니다.</span></li>
+        <li><span class="pill do">한다</span><span>알살락스 탑 줄기 <span class="en">The Tower of Althalaxx</span>. 여러 단계에 걸쳐 경험치가 큽니다.</span></li>
+        <li><span class="pill do">한다</span><span>배쉬알아란 줄기 <span class="en">Bashal'Aran</span>, 버즈박스 줄기 <span class="en">Buzzbox</span>. 북쪽 해안을 올라가며 처치 퀘스트와 겹칩니다.</span></li>
+        <li><span class="pill do">한다</span><span>역병 걸린 땅 <span class="en">Plagued Lands</span>. 곰 포획, 짧음.</span></li>
+        <li><span class="pill skip">버림</span><span>탐광자 호위 <span class="en">The Absent Minded Prospector</span>. 느리고 긴 호위.</span></li>
+        <li><span class="pill skip">버림</span><span>머크딥 <span class="en">Murkdeep!</span>. 정예 멀록 무리.</span></li>
+      </ul>
+      <div class="move"><b>이동 시점</b> 18~19레벨. 어둠의 해안 남쪽 끝에서 잿빛 골짜기로 넘어가 <b>아스트라나르</b> 비행 경로를 켜고, 마을 근처의 20레벨 초반 퀘스트로 마무리합니다. 동부 왕국 쪽을 원하면 아우버다인에서 메네실 항구 배를 타지만, 저습지는 20레벨대라 1단계에서는 추천하지 않습니다.</div>
+    </div></div>
+  </div>
+
+  <!-- SKYBORNE -->
+  <div class="race" id="skyborne">
+    <h2><span class="sw" style="background:#3AA3A0"></span>스카이본 (포에버 신규 종족)</h2>
+    <p>확인된 것은 <b>유료 확장팩이 필요하고 1~12레벨을 전용 지역 제프라스 섬(Zephras Isle)에서 보낸다</b>는 것까지입니다. 섬을 나온 뒤 어느 지역으로 연결되는지는 찾지 못했습니다. 12레벨에 도착한 곳에서 가까운 경로를 고르세요: 동부 왕국이면 <a href="#human">서부 몰락지대 → 붉은마루</a>, 칼림도어면 <a href="#nelf">어둠의 해안</a> 구간과 같습니다.</p>
+  </div>
+
+  <section id="dungeons">
+    <h2>던전: 한 번씩만</h2>
+    <p>포에버는 던전 몬스터 경험치를 줄이고 던전 퀘스트 첫 완료 보상을 늘렸습니다. 그래서 <b>“퀘스트를 들고 한 번 돌고, 다시 필드로”</b>가 정답입니다. 같은 던전 반복은 클래식보다 손해가 큽니다.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>던전</th><th>레벨</th><th>위치</th><th>얼라이언스 판단</th></tr></thead>
+      <tbody>
+        <tr><td>왕좌의 전당 <span class="en">Hall of Thanes</span> · 신규</td><td class="lv">13~18</td><td>아이언포지 아래</td><td><span class="pill do">한다</span> 가깝고 레벨대가 딱 맞음. 13~15에 한 번.</td></tr>
+        <tr><td>로데론 폐허 <span class="en">Ruins of Lordaeron</span> · 신규</td><td class="lv">15~20</td><td>티리스팔 숲</td><td><span class="pill maybe">조건부</span> 호드 영토 깊숙이 있어 얼라이언스는 가는 길이 멉니다. 파티가 이미 모여 있을 때만.</td></tr>
+        <tr><td>죽음의 폐광 <span class="en">The Deadmines</span></td><td class="lv">17~</td><td>서부 몰락지대</td><td><span class="pill maybe">조건부</span> 데피아스 줄기 마무리용. 20 제한에서는 막바지에 한 번. (포에버 레벨대 변경 여부는 미확인)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="cap">
+    <h2>20레벨에 도달했을 때 (베타 1단계)</h2>
+    <ul class="plain">
+      <li><b>퀘스트를 끝내 놓고 반납은 미루세요.</b> 최고 레벨에서 반납하면 경험치가 돈으로 바뀌어 사라집니다. 40칸 목록에 완료된 퀘스트를 쌓아 두었다가 30 개방(10월 1일 전후) 직후에 한꺼번에 반납하면 바로 몇 레벨이 오릅니다.</li>
+      <li>남는 시간은 전문 기술, 직업 퀘스트, 신규 던전 한 번씩에 쓰세요.</li>
+      <li>베타 캐릭터는 10월 21일에 초기화됩니다. 이번 베타는 정식 출시(11월 4일) 때 쓸 동선을 미리 익히는 연습이라고 보면 됩니다.</li>
+    </ul>
+  </section>
+
+  <section id="habits">
+    <h2>모든 종족 공통 습관</h2>
+    <ul class="plain">
+      <li><b>새 마을에 도착하면 비행 경로부터.</b> 이후 반납·훈련 이동이 크게 줄어듭니다.</li>
+      <li><b>짝수 레벨마다 주문 훈련.</b> 대부분 직업은 짝수 레벨에 새 주문·계급이 열립니다. 수도 갈 일이 있을 때 몰아서 배우되, 너무 오래 미루지는 마세요.</li>
+      <li><b>여관에서 로그아웃.</b> 휴식 경험치가 쌓여 다음 접속 때 몬스터 경험치가 두 배로 들어옵니다.</li>
+      <li><b>마을에서 퀘스트를 받을 때 한 번에 다 받기.</b> 반납하러 왔을 때 새로 뜬 퀘스트도 바로 받아서 같은 방향으로 나갑니다.</li>
+      <li><b>죽음의 폐광·왕좌의 전당 퀘스트는 필드에서 미리 받아 두기.</b> 던전 퀘스트 보상이 늘어서 퀘스트 없이 도는 것은 손해입니다.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><b>출처</b> (포에버 관련 사실 확인용, 2026년 9월 27일 기준)</p>
+    <ul>
+      <li><a href="https://lfcarry.com/guides/wow-forever-leveling">LFCarry: WoW Forever Leveling Guide</a></li>
+      <li><a href="https://lfcarry.com/guides/wow-forever-beta">LFCarry: WoW Forever Beta Guide</a></li>
+      <li><a href="https://timesaver.gg/blog/wow-forever-leveling-explained-beta">Timesaver: WoW Forever Leveling Explained</a></li>
+      <li><a href="https://timesaver.gg/blog/wow-forever-beta-dungeons-hall-of-thanes-ruins-of-lordaeron">Timesaver: Hall of Thanes &amp; Ruins of Lordaeron</a></li>
+      <li><a href="https://www.masterofwarcraft.net/2026/09/wow-forever-whats-new-changes-classic-guide.html">Master of Warcraft: What's New in WoW Forever</a></li>
+      <li><a href="https://www.wowhead.com/classic/ko/zone=1">Wowhead 한국어판(클래식): 지역 이름 대조</a></li>
+    </ul>
+    <p>지역 순서와 퀘스트 목록은 클래식 기준입니다. 포에버에서 퀘스트가 바뀐 곳을 발견하면 알려 주세요. 반영하겠습니다.</p>
+  </footer>
+</div>
+
+</body></html>
