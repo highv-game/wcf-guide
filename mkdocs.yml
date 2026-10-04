@@ -76,6 +76,9 @@ markdown_extensions:
       custom_checkbox: true
   - toc:
       permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
 
 nav:
   - 홈: index.md
@@ -99,3 +102,6 @@ nav:
       - 드루이드 솔로·매크로: archive/druid-solo-macros.md
       - 드루이드 던전: archive/druid-dungeon.md
       - 나이트엘프 드루이드 1~20: archive/druid-nightelf-1-20.md
+
+validation:
+  anchors: warn

@@ -43,3 +43,9 @@ body { word-break: keep-all; }
 
 /* 할 일 체크리스트 */
 .md-typeset .task-list-item { list-style: none; }
+
+.md-typeset h1 { color: var(--md-default-fg-color); }
+.md-typeset h1 ~ blockquote:first-of-type { border-left: 0; padding: 0; margin: -.4em 0 1.2em; color: var(--md-default-fg-color--light); font-size: .72rem; }
+.md-typeset .admonition, .md-typeset details { font-size: .76rem; border-radius: .5rem; }
+.md-typeset .admonition-title, .md-typeset summary { font-size: .76rem; }
+@media (max-width: 600px) { .md-typeset { font-size: .78rem; } .md-typeset table:not([class]) td { min-width: 6em; } }

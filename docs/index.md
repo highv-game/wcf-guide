@@ -82,9 +82,3 @@ hide:
 - **Shift+알파벳**: 비전투·변형 기술, 공격대 징표(Shift+X/C/V)
 - **T**: 전투 부활 / 던전 부활
 - Alt+Shift 조합은 한글 입력 전환과 겹쳐서 쓰지 않습니다.
-
-## 유용한 포에버 사이트
-
-- [ForeverChanges](https://foreverchanges.pro) 특성·직업 변경점, 아이템
-- [ForeverDiff](https://foreverdiff.com) 제조법
-- [wow-professions.com Forever](https://www.wow-professions.com/forever) 전문기술 NPC·상인
