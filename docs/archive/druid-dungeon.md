@@ -36,7 +36,7 @@
 2. 몹 뒤에서 칼날 발톱(22부터), 정면이면 할퀴기. 갈퀴 발톱은 오래 사는 정예 몹에만 건다.
 3. 연계 점수 4\~5개에서 몹이 오래 버틸 것 같으면 도려내기, 금방 죽으면 할퀴기를 계속 누른다.
 4. 몹이 나를 보기 시작하면 28레벨부터 웅크리기로 위협을 줄인다. 그 전에는 공격을 잠깐 멈춘다.
-5. Forever에는 야성 요정의 불꽃(변신 상태에서 쓰는 요정의 불꽃)이 없다(ForeverChanges). 요정의 불꽃이 필요하면 변신 전에 캐스터로 건다.
+5. Forever에는 야성 요정의 불꽃(변신 상태에서 쓰는 요정의 불꽃)이 없다. 요정의 불꽃이 필요하면 변신 전에 캐스터로 건다.
 
 - 숨기는 파티에서 몹 무리를 피해 지나갈 때만 쓴다. 탱커보다 먼저 들어가 기습하지 않는다.
 - 탱커가 죽으면 곰으로 바꿔 대신 버틴다. 드루이드 딜러의 가장 큰 장점이다.
@@ -69,8 +69,6 @@
 | 검은심연 나락 | 24\~32 | 물속 구간에서 바다표범 변신. 나가로 몹 시전 끊기 |
 
 데드마인과 그림자송곳니 성채의 레벨, 각 던전의 몹 특징은 클래식 기준이고 Forever에서 바뀌었을 수 있다. Forever에는 자동 파티 찾기가 없고 파티 찾기 목록만 있으며, 소환은 흑마법사만 할 수 있다.
-
-출처: [ForeverChanges 드루이드 주문서](https://foreverchanges.pro/spellbook/druid), [Wowhead 20레벨 곰 탱커](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-tank-overview), [Wowhead 20레벨 야성 딜러](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-dps-overview)
 
 ## 매크로 구성
 

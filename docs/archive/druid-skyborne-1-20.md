@@ -21,8 +21,6 @@
 - 가시는 걸 때의 주문력을 저장한다. 던전에서는 주문력 장비로 가시를 걸고 다시 야성 장비로 바꾼다.
 - 공통 변경: 자연의 손아귀와 청명의 전조가 기본 기술이 됐고, 12레벨에 전투 밖 부활 주문(Revive)이 생겼다. 변신 중에도 물약·차를 쓸 수 있다.
 
-출처: [블리자드 스카이본 공지(한국어)](https://worldofwarcraft.blizzard.com/ko-kr/news/24302071), [Icy Veins 스카이본](https://www.icy-veins.com/wow-forever/skyborne-race-guide), [Wowhead 스카이본 드루이드 변신](https://www.wowhead.com/forever/news/skyborne-druid-forms-in-wow-forever-382861), [Wowhead 지맥 읽기](https://www.wowhead.com/forever/spell=1259705/read-ley-line), [ForeverChanges 드루이드 변경점](https://foreverchanges.pro/class/druid)
-
 ## 특성 빌드 (1\~20레벨)
 
 20레벨까지 11포인트를 전부 야성에 넣는 0/11/0 빌드를 추천한다. 특성은 종족과 상관없어서 나이트 엘프 드루이드와 같다. 곰과 표범이 같은 야성 트리를 쓰기 때문에 탱커와 근접 딜러를 둘 다 할 수 있다. 특성 포인트는 10레벨부터 레벨당 1개씩 받고, 5포인트마다 다음 단이 열린다.
@@ -102,8 +100,6 @@ flowchart LR
 
 힐러 빌드 출처: [Wowhead 20레벨 회복](https://www.wowhead.com/forever/guide/classes/druid/restoration/level-20-healer-overview), [Leprestore 회복 드루이드](https://leprestore.com/guides/world-of-warcraft-forever/wow-forever-restoration-druid-guide-best-builds-rotation-race-professions/)
 
-출처: [ForeverChanges 드루이드 특성](https://foreverchanges.pro/talents/druid), [Icy Veins 야성](https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide), [Mobalytics 야성](https://mobalytics.gg/wow-forever/classes/feral-druid-guide)
-
 ## 추천 매크로
 
 /cast, /startattack 같은 명령어와 \[stance:1\] 같은 조건은 영어 그대로 쓰고, 주문 이름만 한글로 넣는다. 드루이드의 태세 번호는 배운 변신 순서대로 붙는다. 20레벨에 세 형태를 다 배우면 1 곰 변신, 2 바다표범 변신, 3 표범 변신이다. 바다표범 변신을 안 배웠다면 표범은 2번이니 아래 매크로의 3을 2로 바꾼다. 스카이본은 변신 모습만 다르고 주문 이름은 같다.
@@ -165,7 +161,7 @@ flowchart LR
 ### 초반 (드랍 무기 전)
 
 - 시작 무기를 쓰다가 퀘스트 보상 중 DPS가 가장 높은 지팡이나 둔기를 고른다.
-- 8레벨쯤 경매장에서 초록 무기를 하나 사면 평타 DPS가 2에서 6 이상으로 오른다(Mobalytics).
+- 8레벨쯤 경매장에서 초록 무기를 하나 사면 평타 DPS가 2에서 6 이상으로 오른다.
 - 드루이드는 단검·장착 무기·둔기·지팡이·양손 둔기를 쓸 수 있다. 양손 둔기는 아이언포지 무기 전문가에게 배운다(클래식 기준).
 - 새 무기는 숙련도가 낮으면 빗나감이 많다. 바꾼 뒤 필드에서 숙련도를 올리고 던전에 간다.
 - 가죽세공 Brawler's Leather 세트(머리·갑옷)가 경매장에 싸게 올라오면 산다.
@@ -191,8 +187,6 @@ flowchart LR
 - 영주의 전당에서는 Golemheart Stave(플런더), 가죽 장갑 Flamefist Grips, 가죽 다리 Direhammer Leggings가 야성에 쓸 만하다.
 - 가시는 걸 때의 주문력을 저장한다. 탱커는 주문력 장비 몇 개를 따로 챙겼다가 가시를 걸 때만 입는다.
 - 아이템 이름은 한글판 번역이 확인되지 않아 영문으로 적었다. 베타 초기 목록이라 순위·드랍처는 바뀔 수 있다.
-
-출처: [ForeverChanges 드루이드 BiS](https://foreverchanges.pro/bis/druid), [Wowhead 20레벨 곰 탱커](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-tank-overview), [Wowhead 20레벨 야성 딜러](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-dps-overview)
 
 ## 1\~20 육성 루트
 
@@ -230,9 +224,7 @@ flowchart LR
 - 약초 채집을 같이 올릴 때는 모단 호수·서부 몰락지대·붉은마루 산맥 약초를 캔다. 자세한 위치는 [약초 지도](../tools/herb-atlas.html)에 있다.
 - Forever는 던전 몹 경험치가 줄고 던전 퀘스트 경험치가 늘었다. 던전은 퀘스트를 다 받은 상태로 한 번 도는 게 핵심이다.
 
-제프라스 섬의 지명·NPC·퀘스트 이름은 한글판 표기를 확인하지 못해 영문으로 적었다. 섬 안 레벨 구간은 가이드 한 곳(ForeverWisp) 기준이다.
-
-출처: [ForeverWisp 스카이본 레벨업](https://www.foreverwisp.com/guides/wow-forever-alliance-skyborne-leveling-guide), [Warcraft Tavern 제프라스 섬에서 아이언포지 가기](https://www.warcrafttavern.com/forever/guides/how-to-get-to-ironforge-from-the-zephras-isle/), [블리자드 포럼 스카이본 드루이드 퀘스트 버그](https://us.forums.blizzard.com/en/wow/t/bug-missing-quests-skyborne-druid-class-quests/2355854), [블리자드 포럼 곰 변신](https://us.forums.blizzard.com/en/wow/t/skyborne-level-10-druid-bear-form/2354273), [ForeverChanges 표범 변신 퀘스트](https://foreverchanges.pro/druid-cat-form)
+제프라스 섬의 지명·NPC·퀘스트 이름은 한글판 표기를 확인하지 못해 영문으로 적었다. 섬 안 레벨 구간은 가이드 한 곳 기준이다.
 
 ## 던전
 
@@ -242,9 +234,9 @@ flowchart LR
 | --- | --- | --- | --- |
 | 영주의 전당 (Forever 신규) | 13\~18 | 아이언포지 지하(옛 아이언포지) | 스톰윈드 → 깊은굴 지하철 → 아이언포지 왕좌에서 아래로 내려가 바닥의 차원문 |
 | 죽음의 폐광 | 17\~26 (일부 Forever 자료는 15\~22) | 서부 몰락지대 문브룩 | 스톰윈드 → 서부 몰락지대 남쪽 |
-| 로데론의 폐허 (Forever 신규) | 15\~20 (Wowhead는 16\~22) | 티리스팅 숲 언더시티 위 폐허 | 메네스됬 → 힐스브래드 → 로데르미어 호수를 헤엄쳐 티리스팅. 호드 지역이라 멀고 위험하다 |
+| 로데론의 폐허 (Forever 신규) | 15\~20 | 티리스팅 숲 언더시티 위 폐허 | 메네스됬 → 힐스브래드 → 로데르미어 호수를 헤엄쳐 티리스팅. 호드 지역이라 멀고 위험하다 |
 
-영주의 전당은 드워프 전사 문서에서 '왕들의 전당'이라고 적었던 곳이다. 한국 커뮤니티(인벤) 표기를 따랐다.
+영주의 전당은 드워프 전사 문서에서 '왕들의 전당'이라고 적었던 곳이다. 한국 커뮤니티 표기를 따랐다.
 
 ### 파티 구성
 
@@ -296,8 +288,6 @@ flowchart LR
 /tm [mod:shift] 7; [mod:ctrl] 5; 8
 ```
 
-출처: [Wowhead 영주의 전당](https://www.wowhead.com/forever/guide/hall-of-thanes-dungeon-overview-location-rewards), [Wowhead 로데론의 폐허](https://www.wowhead.com/forever/guide/ruins-of-lordaeron-dungeon-overview-location-rewards), [Warcraft Tavern 던전 목록](https://www.warcrafttavern.com/forever/guides/dungeons/), [Wowhead 20레벨 곰 탱커](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-tank-overview)
-
 ## 추천 전문기술
 
 약초 채집용 부캐라면 약초채집 + 연금술이 가장 좋다. 캔 약초를 바로 물약으로 만들고, Forever에서는 드루이드가 변신 중에도 물약을 마실 수 있다.
@@ -310,10 +300,9 @@ flowchart LR
 
 - 스카이본의 공중 걷기는 절벽·산에서 내려가며 약초로 바로 가는 지름길이 된다. 봉우리 약초를 캐고 내려올 때 쓴다.
 - Forever 약초채집은 채집할 때 씨앗(4등급)과 희귀 재료가 추가로 나온다. 약초채집 20에 모닥불 옆 지능 +25 버프를 주는 Incense Candle, 140에 씨앗을 심어 약초를 키우는 Greenhouse를 만든다.
-- 표범 은신(숨기)과 살쾡이의 기민함 이동속도 +30%로 몹을 피해 약초까지 간다. 30레벨 치타 변신(+40%)부터는 더 빨라진다. 치타 변신 상태로 약초를 캔다는 주장은 한 곳(Warcraft Tavern)에서만 확인됐다.
+- 표범 은신(숨기)과 살쾡이의 기민함 이동속도 +30%로 몹을 피해 약초까지 간다. 30레벨 치타 변신(+40%)부터는 더 빨라진다. 치타 변신 상태로 약초를 캔다는 주장은 한 곳에서만 확인됐다.
 - 요리는 보조로 꼭 올린다. Forever 신규 모닥불 시스템에서 요리로 모닥불을 피우고 옆에 전문기술 효과를 두면 버프를 받는다.
 - 전문기술 150·225·300 달성은 레거시 포인트를 준다.
 
 약초별 위치와 가격은 [약초 지도](../tools/herb-atlas.html)에 있다.
 
-출처: [Wowhead 약초채집](https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling), [ForeverChanges 약초채집](https://foreverchanges.pro/professions/herbalism), [Warcraft Tavern 드루이드](https://www.warcrafttavern.com/forever/guides/druid/)

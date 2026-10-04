@@ -14,8 +14,6 @@
 - 공통 변경: 자연의 손아귀와 청명의 전조가 기본 기술이 됐고, 야생의 징표 연마 효과가 기본 적용된다. 12레벨에 전투 밖 부활 주문(Revive)이 생겼다. 변신 중에도 물약·차를 쓸 수 있고, 변신 재변신으로 자원을 얻던 파워시프팅은 사라졌다.
 - 표범 변신은 20레벨 직업 퀘스트로 배운다. 표범 변신 공격력 보너스는 40에서 12로 줄었고, 곰의 체력 보너스는 늘었다.
 
-출처: [Icy Veins 드루이드](https://www.icy-veins.com/wow-forever/druid-class-overview), [Icy Veins 나이트 엘프](https://www.icy-veins.com/wow-forever/night-elf-race-guide), [ForeverChanges 드루이드 변경점](https://foreverchanges.pro/class/druid), [Wowhead 20레벨 야성 딜러](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-dps-overview), [Zockify 드루이드](https://www.zockify.com/forever/druid/)
-
 ## 특성 빌드 (1\~20레벨)
 
 20레벨까지 11포인트를 전부 야성에 넣는 0/11/0 빌드를 추천한다. 곰과 표범이 같은 야성 트리를 쓰기 때문에 탱커와 근접 딜러를 둘 다 할 수 있다. 특성 포인트는 10레벨부터 레벨당 1개씩 받고, 5포인트마다 다음 단이 열린다.
@@ -96,8 +94,6 @@ flowchart LR
 
 힐러 빌드 출처: [Wowhead 20레벨 회복](https://www.wowhead.com/forever/guide/classes/druid/restoration/level-20-healer-overview), [Leprestore 회복 드루이드](https://leprestore.com/guides/world-of-warcraft-forever/wow-forever-restoration-druid-guide-best-builds-rotation-race-professions/)
 
-출처: [ForeverChanges 드루이드 특성](https://foreverchanges.pro/talents/druid), [Icy Veins 야성](https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide), [Mobalytics 야성](https://mobalytics.gg/wow-forever/classes/feral-druid-guide)
-
 ## 추천 매크로
 
 /cast, /startattack 같은 명령어와 \[stance:1\] 같은 조건은 영어 그대로 쓰고, 주문 이름만 한글로 넣는다. 드루이드의 태세 번호는 배운 변신 순서대로 붙는다. 20레벨에 세 형태를 다 배우면 1 곰 변신, 2 바다표범 변신, 3 표범 변신이다. 바다표범 변신을 안 배웠다면 표범은 2번이니 아래 매크로의 3을 2로 바꾼다.
@@ -162,7 +158,7 @@ flowchart LR
 ### 초반 (드랍 무기 전)
 
 - 시작 무기를 쓰다가 텔드랏실·어둠의 해안 퀘스트 보상 중 DPS가 가장 높은 지팡이나 둔기를 고른다.
-- 8레벨쯤 경매장에서 초록 무기를 하나 사면 평타 DPS가 2에서 6 이상으로 오른다(Mobalytics).
+- 8레벨쯤 경매장에서 초록 무기를 하나 사면 평타 DPS가 2에서 6 이상으로 오른다.
 - 무기 숙련: 다르나서스 전사의 단(57.6, 46.7) 무기 전문가 Ilyenia Moonfire가 단검·장착 무기·지팡이를 가르친다(각 10실버). 양손 둔기는 다르나서스에서 못 배우니 스톰윈드나 아이언포지에서 배운다.
 - 새 무기는 숙련도가 낮으면 빗나감이 많다. 바꾼 뒤 필드에서 숙련도를 올리고 던전에 간다.
 - 가죽세공 Brawler's Leather 세트(머리·갑옷)가 경매장에 싸게 올라오면 산다. Wowhead 딜러 가이드가 추천하는 레벨업 세트다.
@@ -189,8 +185,6 @@ flowchart LR
 - 영주의 전당에서는 Golemheart Stave(플런더), 가죽 장갑 Flamefist Grips, 가죽 다리 Direhammer Leggings가 야성에 쓸 만하다.
 - 탱커는 Defender's Leather 계열(가죽세공)의 체력·방어도를 더 챙겨도 된다.
 - 아이템 이름은 한글판 번역이 확인되지 않아 영문으로 적었다. 베타 초기 목록이라 순위·드랍처는 바뀔 수 있다.
-
-출처: [ForeverChanges 드루이드 BiS](https://foreverchanges.pro/bis/druid), [Wowhead 20레벨 곰 탱커](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-tank-overview), [Wowhead 영주의 전당](https://www.wowhead.com/forever/guide/hall-of-thanes-dungeon-overview-location-rewards), [Wowhead 로데론의 폐허](https://www.wowhead.com/forever/guide/ruins-of-lordaeron-dungeon-overview-location-rewards)
 
 ## 1\~20 육성 루트
 
@@ -224,8 +218,6 @@ flowchart LR
 
 퀘스트 세부 목록은 [얼라이언스 1\~20 육성 동선](../tools/alliance-leveling.html)의 나이트 엘프 항목과 같다. NPC·퀘스트 이름은 한글판 표기를 확인하지 못해 영문으로 적었다. 아우버다인·아스트라나르 지명도 한글판 대조 전이다.
 
-출처: [ForeverWisp 나이트 엘프 레벨업](https://www.foreverwisp.com/guides/wow-forever-night-elf-leveling-guide), [Wowhead 표범 변신](https://www.wowhead.com/forever/spell=768), [Wowhead 바다표범 변신](https://www.wowhead.com/forever/spell=1066), [ClassicWoWForever 드루이드](https://classicwowforever.com/class-guide/druid/)
-
 ## 던전
 
 20레벨까지 나이트 엘프 드루이드가 갈 던전은 영주의 전당, 로데론의 폐허, 죽음의 폐광 세 곳이다. 세 곳 모두 다르나서스에서 멀어서, 어둠의 해안을 끝낸 뒤 동부 왕국으로 넘어가 한 번에 도는 게 효율적이다. 검은심연의 나락은 Forever에서 24\~32레벨로 올라가 30 개방 뒤에 간다.
@@ -233,10 +225,10 @@ flowchart LR
 | 던전 | 레벨 | 위치 | 가는 법 |
 | --- | --- | --- | --- |
 | 영주의 전당 (Forever 신규) | 13\~18 | 아이언포지 지하(옛 아이언포지) | 아우버다인 → 배 → 아이언포지 왕좌에서 아래로 내려가 바닥의 차원문 |
-| 로데론의 폐허 (Forever 신규) | 15\~20 (Wowhead는 16\~22) | 티리스팅 숲 언더시티 위 폐허 | 아우버다인 → 메네스됬 → 힐스브래드 → 로데르미어 호수를 헤엄쳐 티리스팅 |
+| 로데론의 폐허 (Forever 신규) | 15\~20 | 티리스팅 숲 언더시티 위 폐허 | 아우버다인 → 메네스됬 → 힐스브래드 → 로데르미어 호수를 헤엄쳐 티리스팅 |
 | 죽음의 폐광 | 17\~26 (일부 Forever 자료는 15\~22) | 서부 몰락지대 문브룩 | 아우버다인 → 신규 스톰윈드 항로 → 서부 몰락지대 남쪽 |
 
-영주의 전당은 드워프 전사 문서에서 '왕들의 전당'이라고 적었던 곳이다. 한국 커뮤니티(인벤) 표기가 영주의 전당이라 여기서는 그걸 따랐다. Forever가 추가한 아우버다인 ↔ 스톰윈드, 아우버다인 ↔ 메네스됬 ↔ 사우스쇼어 배가 베타에 열려 있는지는 확인하지 못했다.
+영주의 전당은 드워프 전사 문서에서 '왕들의 전당'이라고 적었던 곳이다. 한국 커뮤니티 표기가 영주의 전당이라 여기서는 그걸 따랐다. Forever가 추가한 아우버다인 ↔ 스톰윈드, 아우버다인 ↔ 메네스됬 ↔ 사우스쇼어 배가 베타에 열려 있는지는 확인하지 못했다.
 
 ### 파티 구성
 
@@ -289,8 +281,6 @@ flowchart LR
 /tm [mod:shift] 7; [mod:ctrl] 5; 8
 ```
 
-출처: [Wowhead 영주의 전당](https://www.wowhead.com/forever/guide/hall-of-thanes-dungeon-overview-location-rewards), [Wowhead 로데론의 폐허](https://www.wowhead.com/forever/guide/ruins-of-lordaeron-dungeon-overview-location-rewards), [Warcraft Tavern 던전 목록](https://www.warcrafttavern.com/forever/guides/dungeons/), [Mobalytics 던전 지도](https://mobalytics.gg/wow-forever/guides/dungeon-raid-map), [Wowhead 신규 항로](https://www.wowhead.com/forever/news/three-new-ship-routes-debuting-in-forever-382891), [Wowhead 20레벨 곰 탱커](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-tank-overview)
-
 ## 추천 전문기술
 
 약초 채집용 부캐라면 약초채집 + 연금술이 가장 좋다. 캔 약초를 바로 물약으로 만들고, Forever에서는 드루이드가 변신 중에도 물약을 마실 수 있다. 텔드랏실·어둠의 해안·잿빛 골짜기가 약초채집 1\~150 구간이라 레벨업 동선과 겹친다.
@@ -310,4 +300,3 @@ flowchart LR
 
 약초별 위치와 가격은 [약초 지도](../tools/herb-atlas.html)에 있다.
 
-출처: [Wowhead 약초채집](https://www.wowhead.com/forever/guide/professions/herbalism/overview-leveling), [ForeverChanges 약초채집](https://foreverchanges.pro/professions/herbalism), [Warcraft Tavern 드루이드](https://www.warcrafttavern.com/forever/guides/druid/), [Zockify 드루이드](https://www.zockify.com/forever/druid/)

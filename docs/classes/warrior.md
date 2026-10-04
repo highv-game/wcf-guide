@@ -14,8 +14,6 @@
 - 공통 변경: 연전연승(Victory Rush)이 기본 기술이 됐고, 전술 숙련도 기본 기능이 됐다. 방패의 벽·무모한 희생 같은 큰 쿨기는 15분으로 줄었다.
 - 방어 특성은 혼자 퀘스트할 때 사냥이 느리다. 퀘스트 위주 구간은 무기 특성으로 올리고 던전 갈 때만 바꾸는 방법도 있다(베타 특성 초기화 1실버).
 
-출처: [Leprestore 방어 전사](https://leprestore.com/guides/world-of-warcraft-forever/wow-forever-protection-warrior-guide-best-builds-race-professions/), [Mobalytics 방어 전사](https://mobalytics.gg/wow-forever/classes/protection-warrior-guide-kalltorak), [Zockify 전사 변경점](https://www.zockify.com/forever/warrior/), [종족 레이셜](https://wowclassicforever.info/races/)
-
 ## 특성 빌드 (1\~20레벨)
 
 20레벨까지 11포인트를 전부 방어에 넣는 0/0/11 빌드를 추천한다. 특성 포인트는 10레벨부터 레벨당 1개씩 받는다. 트리는 5포인트마다 다음 단이 열리므로 아래 순서대로 찍으면 된다.
@@ -53,8 +51,6 @@ flowchart LR
 - 방어 43 / 분노 8: 방어 트리 끝의 방패 밀쳐내기(Shield Slam), 신규 Bastion(방패 착용 시 피해 +10%), Focused Rage(공격 기술 분노 감소), Vitality, 최후의 저항, 방패의 벽 연마.
 - 분노 8포인트는 무자비함(Cruelty) 5/5 + Unbridled Wrath 3/5로 치명타와 분노를 보강한다.
 - 60레벨은 아직 베타에서 열리지 않아 검증 전이다.
-
-출처: [ForeverChanges 특성 계산기](https://foreverchanges.pro/talents/warrior), [Icy Veins 방어 전사](https://www.icy-veins.com/wow-forever/protection-warrior-tank-pve-guide), [wowforeverbuilds 60레벨 빌드](https://wowforeverbuilds.com/guide/protection-warrior-pve-guide)
 
 ## 추천 매크로
 
@@ -130,11 +126,11 @@ flowchart LR
 | --- | --- | --- | --- |
 | 무기 1순위 | [Butcher's Slicer](https://foreverchanges.pro/item/6633) | 한손 도끼 | 그림자송곳 성채, 도살자 라자클로 (41.95%) |
 | 무기 2순위 | [Gutterblade](https://foreverchanges.pro/item/17046) | 한손 무기 | 잔재나무 숲 퀘스트 Raene's Cleansing (18+) |
-| 무기 (가까운 대안) | [Durgen's Crescent Axe](https://wowtbc.gg/warcraftforever/loot-tables/dungeons/hall-of-thanes/) | 한손 도끼 | 왕들의 전당, 두르겐 더지해머 |
+| 무기 (가까운 대안) | [Durgen's Crescent Axe] | 한손 도끼 | 왕들의 전당, 두르겐 더지해머 |
 | 방패 1순위 | [Crest of Darkshire](https://foreverchanges.pro/item/6223) | 방패 | 그늘나무 숲 퀘스트 Bride of the Embalmer (20+) |
 | 방패 2순위 | [Arctic Buckler](https://foreverchanges.pro/item/7002) | 방패 | 검은심연 나락 퀘스트 Blackfathom Villainy (18+) |
 | 가슴·다리·손 | Fire Hardened Hauberk·Leggings·Gauntlets | 사슬 | 20레벨 얼라이언스 전사 직업 퀘스트 (Furen's·Mathiel's Armor 등) |
-| 가슴 (던전) | [Golemguard Chest](https://wowtbc.gg/warcraftforever/loot-tables/dungeons/hall-of-thanes/) | 사슬 | 왕들의 전당, 플런더 |
+| 가슴 (던전) | [Golemguard Chest] | 사슬 | 왕들의 전당, 플런더 |
 | 허리·발 (던전) | Kindlegem Girdle, Treads of the Protector Golem | 사슬 | 왕들의 전당, 마그마투스·플런더 |
 | 손목 | Beetle Clasps | 사슬 | 퀘스트 |
 | 반지 | Seal of Wrynn | 반지 | 퀘스트 |
@@ -144,8 +140,6 @@ flowchart LR
 - 죽음의 폐광에서는 밴클리프의 Cruel Barb(한손검)도 탱커가 쓸 만하다. 감시병 언덕 데피아즈 퀘스트 마지막 보상은 사슬 다리 Chausses of Westfall을 고른다.
 - 드워프는 둔기 치명타 +1%가 있지만, 탱커는 무기 자체 성능이 더 중요하다. 위 목록은 도끼·검이라도 둔기보다 좋으면 그대로 쓴다.
 - 아이템 이름은 한글판 번역이 확인되지 않아 영문으로 적었다. 베타 초기 목록이라 순위·드랍처는 바뀔 수 있다.
-
-출처: [ForeverChanges 전사 탱커 BiS](https://foreverchanges.pro/bis/warrior/tank), [Wowhead 20레벨 방어 전사](https://www.wowhead.com/forever/guide/classes/warrior/protection/level-20-tank-overview), [wowtbc.gg 왕들의 전당 전리품](https://wowtbc.gg/warcraftforever/loot-tables/dungeons/hall-of-thanes/)
 
 ## 1\~20 육성 루트
 
@@ -175,8 +169,6 @@ flowchart LR
 - 20레벨이 되면 끝낸 퀘스트는 반납하지 말고 쌓아두었다가 30 개방 직후 한꺼번에 반납한다.
 
 퀘스트 세부 목록과 하고 버릴 퀘스트는 [얼라이언스 1\~20 육성 동선](../tools/alliance-leveling.html)의 드워프·노움 항목과 같다. NPC·퀘스트 이름은 한글판 표기를 확인하지 못해 영문으로 적었다.
-
-출처: [ForeverWisp 드워프·노움 레벨업](https://www.foreverwisp.com/guides/wow-forever-dwarf-gnome-leveling-guide), [Wowhead 클래식 전사 직업 퀘스트](https://www.wowhead.com/classic/guide/warrior-class-quests-classic-wow)
 
 ## 던전
 
@@ -249,8 +241,6 @@ Forever에서는 모든 보스가 희귀(파란색) 아이템을 확정으로 �
 - 채팅 명령(/p)에는 조건문이 안 먹어서 돌진 매크로에 넣으면 태세를 바꿀 때마다 채팅이 나간다. 그래서 알림은 따로 놨다.
 - `/tm`에 조건문(`[mod:shift]`)이 먹는지는 Forever 클라이언트에서 확인이 필요하다. 안 되면 표식마다 `/tm 8`, `/tm 7`처럼 매크로를 따로 만든다.
 
-출처: [Mobalytics 왕들의 전당](https://mobalytics.gg/wow-forever/dungeons/the-hall-of-thanes-dungeon-guide), [wowtbc.gg 왕들의 전당 전리품](https://wowtbc.gg/warcraftforever/loot-tables/dungeons/hall-of-thanes/), [MMOnster 죽음의 폐광](https://mmonster.co/wow-forever/guides/dungeons/the-deadmines), [Wowhead 20레벨 방어 전사](https://www.wowhead.com/forever/guide/classes/warrior/protection/level-20-tank-overview)
-
 ## 추천 전문기술
 
 탱커는 채광 + 대장기술이 가장 무난하다. 채광이 대장기술 재료를 바로 대주고, 20레벨 BiS 목록의 머리·발(Guard's Silvered Chain Helm, Guard's Boots)이 대장기술 제작템이다. 드워프는 던 모로·모단 호수에 구리·주석 광맥이 많아서 더 편하다.
@@ -266,4 +256,3 @@ Forever에서는 모든 보스가 희귀(파란색) 아이템을 확정으로 �
 - 전문기술 150·225·300 달성은 레거시 포인트를 준다. 레거시의 Talented 특전이 위 특성 섹션의 추가 특성 포인트다.
 - 레시피가 계속 추가되는 중이라 출시 후 추천이 바뀔 수 있다.
 
-출처: [Leprestore 방어 전사](https://leprestore.com/guides/world-of-warcraft-forever/wow-forever-protection-warrior-guide-best-builds-race-professions/), [ForeverChanges 전사 탱커 BiS](https://foreverchanges.pro/bis/warrior/tank), [Wowhead 레거시 시스템](https://www.wowhead.com/forever/guide/legacy-system-overview-rewards)

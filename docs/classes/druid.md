@@ -15,8 +15,6 @@
 
 이 문서는 예전 드루이드 문서 세 개([스카이본 1\~20](../archive/druid-skyborne-1-20.md), [야성 솔플](../archive/druid-solo-macros.md), [야성 던전](../archive/druid-dungeon.md))의 확인된 내용을 합치고 30레벨까지 늘린 것이다. 예전 문서는 지우지 않고 그대로 두었다.
 
-출처: [ForeverChanges 드루이드 변경점](https://foreverchanges.pro/class/druid), [ForeverChanges 드루이드 주문서](https://foreverchanges.pro/spellbook/druid)
-
 ## 특성 빌드 (1\~30레벨)
 
 30레벨까지 21포인트를 전부 야성에 넣는 0/21/0 빌드를 추천한다. 20까지는 분노·기력 비용과 이동을 해결하고, 21부터는 치명타·피해를 올려 30에 무리의 우두머리에 닿는다. 곰과 표범이 같은 트리를 써서 탱커와 딜러를 둘 다 할 수 있다. 특성 포인트는 10레벨부터 레벨당 1개, 5포인트마다 다음 단이 열린다.
@@ -43,11 +41,9 @@
 
 ### 힐러(회복) 빌드로 던전 갈 때
 
-힐러를 자주 맡을 거면 레벨업은 야성으로 하고 던전 전에 특성을 초기화한다. 20레벨 기준은 Naturalist 5 → 자연의 정신 집중 5 → 묵상 1(Wowhead 'Reflective' 빌드), 21\~30은 묵상 3/3 → 자연의 선물 2 → 신속한 치유 1 → 회복 연마 3 → 자연의 선물 3 → 자연의 신속함 1 순서다. 스카이본은 지맥 읽기가 묵상과 같이 작동해 힐러에도 잘 맞는다. 자세한 운영은 [스카이본 1\~20 문서](../archive/druid-skyborne-1-20.md)에 남겨두었다.
+힐러를 자주 맡을 거면 레벨업은 야성으로 하고 던전 전에 특성을 초기화한다. 20레벨 기준은 Naturalist 5 → 자연의 정신 집중 5 → 묵상 1, 21\~30은 묵상 3/3 → 자연의 선물 2 → 신속한 치유 1 → 회복 연마 3 → 자연의 선물 3 → 자연의 신속함 1 순서다. 스카이본은 지맥 읽기가 묵상과 같이 작동해 힐러에도 잘 맞는다. 자세한 운영은 [스카이본 1\~20 문서](../archive/druid-skyborne-1-20.md)에 남겨두었다.
 
 특성 이름은 Wowhead 한글판(클래식) 이름이고, 영문은 Forever 신규라 한글 이름을 확인하지 못한 특성이다.
-
-출처: [ForeverChanges 드루이드 특성](https://foreverchanges.pro/talents/druid), [Icy Veins 야성](https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide), [Wowhead 20레벨 회복](https://www.wowhead.com/forever/guide/classes/druid/restoration/level-20-healer-overview)
 
 ## 공통 단축키와 기본 매크로
 
@@ -82,7 +78,7 @@
 | Shift+X / C | 표시 | 해골 / X | 같음 | 같음 |
 | 숫자 1 왼쪽 키 | 따라 때리기 | 탱커 대상 가져오기 | 같음 | 같음 |
 
-괄호 숫자는 배우는 레벨(ForeverChanges 주문서, 야성의 돌진은 20레벨 특성). 아직 안 배운 칸은 비워 두면 된다.
+괄호 숫자는 배우는 레벨. 아직 안 배운 칸은 비워 두면 된다.
 
 드루이드 태세 번호는 배운 변신 순서대로 붙는다. 16레벨 바다표범까지 배우면 1 곰, 2 바다표범, 3 표범, 30레벨에 4 치타다. 바다표범을 건너뛰었다면 아래 매크로의 stance:3을 2로 바꾼다. 명령어와 조건은 영어, 주문 이름만 한글이다. 문법은 [포에버 매크로 교본](../tools/macro-guide.html)과 같다.
 
@@ -238,7 +234,7 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 1. 숨기(F 두 번)로 접근해 몹 뒤로 돈다. 24부터 맹공격(5)을 전투 직전에 켠다.
 2. 오프너(1): 20\~21은 할퀴기, 22부터 칼날 발톱, 24부터는 갈퀴 발톱(3)으로 출혈을 넣어도 된다.
 3. 연계 점수 쌓기: 뒤에 있으면 칼날 발톱, 정면이면 할퀴기. 만능 공격 매크로는 은신이 풀린 뒤 할퀴기를 쓰니, 뒤에 있을 때는 칼날 발톱 칸을 따로 두거나 할퀴기로 쌓는다.
-4. 마무리: 연계 점수 4\~5개에 몹이 6초 이상 버틸 것 같으면 도려내기(2), 아니면 할퀴기를 계속 누른다(Wowhead).
+4. 마무리: 연계 점수 4\~5개에 몹이 6초 이상 버틸 것 같으면 도려내기(2), 아니면 할퀴기를 계속 누른다.
 5. 청명의 전조가 켜지면 다음 기술이 무료다. 가장 비싼 칼날 발톱에 쓴다.
 6. 25레벨에 찍는 Primal Bite는 연계 점수 마무리 기술로 보인다. 툴팁을 보고 도려내기 대신 쓸지 정한다.
 
@@ -269,8 +265,6 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 | 채집 동선 | 표범 + 숨기로 몹을 피해 간다. 30부터 치타(Shift+F) |
 
 - 통곡의 동굴 송곳니 세트를 다 입으면 표범이 뱀 모습이 되고, 5세트 효과로 근접 공격에 확률적으로 1초 기절(Dream Venom)이 붙는다. 장비 섹션 참고.
-
-출처: [Wowhead 20레벨 야성 딜러](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-dps-overview), [ForeverChanges 드루이드 주문서](https://foreverchanges.pro/spellbook/druid)
 
 ## 던전
 
@@ -354,8 +348,6 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 
 기존 던전의 레벨과 몹 특징은 클래식 기준이라 Forever에서 바뀌었을 수 있다. 영주의 전당은 드워프 전사 문서의 '왕들의 전당'과 같은 곳이고, 인벤 표기를 따랐다. 던전별 퀘스트·보스 상세는 [스카이본 1\~20 문서](../archive/druid-skyborne-1-20.md)에 있다.
 
-출처: [Wowhead 20레벨 곰 탱커](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-tank-overview), [Wowhead 영주의 전당](https://www.wowhead.com/forever/guide/hall-of-thanes-dungeon-overview-location-rewards), [Wowhead 로데론의 폐허](https://www.wowhead.com/forever/guide/ruins-of-lordaeron-dungeon-overview-location-rewards), [Warcraft Tavern 던전 목록](https://www.warcrafttavern.com/forever/guides/dungeons/)
-
 ## 1\~30 육성 루트
 
 제프라스 섬(1\~12) → 달라란 → 스톰윈드 → 모단 호수·영주의 전당 → 서부 몰락지대·죽음의 폐광 → 다르나서스(표범 퀘스트) → 잿빛 골짜기·통곡의 동굴 → 그늘숲·저습지 순서가 기본이다. 곰 변신은 섬 안의 스카이본 전용 퀘스트로 배우고, 바다표범·표범 변신은 다르나서스에서 시작한다. 20대에 다르나서스에 가는 김에 칼림도어로 내려가 통곡의 동굴을 도는 것이 핵심이다.
@@ -400,15 +392,13 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 
 제프라스 섬의 지명·NPC·퀘스트 이름은 한글판 표기를 확인하지 못해 영문으로 적었다. 섬 안 레벨 구간은 ForeverWisp 한 곳 기준이고, 20\~30 구간은 클래식 얼라이언스 동선에 통곡의 동굴을 넣어 내가 짠 것이다.
 
-출처: [ForeverWisp 스카이본 레벨업](https://www.foreverwisp.com/guides/wow-forever-alliance-skyborne-leveling-guide), [Warcraft Tavern 제프라스 섬에서 아이언포지 가기](https://www.warcrafttavern.com/forever/guides/how-to-get-to-ironforge-from-the-zephras-isle/), [블리자드 포럼 스카이본 드루이드 퀘스트 버그](https://us.forums.blizzard.com/en/wow/t/bug-missing-quests-skyborne-druid-class-quests/2355854), [ForeverChanges 표범 변신 퀘스트](https://foreverchanges.pro/druid-cat-form), [Mobalytics 분실된 상자](https://mobalytics.gg/wow-forever/guides/waylaid-crates-explained)
-
 ## 장비 선택
 
 야성 드루이드의 첫 목표는 무기다. Forever에서는 무기 DPS가 곰·표범 피해에 들어가서, 20에 죽음의 폐광 Smite's Mighty Hammer, 30에 Viscous Hammer를 목표로 한다. 방어구는 가죽이고, 20대에는 송곳니 세트, 25 이후에는 직접 만든 싸움꾼의 가죽 세트로 채운다.
 
-- 스탯 우선순위(Icy Veins): 무기 DPS > 적중 > 치명타 > 힘 > 민첩 > 체력 > 정신력 > 지능. Forever는 적중과 치명타가 각각 하나의 스탯으로 합쳐졌다.
+- 스탯 우선순위: 무기 DPS > 적중 > 치명타 > 힘 > 민첩 > 체력 > 정신력 > 지능. Forever는 적중과 치명타가 각각 하나의 스탯으로 합쳐졌다.
 - 무기: 드루이드는 단검·장착 무기·둔기·지팡이·양손 둔기를 쓴다. 양손 둔기는 아이언포지 무기 전문가에게 배운다(클래식 기준). 스카이본 시작 무기와 무기 숙련은 확인되지 않았다.
-- 초반: 8레벨짐 경매장에서 초록 무기를 하나 사면 평타 DPS가 2에서 6 이상으로 오른다(Mobalytics). 새 무기는 숙련도가 낮으면 빗나감이 많으니 필드에서 올리고 던전에 간다.
+- 초반: 8레벨짐 경매장에서 초록 무기를 하나 사면 평타 DPS가 2에서 6 이상으로 오른다. 새 무기는 숙련도가 낮으면 빗나감이 많으니 필드에서 올리고 던전에 간다.
 - 가시는 걸 때의 주문력을 저장한다. 탱커는 주문력 장비 몇 개를 따로 챙겼다가 가시를 걸 때만 입는다.
 
 ### 송곳니 세트 (독사의 포옹, 통곡의 동굴)
@@ -421,7 +411,7 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 | 허리 | Belt of the Fang | Lady Anacondra |
 | 발 | Footpads of the Fang | Lord Serpentis |
 
-- 세트 효과(Wowhead Forever): 2세트 지능 +10, 3세트 전투력 +10, 4세트 체력 25% 이하에서 맞으면 5초간 생명력·마나 100 회복(5분에 한 번), 5세트 근접 공격에 확률적으로 1초 기절(Dream Venom).
+- 세트 효과: 2세트 지능 +10, 3세트 전투력 +10, 4세트 체력 25% 이하에서 맞으면 5초간 생명력·마나 100 회복(5분에 한 번), 5세트 근접 공격에 확률적으로 1초 기절(Dream Venom).
 - 뱀 모습: Icy Veins는 세트를 다 모으면 드루이드가 뱀으로 변신하고 종족마다 뱀 색이 다르며 은신하면 땅을 기는 모습이 된다고 전한다. wow.gg는 4세트 효과 이름을 Embrace of the Viper로 적어서, 뱀 모습이 4세트인지 5세트인지는 출처마다 다르다.
 - 요구 레벨이 14\~18이라 20대 중반에는 스탯이 밀린다. 뱀 모습을 계속 쓰려면 세트를 가방에 두고 필요할 때 갈아입는다. 싸움꾼의 가죽 다리보호대를 입으면 다리 칸이 겹쳐 5세트가 깨진다.
 - 보스별 드랍은 클래식 Wowhead 기준이다. 클래식에서 가슴(Pythas)이 가장 잘 나오고 나머지는 여러 번 돌아야 한다.
@@ -436,11 +426,11 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 | 가슴 | Tunic of Westfall | 퀘스트 데피아스 형제단 (서부 몰락지대) |
 | 손목 | Witherbite Bracers | 로데론의 폐허, Witherfang |
 | 반지 | First Mate Band | 죽음의 폐광, 미스터 스마이트 |
-| 손·다리·발 등 | 송곳니 세트 | 통곡의 동굴 (ForeverChanges 20 BiS) |
+| 손·다리·발 등 | 송곳니 세트 | 통곡의 동굴 |
 
 영주의 전당에서는 Golemheart Stave(플런더), 가죽 장갑 Flamefist Grips, 가죽 다리 Direhammer Leggings가 쓸 만하다.
 
-### 30레벨 BiS (ForeverChanges)
+### 30레벨 BiS
 
 | 부위 | 아이템 | 얻는 곳 |
 | --- | --- | --- |
@@ -464,8 +454,6 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 - ForeverChanges 페이지는 탱커 목록을 따로 보여주지 않는다. 곰 탱커는 같은 목록에 체력·방어도 장비를 섞는다.
 - 아이템 이름은 한글판 번역이 확인되지 않아 영문으로 적었다. 베타 초기 목록이라 순위·드랍처는 바뀔 수 있다.
 
-출처: [ForeverChanges 드루이드 BiS](https://foreverchanges.pro/bis/druid), [Wowhead 독사의 포옹](https://www.wowhead.com/forever/item-set=162), [Icy Veins 드루이드 뱀 변신](https://www.icy-veins.com/wow-forever/news/new-druid-form-found-on-the-world-of-warcraft-forever-beta/), [wow.gg 세트 효과](https://wow.gg/guides/wow-forever-tier-set-bonuses), [Icy Veins 야성](https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide)
-
 ## 추천 전문기술
 
 이 드루이드는 무두질 + 가죽세공으로 간다. 사냥하며 잡은 야수에서 가죽을 벗기고, 그 가죽으로 자기 싸움꾼의 가죽 장비를 만든다. 싸움꾼의 가죽 다리보호대는 착용 시 귀속이라 입을 캐릭터가 직접 만들어야 한다. 세 캐릭터 분담(주술사 약초채집·연금술, 흑마법사 재봉술·마법부여)을 정한 스레드의 결론이다.
@@ -486,7 +474,7 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 | Brawler's Leather Tunic | 110 | 상인의 호의 30 |
 | Brawler's Leather Legguards (싸움꾼의 가죽 다리보호대) | 125 | 상인의 호의 30 |
 
-- 상인의 호의(Merchant's Favor)는 필드에서 나오는 분실된 상자(Waylaid Crate)에 요구 재료(예: 리넨 천, 얇은 가죽)를 채워 반납하면 받는다. 상자 하나에 5, 첫 상자는 보너스로 55를 줘서 도안 하나를 바로 산다(Mobalytics).
+- 상인의 호의(Merchant's Favor)는 필드에서 나오는 분실된 상자(Waylaid Crate)에 요구 재료(예: 리넨 천, 얇은 가죽)를 채워 반납하면 받는다. 상자 하나에 5, 첫 상자는 보너스로 55를 줘서 도안 하나를 바로 산다.
 - 얼라이언스 반납처는 엘윈 숲과 붉은마루 산맥 경계의 Marcy Baker(엘윈 9.7, 70.9)이고, 옆 캠프에 도안 상인이 있다. wow-professions.com은 싸움꾼 도안 상인을 십자로 옆 Pawani(호드 쪽 캠프)로만 적어서, 얼라이언스 캠프에서도 같은 도안을 파는지는 게임에서 확인한다.
 - 30레벨 BiS의 Brawler's Leather Helm은 ForeverChanges 가죽세공 목록(100\~130 구간)에 있고, 필요 스킬과 파는 곳은 확인하지 못했다.
 
@@ -510,9 +498,7 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 - 전문기술 150·225·300 달성은 레거시 포인트를 준다. 레거시의 Talented 특전이 특성 섹션의 추가 특성 포인트다.
 - 물약은 주술사(연금술)에게 받는다. Forever에서는 변신 중에도 물약을 마실 수 있다. 쓰지 않는 초록 장비는 흑마법사에게 우편으로 보내 마력 추출한다.
 
-전문기술 트레이너와 상인 위치는 [wow-professions.com Forever](https://www.wow-professions.com/forever)에서 찾는다.
-
-출처: [ForeverChanges 가죽세공](https://foreverchanges.pro/professions/leatherworking), [wow-professions 가죽세공 레벨업](https://www.wow-professions.com/forever/leatherworking-leveling-guide), [wow-professions Pawani](https://www.wow-professions.com/forever/npc/pawani), [Mobalytics 분실된 상자](https://mobalytics.gg/wow-forever/guides/waylaid-crates-explained)
+전문기술 트레이너와 상인 위치는 [wow-professions.com Forever]에서 찾는다.
 
 ## 스카이본 종족 특성
 
@@ -531,9 +517,7 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 - 언어는 다르나서스어다. 스카이본 드루이드의 종족 전용 무두질·가죽세공 보너스는 없다.
 - 공중 걷기의 정확한 수치와 지맥 읽기가 변신 중에도 쓰이는지는 게임 툴팁으로 확인한다.
 
-출처: [블리자드 스카이본 공지(한국어)](https://worldofwarcraft.blizzard.com/ko-kr/news/24302071), [Icy Veins 스카이본](https://www.icy-veins.com/wow-forever/skyborne-race-guide), [Wowhead 스카이본 드루이드 변신](https://www.wowhead.com/forever/news/skyborne-druid-forms-in-wow-forever-382861), [Wowhead 지맥 읽기](https://www.wowhead.com/forever/spell=1259705/read-ley-line)
-
-## 게임에서 확인할 것과 출처
+## 게임에서 확인할 것
 
 주문 이름은 한글 클래식 클라이언트 기준이고, 주요 야성 기술(포효, 후려치기, 휘둘러치기, 강타, 숨기, 칼날 발톱, 웅크리기, 광포한 재생력, 환생, 도전의 포효, 해독, 독 해제, 저주 해제, 겨울잠, 동물 달래기)은 Wowhead 한글판(클래식)에서 대조했다. 아래는 Forever 한글 클라이언트에서 확인하지 못한 부분이다. 매크로가 안 먹으면 주문서에서 Shift+클릭으로 이름을 넣는다.
 
@@ -547,4 +531,3 @@ Shift+E는 표범이 아니면 표범으로, 표범이면 질주다. 두 번 누
 - 던전: 기존 던전의 레벨과 몹 특징은 클래식 기준이다.
 - 파티 프레임·이름표 설정 메뉴의 정확한 위치는 Forever 클라이언트에서 확인이 필요하다.
 
-출처: [ForeverChanges 드루이드 변경점](https://foreverchanges.pro/class/druid), [ForeverChanges 드루이드 주문서](https://foreverchanges.pro/spellbook/druid), [ForeverChanges 드루이드 특성](https://foreverchanges.pro/talents/druid), [ForeverChanges 드루이드 BiS](https://foreverchanges.pro/bis/druid), [Icy Veins 야성](https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide), [Wowhead 20레벨 야성 딜러](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-dps-overview), [Wowhead 20레벨 곰 탱커](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-tank-overview), [wow-professions.com Forever](https://www.wow-professions.com/forever). 관련 문서: [포에버 매크로 교본](../tools/macro-guide.html), [노움 흑마법사 가이드](warlock.md), [드워프 고양 주술사 가이드](shaman.md).

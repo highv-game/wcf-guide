@@ -42,7 +42,7 @@
 1. 숨기로 접근해 몹 뒤로 돈다.
 2. 오프너: 20\~21은 할퀴기, 22부터 칼날 발톱, 24부터는 출혈이 들어가는 갈퀴 발톱.
 3. 연계 점수 쌓기: 뒤에 있으면 칼날 발톱, 정면이면 할퀴기.
-4. 마무리: 연계 점수 4\~5개에 몹이 6초 이상 버틸 것 같으면 도려내기, 아니면 할퀴기를 계속 누른다(Wowhead).
+4. 마무리: 연계 점수 4\~5개에 몹이 6초 이상 버틸 것 같으면 도려내기, 아니면 할퀴기를 계속 누른다.
 5. 청명의 전조가 켜지면 다음 기술이 무료다. 가장 비싼 칼날 발톱에 쓴다.
 6. 24부터 맹공격은 전투 시작 직전에 켜둔다.
 
@@ -61,8 +61,6 @@
 - 변신은 매번 마나를 쓴다. 전투 중 힐은 한 번만 하고, 완전히 회복하는 건 전투 뒤에 한다.
 - 통곡의 동굴 송곳니 세트 5부위를 모두 입으면 표범이 뱀 모습이 된다. 근접 공격 시 기절 효과(Dream Venom)가 붙는다는 주장은 한 곳에서만 확인됐다.
 - Forever에서는 변신 재변신으로 기력을 얻는 파워시프팅이 사라졌다.
-
-출처: [ForeverChanges 드루이드 주문서](https://foreverchanges.pro/spellbook/druid), [Wowhead 20레벨 야성 딜러](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-dps-overview), [Wowhead 20레벨 곰 탱커](https://www.wowhead.com/forever/guide/classes/druid/feral/level-20-tank-overview), [Icy Veins 야성](https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide)
 
 ## 매크로 구성
 

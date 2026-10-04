@@ -23,11 +23,9 @@
 
 단축키 배치는 기존 주술사·드루이드·흑마법사 가이드와 같은 틀(1 주력, 4 마우스오버 군중 제어, Q·E 보조 공격, Z 버프, T 부활 계열)이다. 사제는 힐이 있으니 Ctrl+1\~4에는 마우스오버 치유·보호막·해제를 모았다. Shift+숫자는 쓰지 않는다.
 
-출처: [ForeverChanges 사제 변경점](https://foreverchanges.pro/class/priest), [Mobalytics 암흑 사제](https://mobalytics.gg/wow-forever/classes/shadow-priest-guide)
-
 ## 특성 빌드 (1\~30레벨)
 
-30레벨까지 21포인트를 수양 2 + 암흑 19로 나누는 2/0/19 빌드를 추천한다(Mobalytics). 먼저 마법봉을 강하게 만들고, 정신력 누출로 쉬는 시간을 줄인 뒤, 정신의 채찍과 흡혈의 선물까지 간다. 특성 포인트는 10레벨부터 레벨당 1개씩 받고, 5포인트마다 다음 단이 열린다.
+30레벨까지 21포인트를 수양 2 + 암흑 19로 나누는 2/0/19 빌드를 추천한다. 먼저 마법봉을 강하게 만들고, 정신력 누출로 쉬는 시간을 줄인 뒤, 정신의 채찍과 흡혈의 선물까지 간다. 특성 포인트는 10레벨부터 레벨당 1개씩 받고, 5포인트마다 다음 단이 열린다.
 
 | 레벨 | 특성 | 효과 |
 | --- | --- | --- |
@@ -54,8 +52,6 @@
 
 영문으로 두었던 특성은 Forever 신규라 한글 이름을 확인하지 못한 것이다.
 
-출처: [ForeverChanges 사제 특성](https://foreverchanges.pro/talents/priest), [Mobalytics 암흑 사제](https://mobalytics.gg/wow-forever/classes/shadow-priest-guide), [Mobalytics 사제 레벨업](https://mobalytics.gg/wow-forever/classes/priest-leveling-guide)
-
 ## 공통 단축키와 기본 매크로
 
 솔플·던전 모두 이 배치를 그대로 쓴다. 수정키 규칙은 주술사·드루이드·흑마법사 가이드와 같다.
@@ -81,7 +77,7 @@
 | T | 부활 | 마우스오버 부활(10) | Shift: 정신 지배(30) |
 | X / C / V | 표시 | - | Shift: 해골 / X / 달 |
 
-괄호 숫자는 배우는 레벨(ForeverChanges 주문서). 아직 안 배운 칸은 비워 두면 된다. 30레벨 천상의 정신·어둠의 보호는 전투 밖에서만 쓰니 추가 바에 두고 마우스로 누른다.
+괄호 숫자는 배우는 레벨. 아직 안 배운 칸은 비워 두면 된다. 30레벨 천상의 정신·어둠의 보호는 전투 밖에서만 쓰니 추가 바에 두고 마우스로 누른다.
 
 ### 1. 선공 (키 1)
 
@@ -187,7 +183,7 @@ Confounding Flash는 8미터 안 적 최대 5명을 3초 동안 혼란시킨다.
 - 신의 권능: 인내와 내면의 열정(12)을 유지한다. Forever 내면의 열정은 방어도 보너스 15%, 충전 +4회로 강해졌다.
 - 마법봉을 최대한 빨리 구한다. 10레벨 마법봉류 전문화와 같이 레벨업 속도가 크게 달라진다. 장비 선택 섹션 참고.
 
-### 한 마리 잡는 순서 (Mobalytics)
+### 한 마리 잡는 순서
 
 1. **보호막**: 당기기 전에 내게 신의 권능: 보호막(E). 보호막이 있으면 맞아도 주문이 밀리지 않는다.
 2. **선공**: 정신 분열(1)로 큰 피해를 먼저 넣는다. 10레벨 전에는 성스러운 일격.
@@ -220,8 +216,6 @@ Confounding Flash는 8미터 안 적 최대 5명을 3초 동안 혼란시킨다.
 | 언데드 몹 둘 | 하나는 언데드 속박(Alt+4, 20)으로 묶어두고 다른 하나를 잡는다 |
 | 마나 부족 | 정신 분열을 빼고 보호막·고통·마법봉만 쓴다 |
 
-출처: [Mobalytics 사제 레벨업](https://mobalytics.gg/wow-forever/classes/priest-leveling-guide), [ForeverChanges 사제 주문서](https://foreverchanges.pro/spellbook/priest)
-
 ## 던전
 
 던전에서 암사의 가치는 딜에 더해 흡혈의 선물(파티 치유), 보호막, 해제, 버프에서 나온다. 힐러 마나가 바닥나면 급한 불을 대신 끄는 것도 암사 몫이다. Forever에는 자동 파티 찾기가 없으니 파티 찾기 목록에 "암사, 흡선·보조힐 가능"을 적으면 파티가 잘 구해진다.
@@ -236,7 +230,7 @@ Confounding Flash는 8미터 안 적 최대 5명을 3초 동안 혼란시킨다.
 ### 전투 순서
 
 1. **진입**: 탱커가 몹을 잡고 2\~3초 뒤에 시작한다. 탱커 대상 가져오기는 아래 따라 때리기 키를 쓴다.
-2. **지속 피해**: 오래 사는 몹마다 키 3(마우스오버 고통)을 건다(Mobalytics). 금방 죽을 몹에는 걸지 않는다.
+2. **지속 피해**: 오래 사는 몹마다 키 3(마우스오버 고통)을 건다. 금방 죽을 몹에는 걸지 않는다.
 3. **흡혈의 선물**: 27레벨부터 해골 몹에 Alt+3. 이후 내 암흑 피해의 20%가 파티 전체를 치유한다. Forever에서 지속이 30초라 긴 전투에서는 다시 건다.
 4. **채우기**: 정신 분열(1) 재사용 대기마다, 나머지는 정신의 채찍(Q). 마나가 모자라면 마법봉.
 5. **보조**: 탱커가 아닌 파티원이 맞으면 보호막(Ctrl+2), 저주나 마법 디버프는 마법 무효화(Ctrl+4), 질병은 질병 치료(G).
@@ -316,7 +310,7 @@ Confounding Flash는 8미터 안 적 최대 5명을 3초 동안 혼란시킨다.
 
 레벨업 암사의 첫 목표는 마법봉이고, 30레벨 BiS는 절반이 재봉술 제작품(Shadow 세트)이다.
 
-**스탯 규칙**: 지능·정신력 우선, 레벨업 중에는 체력도 챙긴다. 힘·민첩은 피한다(Mobalytics). 정신력은 정신력 누출과 겹쳐 레벨업 중 마나 회복을 크게 늘린다.
+**스탯 규칙**: 지능·정신력 우선, 레벨업 중에는 체력도 챙긴다. 힘·민첩은 피한다. 정신력은 정신력 누출과 겹쳐 레벨업 중 마나 회복을 크게 늘린다.
 
 **무기**: 지팡이나 한손 둔기·단검 + 보조장비. 30 BiS는 단검 + 보주다.
 
@@ -330,7 +324,7 @@ Confounding Flash는 8미터 안 적 최대 5명을 3초 동안 혼란시킨다.
 
 마법봉 DPS는 Mobalytics 수치다. 노움 흑마법사가 마법부여를 올리면 하급·상급 마법봉을 만들어 우편으로 보낼 수 있다.
 
-### 30레벨 BiS (ForeverChanges 암사 PvE)
+### 30레벨 BiS
 
 | 부위 | 아이템 | 얻는 곳 |
 | --- | --- | --- |
@@ -354,8 +348,6 @@ Confounding Flash는 8미터 안 적 최대 5명을 3초 동안 혼란시킨다.
 
 재봉술 5부위(머리·가슴·손·다리·발), 기계공학 장신구 2개, 마법부여 보주가 들어 있다. 이 제작품이 착용 시 귀속이면 다른 캐릭터가 만들어 보낼 수 있고, 획득 시 귀속이면 암사가 직접 배워야 한다. 귀속 여부는 확인하지 못했다. 아이템 이름은 ForeverChanges 영문 그대로 두었다.
 
-출처: [ForeverChanges 사제 BiS](https://foreverchanges.pro/bis/priest), [Mobalytics 암흑 사제](https://mobalytics.gg/wow-forever/classes/shadow-priest-guide)
-
 ## 추천 전문기술
 
 암사 혼자라면 재봉술 + 마법부여, 노움 흑마법사와 같이 키운다면 재봉술 + 기계공학을 추천한다. 30레벨 BiS 17칸 중 재봉술 5칸, 기계공학 2칸, 마법부여 1칸이 제작품이다.
@@ -377,9 +369,7 @@ Confounding Flash는 8미터 안 적 최대 5명을 3초 동안 혼란시킨다.
 
 - 응급치료·요리·낚시는 다른 캐릭터와 똑같이 올린다. 사제는 치유 주문이 있어서 응급치료는 우선순위가 낮다.
 - 전문기술 150·225·300 달성은 레거시 포인트를 준다.
-- 전문기술 트레이너와 상인 위치는 [wow-professions.com Forever](https://www.wow-professions.com/forever)에서 찾는다.
-
-출처: [ForeverChanges 사제 BiS](https://foreverchanges.pro/bis/priest), [Mobalytics 암흑 사제](https://mobalytics.gg/wow-forever/classes/shadow-priest-guide)
+- 전문기술 트레이너와 상인 위치는 [wow-professions.com Forever]에서 찾는다.
 
 ## 노움 종족 특성
 
@@ -403,9 +393,7 @@ Forever 노움은 마나가 늘고 필요할 때 주문 3개를 싸고 강하게
 
 유레카의 정확한 감소량·재사용 대기와 Contingency Plan 하위 랭크 수치는 게임 툴팁으로 확인한다.
 
-출처: [Warcraft Tavern 사제 종족 특성](https://www.warcrafttavern.com/forever/news/priest-racials-in-world-of-warcraft-forever-fear-ward-is-baseline/), [Warcraft Tavern 전체 종족 특성](https://www.warcrafttavern.com/forever/news/all-racial-abilities-in-world-of-warcraft-forever/), [ForeverChanges 사제 주문서](https://foreverchanges.pro/spellbook/priest), [Icy Veins 사제 개요](https://www.icy-veins.com/wow-forever/priest-class-overview)
-
-## 게임에서 확인할 것과 출처
+## 게임에서 확인할 것
 
 주문·특성 한글 이름은 Wowhead 한글판(클래식, 어둠의 권능: 죽음은 불타는 성전)에서 대조했다. 아래는 Forever 한글 클라이언트에서 확인하지 못한 부분이다. 매크로가 안 먹으면 주문서에서 Shift+클릭으로 이름을 넣는다.
 
@@ -418,4 +406,3 @@ Forever 노움은 마나가 늘고 필요할 때 주문 3개를 싸고 강하게
 - **던전**: 기존 던전의 레벨과 몹 특징은 클래식 기준이다.
 - **베타 패치**: 수치는 2026년 9월\~10월 자료 기준이라 베타 패치로 바뀔 수 있다.
 
-출처: [ForeverChanges 사제 변경점](https://foreverchanges.pro/class/priest), [ForeverChanges 사제 특성](https://foreverchanges.pro/talents/priest), [ForeverChanges 사제 주문서](https://foreverchanges.pro/spellbook/priest), [ForeverChanges 사제 BiS](https://foreverchanges.pro/bis/priest), [Mobalytics 암흑 사제](https://mobalytics.gg/wow-forever/classes/shadow-priest-guide), [Mobalytics 사제 레벨업](https://mobalytics.gg/wow-forever/classes/priest-leveling-guide), [Icy Veins 사제 개요](https://www.icy-veins.com/wow-forever/priest-class-overview), [Warcraft Tavern 사제 종족 특성](https://www.warcrafttavern.com/forever/news/priest-racials-in-world-of-warcraft-forever-fear-ward-is-baseline/). 관련 문서: [노움 흑마법사 가이드](warlock.md), [포에버 매크로 교본](../tools/macro-guide.html).

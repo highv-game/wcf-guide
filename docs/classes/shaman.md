@@ -13,8 +13,6 @@
 - **Forever 핵심 변경**: 무기 강화가 60분 지속된다. 토템 사거리 30m, 지속 5분으로 늘었다. 원소의 부름으로 토템 4개를 한 번에 깔고, 토템의 귀환으로 마나 25%를 돌려받는다. 불꽃 회오리는 토템이 아니라 깔아 둔 불 토템 주변에 터지는 주문이다(재사용 10초). 신규 특성 Mental Dexterity는 지능의 33%를 전투력으로 바꾸고, 폭풍의 일격은 4단으로 내려와 25레벨에 찍는다.
 - **단축키**는 흑마법사·야성 드루이드 가이드와 같은 틀이다. 1 주력, 4 마우스오버 차단, Ctrl+1\~4 마우스오버 힐·해제, Alt+숫자 변형, Shift+알파벳 가끔 쓰는 것, T 부활 계열. Shift+숫자는 쓰지 않는다.
 
-출처: [ForeverChanges 주술사 변경점](https://foreverchanges.pro/class/shaman), [Warcraft Tavern 주술사](https://www.warcrafttavern.com/forever/guides/shaman/)
-
 ## 특성 빌드 (1\~30레벨)
 
 30레벨까지 21포인트를 전부 고양에 넣는 0/21/0 빌드를 추천한다. 치명타와 전투력을 먼저 올리고, 20에 마나 문제를 줄이고, 25에 폭풍의 일격을 얻는 것이 목표다. 특성 포인트는 10레벨부터 레벨당 1개씩 받고, 5포인트마다 다음 단이 열린다.
@@ -44,8 +42,6 @@
 - **정기**: 번개 화살 위주 캐스터다. 마나 효율이 낮아 30까지는 레벨업이 느리다.
 - **복원**: 던전 힐러용. Forever에는 3단에 물의 보호막(Water Shield)이 신규로 들어왔다. 힐러가 귀한 파티를 자주 구한다면 이차 특성으로 있을 만하다.
 
-출처: [ForeverChanges 주술사 특성](https://foreverchanges.pro/talents/shaman), [Mobalytics 고양 주술사](https://mobalytics.gg/wow-forever/classes/enhancement-shaman-guide), [Mobalytics 주술사 레벨링](https://mobalytics.gg/wow-forever/classes/shaman-leveling-guide), [Icy Veins 고양 주술사](https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-guide)
-
 ## 공통 단축키와 기본 매크로
 
 솔플·던전·법사 2인 모두 이 배치를 그대로 쓴다. 주술사는 변신 바가 없어서(늑대 정령은 바가 안 바뀐다) 한 번 놓으면 끝이다. 수정키 규칙은 흑마법사·드루이드 가이드와 같다.
@@ -71,7 +67,7 @@
 | T | 부활 | 마우스오버 고대의 영혼(12, 전투 밖) | Shift: 수중 호흡(22) |
 | X / C / V | 표시 | - | Shift: 해골 / X / 달 |
 
-괄호 숫자는 배우는 레벨(ForeverChanges 주문서). 아직 안 배운 칸은 비워 두면 된다. 예전 문서에서 바뀐 점은 세 가지다. 불꽃 회오리는 Shift+F에서 Alt+3으로 옮겼고(Alt가 Shift보다 편하고 던전에서 자주 쓴다), 토템 재배치(Shift+E)와 수중 호흡(Shift+T)을 더했다.
+괄호 숫자는 배우는 레벨. 아직 안 배운 칸은 비워 두면 된다. 예전 문서에서 바뀐 점은 세 가지다. 불꽃 회오리는 Shift+F에서 Alt+3으로 옮겼고(Alt가 Shift보다 편하고 던전에서 자주 쓴다), 토템 재배치(Shift+E)와 수중 호흡(Shift+T)을 더했다.
 
 ### 1. 주력 공격 (키 1)
 
@@ -196,7 +192,7 @@ T는 죽은 파티원 프레임에 마우스를 올리고 누르는 부활이다
 5. **시전하는 몹**: 대지 충격(4)으로 끊는다.
 6. **전투 후**: 체력이 낮으면 하급 치유의 물결(Ctrl+1) 한 번. 마나가 반 아래면 앉아서 물을 마신다.
 
-30에 Improved Stormstrike를 찍은 뒤에는 폭풍의 일격 재사용이 초기화되면 바로 키 1을 다시 누른다(Icy Veins).
+30에 Improved Stormstrike를 찍은 뒤에는 폭풍의 일격 재사용이 초기화되면 바로 키 1을 다시 누른다.
 
 ### 레벨별 변화
 
@@ -286,7 +282,7 @@ Icy Veins 30레벨 던전 세트는 대지력 / 불꽃의 토템 / 마나샘 / �
 | 영주의 전당 (아이언포지 지하, 신규) | 13\~18 | 드워프 시작 지역 바로 아래라 첫 던전. 소환사가 나오는 마그마투스는 소환사부터 차단하며 잡는다 |
 | 로데론의 폐허 (티리스팔 숲, 신규) | 15\~20 | 언데드가 많다. 호드 쪽 보상인 Forsaken Greataxe는 얼라이언스가 못 받는다 |
 | 통곡의 동굴 (불모의 땅) | 17\~24 | 송곳니 군주들의 수면 주문을 대지 충격으로 끊기, 진동의 토템(수면 해제), 독에 해독. 드루이드 송곳니 세트 파밍에 합류하기 좋다 |
-| 데드마인 (서부 몰락지대) | 클래식 17\~26 | 얼라이언스 20레벨 무기 Smite's Mighty Hammer(Mobalytics). 몹이 촘촘해 불꽃 회오리는 탱커 확인 후에만 |
+| 데드마인 (서부 몰락지대) | 클래식 17\~26 | 얼라이언스 20레벨 무기 Smite's Mighty Hammer. 몹이 촘촘해 불꽃 회오리는 탱커 확인 후에만 |
 | 스톡케이드 (스톰윈드) | 클래식 22\~30 | 사람 몹 무리가 촘촘하다. 불꽃 회오리 광역이 잘 들어간다 |
 | 그림자송곳니 성채 | 클래식 22\~30 | 주술사는 저주 해제가 없다. 마법 버프 몹에 정화 |
 | 놈리건 | 클래식 24\~34 | 퀘스트 A Fine Mess 보상 Technician's Bracers가 30레벨 BiS 손목 |
@@ -384,22 +380,20 @@ Forever 드워프 주술사는 원소별 퀘스트로 토템을 받는다. 보�
 
 ### 주술사 육성 팁
 
-- 1\~19는 최대 피해가 높은 양손 무기면 된다. 속도는 크게 상관없다(Mobalytics). 25에 폭풍의 일격을 배운 뒤부터 느린 양손 무기를 고른다.
+- 1\~19는 최대 피해가 높은 양손 무기면 된다. 속도는 크게 상관없다. 25에 폭풍의 일격을 배운 뒤부터 느린 양손 무기를 고른다.
 - 트레이너에게 자주 간다. 짝수 레벨마다 새 랭크가 나오고, 번개 보호막·대지 충격 랭크가 사냥 속도를 크게 바꾼다.
 - Forever는 던전 몹 경험치가 줄고 던전 퀘스트 경험치가 늘었다. 던전은 퀘스트를 다 받은 상태로 한 번 도는 게 핵심이다.
-- 가죽세공 텐트가 있는 모닥불에서는 휴식 경험치 5%를 준다(Mobalytics). 드루이드가 가죽세공이니 같이 다닐 때 켜 달라고 한다.
+- 가죽세공 텐트가 있는 모닥불에서는 휴식 경험치 5%를 준다. 드루이드가 가죽세공이니 같이 다닐 때 켜 달라고 한다.
 - 베타 만렙(30)에 닿으면 끝낸 퀘스트는 반납하지 말고 쌓아두었다가 다음 개방 직후 한꺼번에 반납한다.
-
-출처: [Warcraft Tavern 드워프 주술사 토템 퀘스트](https://www.warcrafttavern.com/forever/guides/dwarf-shaman-totem-quests/), [Mobalytics 주술사 레벨링](https://mobalytics.gg/wow-forever/classes/shaman-leveling-guide), [ForeverChanges 주술사 주문서](https://foreverchanges.pro/spellbook/shaman)
 
 ## 장비 선택
 
 레벨업 고양 주술사의 첫 목표는 느리고 강한 양손 둔기다. 30레벨 BiS 방어구 4부위가 가죽세공 제작품이라 드루이드 부캐가 만들어 보낼 수 있고, 성물은 흑마법사의 마법부여 제작품이다.
 
-- **스탯 규칙(레벨업 기준)**: 무기 DPS > 치명타 > 힘 > 지능 > 민첩 > 주문력 > 정신력 > 체력(Icy Veins). 힘은 전투력 2, 지능은 Mental Dexterity로 전투력과 마나를 같이 준다. Mobalytics는 주문력을 "매우 비효율"로 본다.
-- **무기**: 양손 둔기 > 양손 도끼. 드워프는 둔기 치명타 +1%라 같은 성능이면 둔기다. 30까지 쌍수는 없다(ForeverChanges BiS).
+- **스탯 규칙(레벨업 기준)**: 무기 DPS > 치명타 > 힘 > 지능 > 민첩 > 주문력 > 정신력 > 체력. 힘은 전투력 2, 지능은 Mental Dexterity로 전투력과 마나를 같이 준다. Mobalytics는 주문력을 "매우 비효율"로 본다.
+- **무기**: 양손 둔기 > 양손 도끼. 드워프는 둔기 치명타 +1%라 같은 성능이면 둔기다. 30까지 쌍수는 없다.
 - **방어구**: 가죽. 사슬은 40레벨부터다(클래식 기준).
-- **성물 칸**: 주술사는 성물 칸에 토템을 끼운다(Warcraft Tavern).
+- **성물 칸**: 주술사는 성물 칸에 토템을 끼운다.
 
 ### 무기 순서
 
@@ -411,7 +405,7 @@ Forever 드워프 주술사는 원소별 퀘스트로 토템을 받는다. 보�
 
 Hammerbone(통곡의 동굴 퀘스트 Leaders of the Fang)과 Forsaken Greataxe(로데론의 폐허)는 호드 쪽 20레벨 추천이라 얼라이언스는 못 받는다.
 
-### 30레벨 BiS (ForeverChanges)
+### 30레벨 BiS
 
 | 부위 | 아이템 | 얻는 곳 |
 | --- | --- | --- |
@@ -434,8 +428,6 @@ Hammerbone(통곡의 동굴 퀘스트 Leaders of the Fang)과 Forsaken Greataxe(
 - 가죽세공 4부위(머리·가슴·허리·다리)는 드루이드가 만들어 우편으로 보낸다. 그러려면 제작품이 착용 시 귀속(BoE)이어야 하는데, 이 네 가지는 확인하지 못했다. 클래식 가죽세공 제작품은 대부분 착용 시 귀속이다.
 - 성물 Polished Driftwood Icon은 흑마법사의 마법부여 도안이다. 필요한 스킬은 찾지 못했다.
 - 아이템 이름은 한글판 번역이 확인되지 않아 영문으로 적었다. 베타 초기 목록이라 순위·드랍처는 바뀔 수 있다.
-
-출처: [ForeverChanges 고양 주술사 BiS](https://foreverchanges.pro/bis/shaman/enhancement), [Mobalytics 주술사 레벨링](https://mobalytics.gg/wow-forever/classes/shaman-leveling-guide), [Icy Veins 고양 주술사](https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-guide)
 
 ## 추천 전문기술
 
@@ -476,8 +468,6 @@ Hammerbone(통곡의 동굴 퀘스트 Leaders of the Fang)과 Forsaken Greataxe(
 - 응급치료·요리·낚시는 다른 캐릭터와 같이 올린다. 전문기술 150·225·300 달성은 레거시 포인트를 준다.
 - 레거시 전문기술 특전 Bountiful Harvest는 희귀 재료를 20\~100% 더 주고, Working Overtime은 스킬 상승 확률을 4\~20% 올린다. 베타에서는 전문기술이 225에서 막힌다.
 
-출처: [ForeverChanges 연금술](https://foreverchanges.pro/professions/alchemy), [ForeverChanges 약초채집](https://foreverchanges.pro/professions/herbalism), [Icy Veins 고양 주술사](https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-guide), [wow-professions.com Forever](https://www.wow-professions.com/forever)
-
 ## 드워프 종족 특성
 
 Forever 드워프는 총기류 전문화와 냉기 저항이 빠지고 아래 네 가지가 됐다. 고양 주술사가 전부 쓸 수 있고, Mobalytics도 얼라이언스 고양 주술사 종족으로 드워프(둔기류 전문화, 석화, Big Game Hunter)를 꼽는다. 얼라이언스 주술사는 드워프뿐이라 고를 것도 없다.
@@ -491,9 +481,7 @@ Forever 드워프는 총기류 전문화와 냉기 저항이 빠지고 아래 �
 
 석화는 물리 피해만 줄이니 캐스터 몹에게는 효과가 적다. 마법 피해는 마법정화 토템(30)과 차단으로 막는다.
 
-출처: [Warcraft Tavern 드워프 종족 특성](https://www.warcrafttavern.com/forever/guides/dwarf-racials/), [Mobalytics 고양 주술사](https://mobalytics.gg/wow-forever/classes/enhancement-shaman-guide), [Icy Veins 종족·직업 조합](https://www.icy-veins.com/wow-forever/news/heres-the-playable-class-and-race-combos-in-world-of-warcraft-forever/)
-
-## 게임에서 확인할 것과 출처
+## 게임에서 확인할 것
 
 주문 이름은 한글 클래식 클라이언트 기준이고, 일부(늑대 정령, 대지력 토템, 속박의 토템, 마법정화 토템, 윤회, 석화, 둔기류 전문화)는 Wowhead 한글판(클래식)에서 직접 대조했다. 아래는 Forever 한글 클라이언트에서 확인하지 못한 부분이다. 매크로가 안 먹으면 주문서에서 Shift+클릭으로 이름을 넣는다.
 
@@ -507,4 +495,3 @@ Forever 드워프는 총기류 전문화와 냉기 저항이 빠지고 아래 �
 - **가죽세공 BiS 4부위의 귀속**: 착용 시 귀속이어야 드루이드가 만들어 보낼 수 있다.
 - **던전**: 기존 던전의 레벨과 몹 특징은 클래식 기준이다.
 
-출처: [ForeverChanges 주술사 변경점](https://foreverchanges.pro/class/shaman), [ForeverChanges 주술사 주문서](https://foreverchanges.pro/spellbook/shaman), [ForeverChanges 주술사 특성](https://foreverchanges.pro/talents/shaman), [ForeverChanges 고양 주술사 BiS](https://foreverchanges.pro/bis/shaman/enhancement), [Mobalytics 주술사 레벨링](https://mobalytics.gg/wow-forever/classes/shaman-leveling-guide), [Mobalytics 고양 주술사](https://mobalytics.gg/wow-forever/classes/enhancement-shaman-guide), [Icy Veins 고양 주술사](https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-guide), [Warcraft Tavern 주술사](https://www.warcrafttavern.com/forever/guides/shaman/), [Warcraft Tavern 토템 퀘스트](https://www.warcrafttavern.com/forever/guides/dwarf-shaman-totem-quests/). 관련 문서: [포에버 매크로 교본](../tools/macro-guide.html), [노움 흑마법사 가이드](warlock.md), [야성 드루이드 던전 가이드](../archive/druid-dungeon.md).

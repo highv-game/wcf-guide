@@ -12,8 +12,6 @@
 - Forever 핵심 변경: 지속 피해가 치명타로 터지고, 걸 때가 아니라 틱마다 버프를 계산한다. 디버프 칸 제한이 없어졌다. 고통의 저주는 '저주'에서 '파멸(Bane)'으로 이름이 바뀌어 무력화·원소의 저주와 같이 걸 수 있다(Bane of Agony). 생명력 전환은 정신력에 비례한다. 영혼의 가방은 재료 가방 칸에 들어간다.
 - 단축키 배치는 기존 주술사·야성 드루이드 가이드와 같은 틀(1 주력, 4 마우스오버 군중 제어, Q·E 보조 공격, Z 버프, T 부활 계열)을 쓰고, Ctrl+1\~4에는 마우스오버 지속 피해와 소환수 치유를 모았다. Shift+숫자는 쓰지 않는다.
 
-출처: [ForeverChanges 흑마법사 변경점](https://foreverchanges.pro/class/warlock), [Warcraft Tavern 흑마법사](https://www.warcrafttavern.com/forever/guides/warlock/)
-
 ## 특성 빌드 (1\~30레벨)
 
 30레벨까지 21포인트를 전부 고통에 넣는 21/0/0 빌드를 추천한다. 부패를 즉시 시전으로 만들고, 흡수 주문을 강하게 해서 쉬는 시간을 줄이는 것이 목표다. 특성 포인트는 10레벨부터 레벨당 1개씩 받고, 5포인트마다 다음 단이 열린다.
@@ -36,13 +34,11 @@
 
 ### 다른 특성을 고를 때
 
-- 악마: 소환수가 강해지고 생존이 좋다. 30레벨 정도면 서큐버스 연마(Improved Sayaad), Demonic Brand, 영혼의 고리를 목표로 한다(Warcraft Tavern). 악마의 희생은 Forever에서 3단으로 내려오고 지속 2시간이다.
+- 악마: 소환수가 강해지고 생존이 좋다. 30레벨 정도면 서큐버스 연마(Improved Sayaad), Demonic Brand, 영혼의 고리를 목표로 한다. 악마의 희생은 Forever에서 3단으로 내려오고 지속 2시간이다.
 - 파괴: 어둠의 연소(3단), 점화(4단으로 내려옴, 제물 지우며 피해), Bane of Havoc(5단, 다른 대상 피해의 15%를 표시 대상에 전달)을 얻는다. 던전 위주일 때 어울린다.
 - 악마 트리에는 Forever 신규 Portal of Summoning(의식으로 파티 여러 명 소환)이 있다. 30레벨까지는 닿지 않는다.
 
 특성 이름은 Wowhead 한글판(클래식) 이름이고, 영문은 Forever 신규라 한글 이름을 확인하지 못한 특성이다.
-
-출처: [ForeverChanges 흑마법사 특성](https://foreverchanges.pro/talents/warlock), [Mobalytics 흑마법사 레벨업](https://mobalytics.gg/wow-forever/classes/warlock-leveling-guide), [Mobalytics 고통 흑마법사](https://mobalytics.gg/wow-forever/classes/affliction-warlock-guide)
 
 ## 공통 단축키와 기본 매크로
 
@@ -69,7 +65,7 @@
 | T | 영혼석·소환 | 마우스오버 영혼석 사용 | Shift: 소환 의식(20) |
 | X / C / V | 표시 | - | Shift: 해골 / X / 달 |
 
-괄호 숫자는 배우는 레벨(ForeverChanges 주문서). 아직 안 배운 칸은 비워 두면 된다.
+괄호 숫자는 배우는 레벨. 아직 안 배운 칸은 비워 두면 된다.
 
 ### 1. 주력 공격 (키 1)
 
@@ -311,26 +307,24 @@ Forever는 신규 서큐버스/인큐버스가 한 자리를 쓰는 것으로 �
 ### 흑마법사 소환수 퀘스트
 
 - 임프: 클래식에서 노움·드워프 흑마법사는 콜드릿지 계곡 앤빌마르의 Alamar Grimm에게 Beginnings(4레벨)를 받아 남서쪽 동굴의 Frostmane 몹에게서 Feather Charm 3개를 모아 임프 소환을 배웠다. ForeverChanges 주문서는 임프 소환을 1레벨 기술로 적어서, Forever에서 퀘스트가 빠졌는지는 게임에서 확인한다.
-- 보이드워커 (10): 아이언포지 흑마법사 트레이너에게 퀘스트를 받는다. 클래식 얼라이언스 퀘스트는 Surena's Choker를 찾아 가져온 뒤 보이드워커를 불러내 쓰러뜨리는 흐름이다(Icy Veins). 소환한 보이드워커는 꽤 세니 체력과 마나를 채우고 시작한다.
+- 보이드워커 (10): 아이언포지 흑마법사 트레이너에게 퀘스트를 받는다. 클래식 얼라이언스 퀘스트는 Surena's Choker를 찾아 가져온 뒤 보이드워커를 불러내 쓰러뜨리는 흐름이다. 소환한 보이드워커는 꽤 세니 체력과 마나를 채우고 시작한다.
 - 서큐버스 (20): 도시 흑마법사 트레이너에게 받는다. 클래식에서는 여러 지역에서 재료를 모아 도시에서 서큐버스를 불러내 쓰러뜨린다. Forever는 주문서에 서큐버스와 인큐버스를 함께 올려둔다.
-- 지옥사냥개 (30): 클래식에서는 래치릿의 Strahad Farsan에게서 시작해 아이언포지 Krom Stoutarm, 저습지(Moldy Tome, Rod of Channeling 3개), 버데기 산어덕(Tattered Manuscript)을 거친다(Icy Veins). 30레벨 직후 가장 오래 걸리는 퀘스트다.
+- 지옥사냥개 (30): 클래식에서는 래치릿의 Strahad Farsan에게서 시작해 아이언포지 Krom Stoutarm, 저습지(Moldy Tome, Rod of Channeling 3개), 버데기 산어덕(Tattered Manuscript)을 거친다. 30레벨 직후 가장 오래 걸리는 퀘스트다.
 - 클래식 퀘스트 상세(NPC·동선)는 Forever에서 바뀌었을 수 있고 한글판 이름도 대조하지 못해 영문으로 적었다. 트레이너가 주는 퀘스트 안내를 우선한다.
 
 ### 흑마법사 육성 팁
 
-- 초반에는 어둠의 화살보다 마법봉이 빠르다(Warcraft Tavern). 마법부여 75에 하급 마법봉을 직접 만들 수 있다. 장비 선택 섹션 참고.
+- 초반에는 어둠의 화살보다 마법봉이 빠르다. 마법부여 75에 하급 마법봉을 직접 만들 수 있다. 장비 선택 섹션 참고.
 - 트레이너에게 자주 간다. 짝수 레벨마다 새 랭크가 나오고, 소환수 기술은 악마 트레이너에게 따로 산다.
 - Forever는 던전 몹 경험치가 줄고 던전 퀘스트 경험치가 늘었다. 던전은 퀘스트를 다 받은 상태로 한 번 도는 게 핵심이다.
 - 재봉술 재료인 리넨·양모는 사람 몹에게서 나온다. 던 모로 트로글·서부 몰락지대 데피아스 퀘스트를 빼먹지 않는다.
 - 베타 만렙(30)에 닿으면 끝낸 퀘스트는 반납하지 말고 쌓아두었다가 다음 개방 직후 한꺼번에 반납한다.
 
-출처: [warcraft.wiki.gg Beginnings](https://warcraft.wiki.gg/wiki/Beginnings), [Icy Veins 흑마법사 퀘스트(클래식)](https://icy-veins.com/wow-classic/warlock-quests-in-wow-classic), [ForeverChanges 흑마법사 주문서](https://foreverchanges.pro/spellbook/warlock)
-
 ## 장비 선택
 
 레벨업 흑마법사의 첫 목표는 마법봉이다. 이 캐릭터는 마법부여로 마법봉을, 재봉술로 천 방어구를 직접 만들 수 있어서 장비 대부분을 스스로 채운다.
 
-- 스탯 규칙(레벨업 기준): 주문력 > 정신력 > 지능 > 체력(Mobalytics). Forever의 생명력 전환은 정신력에 비례하니 정신력 장비가 치우기보다 좋다. Mobalytics 고통 가이드는 던전에서 지능·체력을 우선으로 본다.
+- 스탯 규칙(레벨업 기준): 주문력 > 정신력 > 지능 > 체력. Forever의 생명력 전환은 정신력에 비례하니 정신력 장비가 치우기보다 좋다. Mobalytics 고통 가이드는 던전에서 지능·체력을 우선으로 본다.
 - 무기: 지팡이나 한손 단검·도검. 노움 흑마법사는 지팡이·단검·한손 도검을 들 수 있다. Forever에서 도검 치명타 보너스는 인간 레이셜이다.
 - 방어구: 천. 재봉술 목표는 30레벨 BiS 표를 본다.
 
@@ -347,7 +341,7 @@ Forever는 신규 서큐버스/인큐버스가 한 자리를 쓰는 것으로 �
 
 클래식에서 하급 마법봉은 마법부여 10, 상급 마법봉은 70이었는데 ForeverChanges는 75·110으로 적었다. 마법부여 트레이너 목록에서 확인한다. 마법봉 한글 이름은 클래식 번역을 따랐다.
 
-### 30레벨 BiS (ForeverChanges)
+### 30레벨 BiS
 
 | 부위 | 아이템 | 얻는 곳 |
 | --- | --- | --- |
@@ -371,8 +365,6 @@ Forever는 신규 서큐버스/인큐버스가 한 자리를 쓰는 것으로 �
 - Staff of Soran'ruk는 클래식에서 그늘냇음 숲 Morganth의 흑마법사 전용 퀘스트 보상이다. 흑마 전용 지팡이라 안 놓치는 게 좋다.
 - 아이템 이름은 한글판 번역이 확인되지 않아 영문으로 적었다. 베타 초기 목록이라 순위·드랍처는 바뀔 수 있다.
 
-출처: [ForeverChanges 흑마법사 BiS](https://foreverchanges.pro/bis/warlock), [ForeverChanges 마법부여](https://foreverchanges.pro/professions/enchanting), [ForeverChanges 재봉술](https://foreverchanges.pro/professions/tailoring), [Mobalytics 고통 흑마법사](https://mobalytics.gg/wow-forever/classes/affliction-warlock-guide)
-
 ## 추천 전문기술
 
 이 흑마법사는 재봉술 + 마법부여로 간다. 재봉술로 자기 천 장비를 만들고, 마법부여로 마법봉을 만들며, 드루이드·주술사가 얻는 귀속 안 된 초록 장비를 마력 추출한다. 세 캐릭터 분담(드루이드 무두질·가죽세공, 주술사 약초채집·연금술)을 정한 스레드의 결론이다.
@@ -385,7 +377,7 @@ Forever는 신규 서큐버스/인큐버스가 한 자리를 쓰는 것으로 �
 ### 올리는 순서
 
 1. 재봉술 1\~75: 리넨 천으로 리넨 천 두루마리와 간단한 장비를 만든다. 초록 등급 장비는 입거나 바로 마력 추출한다.
-2. 마법부여는 재봉술로 만든 초록 장비와 다른 캐릭터에게 받은 초록 장비를 추출해 가루를 모으며 올린다. "만든 걸 추출한다"가 두 전문기술의 기본 순환이다(ForeverChanges).
+2. 마법부여는 재봉술로 만든 초록 장비와 다른 캐릭터에게 받은 초록 장비를 추출해 가루를 모으며 올린다. "만든 걸 추출한다"가 두 전문기술의 기본 순환이다.
 3. 마법부여 75에 하급 마법봉, 110에 상급 마법봉을 만들어 바로 든다.
 4. 재봉술 100\~125: 양모 천 구간. Forever 신규 Shadow Circlet(100)·Filigreed Shadow Circlet(125)·Shadow Gown(110)을 만든다.
 5. 재봉술 140·마법부여 140에 모닥불 설비를 한 단계씩 올린다.
@@ -400,11 +392,9 @@ Forever는 신규 서큐버스/인큐버스가 한 자리를 쓰는 것으로 �
 
 - 응급치료·요리·낚시는 다른 캐릭터와 똑같이 올린다. 응급치료는 마나 없이 체력을 채우는 수단이라 흑마법사에게 특히 쓸모 있다.
 - 전문기술 150·225·300 달성은 레거시 포인트를 준다. 레거시의 Talented 특전이 특성 섹션의 추가 특성 포인트다.
-- 영혼의 가방(Soul Pouch)은 재봉술 도안이고, Forever에서는 재료 가방 칸에 들어간다(Warcraft Tavern). 필요한 스킬은 클래식 기준 260이라 30레벨 구간에서는 경매장에서 작은 영혼의 가방을 산다.
+- 영혼의 가방(Soul Pouch)은 재봉술 도안이고, Forever에서는 재료 가방 칸에 들어간다. 필요한 스킬은 클래식 기준 260이라 30레벨 구간에서는 경매장에서 작은 영혼의 가방을 산다.
 
-전문기술 트레이너와 상인 위치는 [wow-professions.com Forever](https://www.wow-professions.com/forever)에서 찾는다.
-
-출처: [ForeverChanges 전문기술](https://foreverchanges.pro/professions), [ForeverChanges 재봉술](https://foreverchanges.pro/professions/tailoring), [ForeverChanges 마법부여](https://foreverchanges.pro/professions/enchanting), [Warcraft Tavern 흑마법사](https://www.warcrafttavern.com/forever/guides/warlock/)
+전문기술 트레이너와 상인 위치는 [wow-professions.com Forever]에서 찾는다.
 
 ## 노움 종족 특성
 
@@ -418,12 +408,10 @@ Forever 노움은 레이셜이 아래 네 가지로 바뀌다. 마나가 늘고 
 | 기계공학 전문화 | 기계공학 장치가 덜 실패한다 | 이 캐릭터는 기계공학을 안 하니 효과 없음 |
 
 - 인간과 비교: 인간은 정신력 +5%(생명력 전환과 궁합이 좋다)와 기절 해제를 갖는다. 마나 총량과 순간 폭딥은 노움, 생존과 PvP는 인간이 조금 낫다.
-- 클래식의 비전 저항 레이셜은 위 네 가지에 없다(method.gg 목록 기준).
+- 클래식의 비전 저항 레이셜은 위 네 가지에 없다.
 - 유레카의 정확한 감소량·재사용 대기와 탈출의 명수 수치는 출처마다 달라 게임 툴팁으로 확인한다.
 
-출처: [method.gg Forever 종족 특성](https://www.method.gg/wow-forever/all-new-racial-abilities-in-world-of-warcraft-forever), [Warcraft Tavern 흑마법사](https://www.warcrafttavern.com/forever/guides/warlock/), [Wowhead 영리함(클래식)](https://www.wowhead.com/classic/ko/spell=20591)
-
-## 게임에서 확인할 것과 출처
+## 게임에서 확인할 것
 
 주문 이름은 한글 클래식 클라이언트 기준이고, 일부(보이드워커 소환, 마법봉 발사, 무력화 저주, 일몰, 어둠의 무아지경, 마의 정신집중, 어둠의 연소, 영리함)는 Wowhead 한글판(클래식)에서 직접 대조했다. 아래는 Forever 한글 클라이언트에서 확인하지 못한 부분이다. 매크로가 안 먹으면 주문서나 가방에서 Shift+클릭으로 이름을 넣는다.
 
@@ -435,4 +423,3 @@ Forever 노움은 레이셜이 아래 네 가지로 바뀌다. 마나가 늘고 
 - 마법봉 제작 스킬(75·110·175)은 ForeverChanges 값이고 클래식과 다르다.
 - 던전: 기존 던전의 레벨과 몹 특징은 클래식 기준이다.
 
-출처: [ForeverChanges 흑마법사 변경점](https://foreverchanges.pro/class/warlock), [ForeverChanges 흑마법사 주문서](https://foreverchanges.pro/spellbook/warlock), [ForeverChanges 흑마법사 특성](https://foreverchanges.pro/talents/warlock), [ForeverChanges 흑마법사 BiS](https://foreverchanges.pro/bis/warlock), [Mobalytics 흑마법사 레벨업](https://mobalytics.gg/wow-forever/classes/warlock-leveling-guide), [Mobalytics 고통 흑마법사](https://mobalytics.gg/wow-forever/classes/affliction-warlock-guide), [Warcraft Tavern 흑마법사](https://www.warcrafttavern.com/forever/guides/warlock/), [method.gg Forever 종족 특성](https://www.method.gg/wow-forever/all-new-racial-abilities-in-world-of-warcraft-forever). 관련 문서: [포에버 매크로 교본](../tools/macro-guide.html), [드워프 고양 주술사 가이드](shaman.md), [야성 드루이드 던전 가이드](../archive/druid-dungeon.md).
