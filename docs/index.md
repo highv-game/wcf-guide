@@ -1,11 +1,21 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
+<div class="wcf-hero" markdown>
+
 # 하파의 WoW 포에버 공략
 
-WoW 클래식 포에버(World of Warcraft: Forever) 플레이용 개인 공략 모음입니다. Claude가 새로 알게 된 내용을 이 사이트에 계속 반영합니다.
+직업별 1~30 육성, 단축키와 매크로, 던전, 전문기술까지 한곳에 모았습니다.
 
-!!! info "포에버 일정"
-    - 베타: 2026-09-17 시작, 현재 만렙 30 (10월 1일 상향)
-    - 이름 선점 (KR): 2026-10-28 ~ 11-04
-    - 정식 출시: **2026-11-04**
+베타 만렙 30 · 이름 선점 10월 28일 · **정식 출시 11월 4일**
+
+[직업 공략 보기](classes/index.md){ .md-button .md-button--primary }
+[빠른 레벨링 14~27](leveling/fast-route-14-27.md){ .md-button }
+
+</div>
 
 ## 내 캐릭터
 
@@ -39,6 +49,8 @@ WoW 클래식 포에버(World of Warcraft: Forever) 플레이용 개인 공략 �
 
     ---
 
+    수양 2 + 암흑 19 빌드. 마법봉과 지속 피해로 쉬지 않고 사냥.
+
     [:octicons-arrow-right-24: 1~30 공략](classes/priest.md)
 
 -   :material-shield: **방어 전사 (드워프)**
@@ -71,7 +83,7 @@ WoW 클래식 포에버(World of Warcraft: Forever) 플레이용 개인 공략 �
 - **T**: 전투 부활 / 던전 부활
 - Alt+Shift 조합은 한글 입력 전환과 겹쳐서 쓰지 않습니다.
 
-## 참고한 포에버 자료
+## 유용한 포에버 사이트
 
 - [ForeverChanges](https://foreverchanges.pro) 특성·직업 변경점, 아이템
 - [ForeverDiff](https://foreverdiff.com) 제조법
