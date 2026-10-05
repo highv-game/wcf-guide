@@ -53,6 +53,14 @@ hide:
 
     [:octicons-arrow-right-24: 1~30 공략](classes/priest.md)
 
+-   :material-snowflake: **냉기 마법사 (노움)**
+
+    ---
+
+    얼음창·서리의 손가락 0/0/21 빌드. 기계공학 + 채광.
+
+    [:octicons-arrow-right-24: 1~30 공략](classes/mage.md)
+
 -   :material-shield: **방어 전사 (드워프)**
 
     ---

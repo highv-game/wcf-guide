@@ -88,6 +88,7 @@ nav:
       - 고양 주술사 (드워프): classes/shaman.md
       - 고통 흑마법사 (노움): classes/warlock.md
       - 암흑 사제 (노움): classes/priest.md
+      - 냉기 마법사 (노움): classes/mage.md
       - 방어 전사 (드워프): classes/warrior.md
   - 레벨링:
       - 빠른 레벨링 14~27: leveling/fast-route-14-27.md
