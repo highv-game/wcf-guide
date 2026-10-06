@@ -7,58 +7,62 @@
 
     - 핵심은 던전 퀘스트를 미리 전부 받아 두고 한 판에 몰아서 깨는 것. 포에버는 던전 몹 경험치가 적고, 던전 퀘스트는 일반 퀘스트보다 경험치를 더 줍니다.
     - 호드는 오그리마 ↔ 언더시티 비행선 하나로 칼림도어와 동부 왕국을 오갑니다. 비행선을 탈 때마다 그쪽 던전 퀘스트를 같이 챙기는 것이 시간을 줄이는 방법입니다.
-    - 노란 테두리의 `/way ...` 좌표는 **클릭하면 복사**됩니다. 채팅창에 붙여 넣으면 TomTom 애드온이 지도에 화살표를 띄웁니다. 좌표는 클래식 기준이라 포에버에서 바뀐 지도는 어긋날 수 있습니다.
-    - NPC·퀘스트 이름 중 한글을 확인하지 못한 것은 영문으로 적었습니다(미확인). 이름을 누르면 와우헤드 검색이 열립니다.
+    - 포에버 신규 퀘스트도 동선에 넣었습니다. 한글 이름을 확인하지 못한 신규 퀘스트는 영문으로 적고 (한글 미확인)을 붙였습니다.
+    - 노란 테두리의 `/way ...` 좌표는 **클릭하면 복사**됩니다. 채팅창에 붙여 넣으면 TomTom 애드온이 지도에 화살표를 띄웁니다. 지역 이름이 인식되지 않으면 그 지역 안에서 숫자만(`/way 51.5 30.3`) 입력하세요.
+    - NPC 이름을 누르면 와우헤드 한국어 페이지가 열립니다.
 
 ## 동선 요약
 
 | 단계 | 지역 | 하는 일 | 끝나면 |
 | :-: | --- | --- | :-: |
-| [0](#step-0) | 종족별 시작 지역 | 시작 지역 정리하고 크로스로드로 | 11~12 |
-| [1](#step-1) | 불모의 땅 | 크로스로드 1차, 톱니항 비행경로 | 14 |
-| [2](#step-2) | 오그리마 | 성난불길 협곡 | 15~16 |
+| [0](#step-0) | 종족별 시작 지역 | 시작 지역 정리하고 크로스로드로 | 12 |
+| [1](#step-1) | 불모의 땅 | 크로스로드 1차, 톱니항 비행경로 | 15 |
+| [2](#step-2) | 오그리마 | 성난불길 협곡, 도시 심부름 | 16 |
 | [3](#step-3) | 티리스팔 숲 · 은빛소나무 숲 | 로데론의 폐허 퀘 파티 | 18 |
-| [4](#step-4) | 불모의 땅 | 크로스로드 2차, 통곡의 동굴 | 21 |
-| [5](#step-5) | 돌발톱 산맥 | 해바위 야영지 | 22 |
-| [6](#step-6) | 은빛소나무 숲 | 그림자송곳니 성채 | 24 |
-| [7](#step-7) | 힐스브래드 구릉지 | 타렌 밀농장 | 26 |
-| [8](#step-8) | 잿빛 골짜기 | 토막나무 주둔지, 검은심연의 나락 | 28 |
-| [9](#step-9) | 버섯구름 봉우리 · 불모의 땅 남쪽 | 가시덩굴 우리 | 30 |
+| [4](#step-4) | 불모의 땅 · 썬더 블러프 | 크로스로드 2차, 메마른 언덕, 통곡의 동굴 | 21 |
+| [5](#step-5) | 돌발톱 산맥 | 해바위 야영지 | 23 |
+| [6](#step-6) | 은빛소나무 숲 | 그림자송곳니 성채 | 25 |
+| [7](#step-7) | 힐스브래드 구릉지 | 타렌 밀농장 | 27 |
+| [8](#step-8) | 잿빛 골짜기 | 토막나무 주둔지, 검은심연의 나락 | 29 |
+| [9](#step-9) | 불모의 땅 남쪽 · 버섯구름 봉우리 | 높새바람 봉우리, 가시덩굴 우리 | 30 |
 
 ## 던전 한눈에
 
 | 던전 | 레벨 | 입구 | 이 동선에서 |
 | --- | --- | --- | --- |
-| 성난불길 협곡 | 13~18 | 오그리마 안 어둠의 틈 | 2단계 |
-| 로데론의 폐허 (신규) | 15~20 | 언더시티 입구가 있는 왕궁 안뜰 동쪽 | 3단계 |
-| 통곡의 동굴 | 17~24 | 불모의 땅 서쪽 오아시스 | 4단계 |
-| 그림자송곳니 성채 | 22~30 | 은빛소나무 숲 남쪽 | 6단계 |
-| 검은심연의 나락 | 24~32 | 잿빛 골짜기 서해안 조라맘 해변 | 8단계 |
-| 가시덩굴 우리 | 29~38 | 불모의 땅 남쪽 끝 | 9단계 |
+| 성난불길 협곡 | 13~18 | 오그리마 어둠의 틈 `/way 오그리마 52.6 49.0` | 2단계 |
+| 로데론의 폐허 (신규) | 15~20 | 언더시티 입구가 있는 로데론 왕궁 터, 안뜰 동쪽 | 3단계 |
+| 통곡의 동굴 | 15~24 | 크로스로드 남서쪽 언덕 동굴 `/way 불모의 땅 46.0 36.5` | 4단계 |
+| 그림자송곳니 성채 | 20~30 | 은빛소나무 숲 남쪽 `/way 은빛소나무 숲 44.8 67.8` | 6단계 |
+| 검은심연의 나락 | 24~32 | 잿빛 골짜기 서해안 조람 해안 `/way 잿빛 골짜기 14.5 14.2` | 8단계 |
+| 가시덩굴 우리 | 29~38 | 불모의 땅 남쪽 끝 `/way 불모의 땅 42.9 90.2` | 9단계 |
 
 !!! note "빼는 던전"
-    영주의 전당·죽음의 폐광·스톰윈드 지하감옥은 얼라이언스 도시 안이나 옆이라 호드는 사실상 못 갑니다. 저습지 발굴지(26~31, 신규)는 힐스브래드에서 아라시 고원을 지나 저습지까지 걸어가야 해서 이 동선에서는 뺍니다.
+    영주의 전당·죽음의 폐광·스톰윈드 지하감옥은 얼라이언스 도시 안이나 옆이라 호드는 사실상 못 갑니다. 저습지 발굴지(24~29, 신규)는 힐스브래드에서 아라시 고원을 지나 저습지까지 걸어가야 해서 이 동선에서는 뺍니다.
 
 ## 비행 지점 체크리스트
 
-도착하면 퀘스트보다 비룡 조련사부터 말을 거세요.
+도착하면 퀘스트보다 조련사부터 말을 거세요.
 
-| 단계 | 비행 지점 | 비룡 조련사 | 좌표 |
+| 단계 | 비행 지점 | 조련사 | 좌표 |
 | :-: | --- | --- | --- |
-| 0 | 오그리마 · 힘의 골짜기 | [Doras](https://www.wowhead.com/forever/ko/search?q=Doras) | `/way 오그리마 45.2 63.8` |
-| 0 | 썬더 블러프 | [Tal](https://www.wowhead.com/forever/ko/search?q=Tal) | `/way 썬더 블러프 47.0 49.8` |
-| 0 | 언더시티 | [Michael Garrett](https://www.wowhead.com/forever/ko/search?q=Michael%20Garrett) | `/way 언더시티 63.2 48.6` |
-| 1 | 불모의 땅 · 크로스로드 | [Devrak](https://www.wowhead.com/forever/ko/search?q=Devrak) | `/way 불모의 땅 51.5 30.3` |
-| 1 | 불모의 땅 · 톱니항 | [Bragok](https://www.wowhead.com/forever/ko/search?q=Bragok) | `/way 불모의 땅 63.1 37.1` |
-| 3 | 은빛소나무 숲 · 공동묘지 | [Karos Razok](https://www.wowhead.com/forever/ko/search?q=Karos%20Razok) | `/way 은빛소나무 숲 45.6 42.6` |
-| 5 | 돌발톱 산맥 · 해바위 야영지 | [Tharm](https://www.wowhead.com/forever/ko/search?q=Tharm) | `/way 돌발톱 산맥 45.1 59.8` |
-| 7 | 힐스브래드 구릉지 · 타렌 밀농장 | [Zarise](https://www.wowhead.com/forever/ko/search?q=Zarise) | `/way 힐스브래드 구릉지 60.2 18.6` |
-| 8 | 잿빛 골짜기 · 토막나무 주둔지 | [Vhulgra](https://www.wowhead.com/forever/ko/search?q=Vhulgra) | `/way 잿빛 골짜기 73.2 61.6` |
-| 8 | 잿빛 골짜기 · 조람가르 전초기지 | [Andruk](https://www.wowhead.com/forever/ko/search?q=Andruk) | `/way 잿빛 골짜기 12.2 33.8` |
-| 9 | 버섯구름 봉우리 · 바람길 봉우리 | [Nyse](https://www.wowhead.com/forever/ko/search?q=Nyse) | `/way 버섯구름 봉우리 45.1 49.1` |
+| 0 | 오그리마 · 힘의 골짜기 | [도라스](https://www.wowhead.com/forever/ko/npc=3310) | `/way 오그리마 45.1 63.9` |
+| 0 | 썬더 블러프 | [탈](https://www.wowhead.com/forever/ko/npc=2995) | `/way 썬더 블러프 47.0 49.8` |
+| 0 | 불모의 땅 · 타우라조 야영지 | [오무사 썬더혼](https://www.wowhead.com/forever/ko/npc=10378) | `/way 불모의 땅 44.5 59.2` |
+| 1 | 불모의 땅 · 크로스로드 | [데브락](https://www.wowhead.com/forever/ko/npc=3615) | `/way 불모의 땅 51.5 30.3` |
+| 1 | 불모의 땅 · 톱니항 | [브라고크](https://www.wowhead.com/forever/ko/npc=16227) | `/way 불모의 땅 63.1 37.2` |
+| 3 | 언더시티 | [마이클 가레트](https://www.wowhead.com/forever/ko/npc=4551) | `/way 언더시티 63.3 48.6` |
+| 3 | 은빛소나무 숲 · 공동묘지 | [카로스 라조크](https://www.wowhead.com/forever/ko/npc=2226) | `/way 은빛소나무 숲 45.6 42.6` |
+| 5 | 돌발톱 산맥 · 해바위 야영지 | [타름](https://www.wowhead.com/forever/ko/npc=4312) | `/way 돌발톱 산맥 45.1 59.8` |
+| 7 | 힐스브래드 구릉지 · 타렌 밀농장 | [자라이즈](https://www.wowhead.com/forever/ko/npc=2389) | `/way 힐스브래드 구릉지 60.1 18.6` |
+| 8 | 잿빛 골짜기 · 토막나무 주둔지 | [불그라](https://www.wowhead.com/forever/ko/npc=12616) | `/way 잿빛 골짜기 73.2 61.6` |
+| 8 | 잿빛 골짜기 · 조람가르 전초기지 | [안드루크](https://www.wowhead.com/forever/ko/npc=11901) | `/way 잿빛 골짜기 12.2 33.8` |
+| 9 | 버섯구름 봉우리 · 높새바람 봉우리 | [니세](https://www.wowhead.com/forever/ko/npc=4317) | `/way 버섯구름 봉우리 45.1 49.1` |
+
+언데드는 언더시티·공동묘지를 0단계에서 엽니다. 오크·트롤은 썬더 블러프와 타우라조 야영지를 4단계에서 엽니다.
 
 !!! tip "비행선"
-    오그리마 비행선 탑은 정문 밖 `/way 듀로타 50.6 12.6`, 언더시티 비행선 탑은 브릴 남쪽 `/way 티리스팔 숲 60.7 58.8` 입니다. 오그리마 ↔ 언더시티 노선 하나만 쓰면 됩니다.
+    오그리마 비행선 탑은 정문 밖 [프레자](https://www.wowhead.com/forever/ko/npc=9564) `/way 듀로타 50.8 13.5`, 언더시티 비행선 탑은 브릴 남쪽 [제페타](https://www.wowhead.com/forever/ko/npc=9566) `/way 티리스팔 숲 60.7 58.9` 입니다. 오그리마 ↔ 언더시티 노선 하나만 쓰면 됩니다.
 
 ---
 
@@ -68,160 +72,200 @@
 
 === "오크·트롤 (듀로타)"
 
-    - [ ] 센진 마을과 Razor Hill(미확인) 퀘스트를 끝내고 10레벨에 오그리마로 갑니다.
-    - [ ] 오그리마 Doras `/way 오그리마 45.2 63.8` · **비행경로 열기**, 10레벨 기술 훈련
-    - [ ] 천둥 산등성이(Thunder Ridge, 듀로타 북쪽)의 신규 퀘스트 **Beasts of Thunder Ridge**(10)가 보이면 받습니다. 주는 NPC는 미확인.
-    - [ ] [Neeru Fireblade](https://www.wowhead.com/forever/ko/search?q=Neeru%20Fireblade) `/way 오그리마 49.6 50.6` · **Slaying the Beast** 받기 (성난불길 협곡, 2단계용)
-    - [ ] 듀로타 서쪽 사우스퓨리 강 다리를 건너 불모의 땅 Far Watch Post를 지나 크로스로드까지 걷습니다.
+    - [ ] 센진 마을과 칼바위 언덕 퀘스트를 끝냅니다.
+    - [ ] 칼바위 언덕 [오르그닐 소울스카](https://www.wowhead.com/forever/ko/npc=3142) `/way 듀로타 52.2 43.2` · 신규 **실종된 요원**(11) → 티라가드 요새 북쪽 [헤글란 셰이드아이](https://www.wowhead.com/forever/ko/npc=275657) `/way 듀로타 58.6 45.6` → **저 아래에서 온 위협** 연계(11~12, 마지막은 듀로타 북쪽 해안의 바다 거인 처치)
+    - [ ] [레즐락](https://www.wowhead.com/forever/ko/npc=3293) `/way 듀로타 46.4 22.9` · 신규 **Stormy Potential**(11, 한글 미확인). 희미한 폭풍 보주를 주우면 **A Simmering Storm**(한글 미확인)으로 같은 레즐락에게 가져갑니다.
+    - [ ] 해골 바위굴 `/way 듀로타 53.1 9.4`의 불타는칼날단 광신자·견습흑마법사가 떨구는 부관의 휘장을 [스랄](https://www.wowhead.com/forever/ko/npc=4949) `/way 오그리마 31.7 37.8`에게 가져가 **내부의 배신자** 연계를 시작합니다(2단계 성난불길 협곡용).
+    - [ ] 오그리마 [도라스](https://www.wowhead.com/forever/ko/npc=3310) `/way 오그리마 45.1 63.9` · **비행경로 열기**, 기술 훈련
+    - [ ] [네루 파이어블레이드](https://www.wowhead.com/forever/ko/npc=3216) `/way 오그리마 49.5 50.6` · **야수 처단** 받기 (성난불길 협곡)
+    - [ ] 가죽세공·대장기술 재료가 있으면 [카마리](https://www.wowhead.com/forever/ko/npc=5811) `/way 오그리마 63.3 44.8` · 신규 **천둥 마루의 야수들**(10), [오그톡](https://www.wowhead.com/forever/ko/npc=10266) `/way 오그리마 80.8 23.7` · 신규 **This Is Spinal Axe**(10, 한글 미확인). 둘 다 듀로타 북쪽 천둥 마루 짐승이 목표입니다. 할리코르의 발굽이 나오면 **Halikor's Hoof**(12, 한글 미확인)로 카마리에게 반납합니다.
+    - [ ] 칼바위 언덕 [타크린 패스시커](https://www.wowhead.com/forever/ko/npc=3336) `/way 듀로타 50.8 43.6` · **호드의 징병** → 서쪽 다리를 건너 불모의 땅 전초 기지 [카르갈 배틀스카](https://www.wowhead.com/forever/ko/npc=3337) `/way 불모의 땅 62.3 19.4` · **크로스로드의 징병** → 크로스로드 셀그라 다크쏜에게 반납
 
 === "타우렌 (멀고어)"
 
-    - [ ] 블러드후프 마을 퀘스트를 끝내고 썬더 블러프로 올라갑니다.
-    - [ ] 썬더 블러프 Tal `/way 썬더 블러프 47.0 49.8` · **비행경로 열기**, 10레벨 기술 훈련
-    - [ ] [Rahauro](https://www.wowhead.com/forever/ko/search?q=Rahauro) `/way 썬더 블러프 70.4 29.6` · **Testing an Enemy's Strength**, **Searching for the Lost Satchel** 받기 (성난불길 협곡)
-    - [ ] 멀고어 동쪽 길로 나가 타우라조 야영지 `/way 불모의 땅 44.4 59.1`에서 비행경로를 열고 북쪽 크로스로드로 올라갑니다.
-
-    !!! warning "멀고어 좌표"
-        포에버 멀고어는 지도가 넓어지고 Skywatcher Plateau 같은 새 지역이 생겨서 클래식 좌표가 맞지 않습니다. 이 페이지에도 멀고어 좌표는 넣지 않았습니다.
+    - [ ] 블러드후프 마을 퀘스트를 끝냅니다. 신규 퀘스트 셋도 같이 합니다.
+        - 투자개발회사 광산에서 주운 멀고어 확장 계획서로 **피즈스프로켓의 기록**(10)
+        - [모린 클라우드스토커](https://www.wowhead.com/forever/ko/npc=2988) `/way 멀고어 54.8 64.3` · **작업 중단**(12): 개벌꾼 열쇠 가져오기
+        - [멀 썬더혼](https://www.wowhead.com/forever/ko/npc=2948) `/way 멀고어 47.5 63.6` · **Thunderhorn's Report**(10, 한글 미확인): 썬더 블러프 대드루이드 하뮬 룬토템에게 배달
+    - [ ] 썬더 블러프 [탈](https://www.wowhead.com/forever/ko/npc=2995) `/way 썬더 블러프 47.0 49.8` · **비행경로 열기**, 10레벨 기술 훈련
+    - [ ] [라하우로](https://www.wowhead.com/forever/ko/npc=11833) `/way 썬더 블러프 70.1 29.5` · **성난불길 협곡의 트로그**, **잃어버린 가방 찾기** 받기 (성난불길 협곡)
+    - [ ] 멀고어 동쪽 길로 나가 타우라조 야영지 [오무사 썬더혼](https://www.wowhead.com/forever/ko/npc=10378) `/way 불모의 땅 44.5 59.2` · **비행경로 열기**
+    - [ ] [키르제 스턴혼](https://www.wowhead.com/forever/ko/npc=3418) `/way 불모의 땅 44.9 58.6` · **크로스로드로의 여정**(타우렌 전용) → 북쪽 크로스로드 톨크에게 반납
 
 === "언데드 (티리스팔 숲)"
 
-    언데드는 크로스로드로 바로 가지 않고 은빛소나무 숲을 먼저 합니다. 로데론의 폐허가 언더시티 바로 옆이라, 3단계를 먼저 하고 비행선으로 내려가는 순서가 가장 짧습니다.
+    언데드는 크로스로드로 바로 가지 않고 티리스팔 숲과 은빛소나무 숲을 먼저 합니다. 로데론의 폐허가 언더시티 바로 옆이라, 3단계를 먼저 하고 비행선으로 내려가는 순서가 가장 짧습니다.
 
-    - [ ] 브릴 퀘스트를 끝냅니다. 신규 퀘스트 **Hides for the Forsaken**(11), **Rear Guard Patrol**(13)이 보이면 받습니다(주는 NPC 미확인).
-    - [ ] 언더시티 Michael Garrett `/way 언더시티 63.2 48.6` · **비행경로 열기**
-    - [ ] 브릴 남쪽 길로 은빛소나무 숲 공동묘지 Karos Razok `/way 은빛소나무 숲 45.6 42.6` · **비행경로 열기**
-    - [ ] 공동묘지 퀘스트 10~14. 신규 퀘스트 **Return to Quinn (Again)**(11)도 이 근처에서 나옵니다.
-    - [ ] 15레벨에 [3단계](#step-3) 로데론의 폐허 → [1단계](#step-1) 크로스로드 → [2단계](#step-2) 성난불길 협곡 순서로 진행합니다.
+    - [ ] 브릴 퀘스트를 끝냅니다. 신규 퀘스트: [캐롤라이 아니즈](https://www.wowhead.com/forever/ko/npc=2132) `/way 티리스팔 숲 59.4 52.2` · **어둠골짜기의 녹색 비약**(10), [초보연금술사 홀랜드](https://www.wowhead.com/forever/ko/npc=10665) `/way 티리스팔 숲 57.4 48.9` · **Tomb Weed**(11, 한글 미확인)
+    - [ ] [죽음의경비병 테렌스](https://www.wowhead.com/forever/ko/npc=1738) `/way 티리스팔 숲 63.5 56.6` · 신규 **은빛 여명회 사절**(13): 언더시티 입구 근처 천막 야영지로 안내
+    - [ ] 천막 야영지 [헨드릭 할슨](https://www.wowhead.com/forever/ko/npc=267009) `/way 티리스팔 숲 65.9 61.1` · **저주받은 자들의 교단**, **전쟁의 잔재**, **반다리온 성채**(모두 13)
+    - [ ] 같은 야영지 [셸렌 로버트](https://www.wowhead.com/forever/ko/npc=3549) `/way 티리스팔 숲 65.4 60.1` · **포세이큰을 위한 가죽**(11), [죽음의경비병 리니아](https://www.wowhead.com/forever/ko/npc=1495) `/way 티리스팔 숲 65.5 60.3` · **후방 경비**(13)
+    - [ ] 서쪽 어둠골짜기 [리어니드 바돌로매](https://www.wowhead.com/forever/ko/npc=267008) `/way 티리스팔 숲 22.0 44.8` · 반다리온 성채 반납, **A Righteous Cause**·**Leonid's Letter**(13, 한글 미확인. 편지는 언더시티에 배달)
+    - [ ] 옆의 [파괴자 힐다](https://www.wowhead.com/forever/ko/npc=246389) `/way 티리스팔 숲 21.9 47.2` · **땅 위에서도 땅 아래에서도**(10)
+    - [ ] 언더시티 [마이클 가레트](https://www.wowhead.com/forever/ko/npc=4551) `/way 언더시티 63.3 48.6` · **비행경로 열기**
+    - [ ] 브릴 남쪽 길로 은빛소나무 숲 공동묘지 [카로스 라조크](https://www.wowhead.com/forever/ko/npc=2226) `/way 은빛소나무 숲 45.6 42.6` · **비행경로 열기**
+    - [ ] 공동묘지 퀘스트를 15까지. 신규 퀘스트: [연금술사 렌퍼럴](https://www.wowhead.com/forever/ko/npc=1937) `/way 은빛소나무 숲 42.8 40.9` · **쿠인에게 (다시) 돌아가기**(11) → 북쪽 이바르 호박밭 [쿠인 요릭](https://www.wowhead.com/forever/ko/npc=1951) `/way 은빛소나무 숲 53.4 12.6` · **야생의 눈**(11), [달라 던위버](https://www.wowhead.com/forever/ko/npc=1938) `/way 은빛소나무 숲 44.2 39.8` · **Arugal's Folly**(16, 한글 미확인)
+    - [ ] 15레벨에 [3단계](#step-3) 로데론의 폐허 → 비행선으로 오그리마 → [2단계](#step-2) 성난불길 협곡 → [1단계](#step-1) 크로스로드 → [4단계](#step-4) 순서로 진행합니다.
 
 === "스카이본 (제프라스 섬)"
 
     - [ ] 제프라스 섬에서 12레벨까지 섬 퀘스트를 모두 합니다.
-    - [ ] 섬의 Valanaar에서 비행선을 타고 멀고어 북서쪽 **Skywatcher Plateau**로 내립니다.
-    - [ ] 썬더 블러프 Tal `/way 썬더 블러프 47.0 49.8` · **비행경로 열기**. 타우렌 탭의 Rahauro 퀘스트도 같이 받습니다.
-    - [ ] 오그리마 [Thrall](https://www.wowhead.com/forever/ko/search?q=Thrall) `/way 오그리마 31.8 37.8` · 크로스로드로 보내는 퀘스트(Journey to the Crossroads, 미확인)를 받고 불모의 땅으로 갑니다.
-
-    !!! warning "미확인"
-        Skywatcher Plateau의 한글 지명, 섬에서 나오는 퀘스트 이름, 비행선이 Valanaar에서 출발하는지는 확인하지 못했습니다.
+    - [ ] [탈라니스 섀도송](https://www.wowhead.com/forever/ko/npc=252476) `/way 제프라스 섬 66.2 76.5` · **What Comes Next**(한글 미확인) → 발라나르 [아에사 돈싱어](https://www.wowhead.com/forever/ko/npc=251968) `/way 제프라스 섬 59.0 79.5`
+    - [ ] 아에사 돈싱어 · **The Earthen Ring**(한글 미확인): 섬의 비행선을 타고 멀고어로 가서, 썬더 블러프 북서쪽 고지대의 [알라나 스톰워커](https://www.wowhead.com/forever/ko/npc=259119) `/way 멀고어 33.4 22.5`와 대화합니다.
+    - [ ] 알라나 스톰워커 · **아제로스에 오신 걸 환영합니다**: 오그리마 지혜의 골짜기의 스랄에게 가는 퀘스트입니다.
+    - [ ] 가는 길에 썬더 블러프 [탈](https://www.wowhead.com/forever/ko/npc=2995) `/way 썬더 블러프 47.0 49.8` 비행경로와 [라하우로](https://www.wowhead.com/forever/ko/npc=11833) `/way 썬더 블러프 70.1 29.5` 퀘스트(타우렌 탭과 같음)를 챙기고, 멀고어 동쪽 길로 타우라조 야영지와 크로스로드 비행경로를 엽니다.
+    - [ ] 크로스로드에서 동쪽 길로 듀로타를 지나 오그리마까지 걸어가 [도라스](https://www.wowhead.com/forever/ko/npc=3310) `/way 오그리마 45.1 63.9` 비행경로를 엽니다.
+    - [ ] [스랄](https://www.wowhead.com/forever/ko/npc=4949) `/way 오그리마 31.7 37.8` · 환영 퀘스트 반납, **크로스로드로의 여정** 받기 → 크로스로드로 날아가 톨크에게 반납
+    - [ ] (선택) 스랄 · **Exploring the Horde**(한글 미확인): 그롬마쉬 요새에서 안내를 받아 볼진·케른 블러드후프·실바나스를 찾아가는 호드 도시 평판 퀘스트입니다. 각 도시에 갈 때마다 채웁니다.
 
 ## 1단계 · 크로스로드 1차 { #step-1 }
 
-**레벨 12 → 14** · 크로스로드 퀘스트를 한꺼번에 받고 북쪽부터 시계 방향으로 돕니다. 통곡의 동굴 퀘스트도 이때 받아 둡니다.
+**레벨 12 → 15** · 크로스로드 퀘스트를 한꺼번에 받고 북쪽부터 시계 방향으로 돕니다.
 
-- [ ] 크로스로드 [Devrak](https://www.wowhead.com/forever/ko/search?q=Devrak) `/way 불모의 땅 51.5 30.3` · **비행경로 열기**
-- [ ] [Thork](https://www.wowhead.com/forever/ko/search?q=Thork) `/way 불모의 땅 51.5 30.9` · **Disrupt the Attacks**, **Supplies for the Crossroads**: 북동쪽 Razormane 야영지
-- [ ] [Sergra Darkthorn](https://www.wowhead.com/forever/ko/search?q=Sergra%20Darkthorn) `/way 불모의 땅 52.2 31.0` · **Plainstrider Menace** 연계 (사냥하면서 저절로 채움)
-- [ ] [Gazrog](https://www.wowhead.com/forever/ko/search?q=Gazrog) `/way 불모의 땅 51.2 30.8` · **Raptor Thieves**
-- [ ] [Apothecary Helbrim](https://www.wowhead.com/forever/ko/search?q=Apothecary%20Helbrim) `/way 불모의 땅 51.4 30.2` · **Fungal Spores**: 북쪽 잊혀진 웅덩이 버섯
-- [ ] [Darsok Swiftdagger](https://www.wowhead.com/forever/ko/search?q=Darsok%20Swiftdagger) `/way 불모의 땅 51.6 30.4` · **Harpy Raiders**: 북서쪽 하피 둥지
-- [ ] 톱니항 [Bragok](https://www.wowhead.com/forever/ko/search?q=Bragok) `/way 불모의 땅 63.1 37.1` · **비행경로 열기**
-- [ ] [메복 미지릭스](https://www.wowhead.com/forever/ko/search?q=Mebok%20Mizzyrix) `/way 불모의 땅 62.4 37.6` · **똑똑한 음료** 받기 (통곡의 동굴)
-- [ ] [Sputtervalve](https://www.wowhead.com/forever/ko/search?q=Sputtervalve) `/way 불모의 땅 62.8 36.4` · **The Escape** → **Samophlange** 연계 시작
-- [ ] [Gazlowe](https://www.wowhead.com/forever/ko/search?q=Gazlowe) `/way 불모의 땅 62.6 36.2` · **Southsea Freebooters**: 톱니항 남쪽 해적 야영지
-- [ ] 신규 퀘스트 **Parts and Pieces**(14)가 보이면 받기 (주는 NPC 미확인)
-- [ ] 크로스로드로 돌아와 반납. 14 근처면 오그리마로 갑니다.
+- [ ] 크로스로드 [데브락](https://www.wowhead.com/forever/ko/npc=3615) `/way 불모의 땅 51.5 30.3` · **비행경로 열기**
+- [ ] [톨크](https://www.wowhead.com/forever/ko/npc=3429) `/way 불모의 땅 51.5 30.9` · **공격 저지** → **크로스로드의 보급품**, **습격의 종결**: 북쪽 서슬갈기일족 야영지
+- [ ] [셀그라 다크쏜](https://www.wowhead.com/forever/ko/npc=3338) `/way 불모의 땅 52.2 31.0` · **초원타조의 위협** → **얼룩말** → **불모의 땅의 굶주린 사자** → **에체야키** (사냥하면서 저절로 채움)
+- [ ] [가즈록](https://www.wowhead.com/forever/ko/npc=3464) `/way 불모의 땅 51.9 30.3` · **도둑 랩터**
+- [ ] [연금술사 헬브림](https://www.wowhead.com/forever/ko/npc=3390) `/way 불모의 땅 51.4 30.2` · **버섯 포자**(북쪽 잊혀진 웅덩이), **부두주임 디지위그**(톱니항 배달)
+- [ ] [달소크 스위프트대거](https://www.wowhead.com/forever/ko/npc=3449) `/way 불모의 땅 51.6 30.9` · **하피의 습격** → **하피 부대장**: 칼날바람하피
+- [ ] [통가 룬토템](https://www.wowhead.com/forever/ko/npc=3448) `/way 불모의 땅 52.3 31.9` · **잊혀진 웅덩이** → **죽은 오아시스** → **변화된 생물** → **하뮬 룬토템** (4단계 통곡의 동굴 퀘스트로 이어짐)
+- [ ] [렉타르 데스게이트](https://www.wowhead.com/forever/ko/npc=3389) `/way 불모의 땅 45.3 28.4` · **켄타우로스의 팔보호구**(14), **콜카르 지도자**(16)
+- [ ] 톱니항 [브라고크](https://www.wowhead.com/forever/ko/npc=16227) `/way 불모의 땅 63.1 37.2` · **비행경로 열기**
+- [ ] [스퍼터밸브](https://www.wowhead.com/forever/ko/npc=3442) `/way 불모의 땅 63.0 37.2` · **사모플랜지** 연계 시작 (북쪽 진흙늪의 장치)
+- [ ] [가즈로](https://www.wowhead.com/forever/ko/npc=3391) `/way 불모의 땅 62.7 36.2` · **남쪽바다 해적단**: 톱니항 남쪽 해적 야영지
+- [ ] [비운의 레닉스](https://www.wowhead.com/forever/ko/npc=7161) `/way 불모의 땅 63.1 36.3` · 신규 **부품이 산산조각**(14): 같은 해적 야영지 위쪽
+- [ ] 크로스로드로 돌아와 반납. 15 근처면 오그리마로 갑니다.
 
-!!! tip "분실된 상자"
-    사냥하다 분실된 상자(Waylaid Crate)가 나오면 버리지 말고 재료를 채워 크로스로드 바로 밖 반납처 `/way 불모의 땅 50.1 29.3`에 가져갑니다.
+!!! tip "잘못 놓인 보급품"
+    사냥하다 잘못 놓인 보급품이 나오면 버리지 말고 요구 재료를 채워 크로스로드 바로 밖 [도키미](https://www.wowhead.com/forever/ko/npc=256386) `/way 불모의 땅 50.2 29.4`에게 가져갑니다. 싸움꾼 가죽 도안 등을 사는 상인의 호의를 줍니다.
 
 ## 2단계 · 성난불길 협곡 { #step-2 }
 
-**레벨 14 → 15~16** · 오그리마 어둠의 틈에 입구가 있는 첫 던전입니다. 퀘스트 4개를 들고 한 번 돕니다.
+**레벨 15 → 16** · 오그리마 어둠의 틈에 입구가 있는 첫 던전입니다. 퀘스트를 모두 들고 한 번 돕니다.
 
 | 퀘스트 | 받는 곳 | 목표 |
 | --- | --- | --- |
-| Slaying the Beast | [Neeru Fireblade](https://www.wowhead.com/forever/ko/search?q=Neeru%20Fireblade) `/way 오그리마 49.6 50.6` | 마지막 보스 Taragaman the Hungerer |
-| Testing an Enemy's Strength | [Rahauro](https://www.wowhead.com/forever/ko/search?q=Rahauro) `/way 썬더 블러프 70.4 29.6` | 트로그 8, 트로그 주술사 8 |
-| Searching for the Lost Satchel | Rahauro (같은 곳) | 던전 안 가방, 반납 후 **Returning the Lost Satchel** |
-| The Power to Destroy... | [Varimathras](https://www.wowhead.com/forever/ko/search?q=Varimathras) `/way 언더시티 56.2 92.2` | 던전 안 책 2권 |
-| Hidden Enemies | [Thrall](https://www.wowhead.com/forever/ko/search?q=Thrall) `/way 오그리마 31.8 37.8` | Bazzalan, Jergosh the Invoker (선행 퀘스트 필요) |
+| 야수 처단 | [네루 파이어블레이드](https://www.wowhead.com/forever/ko/npc=3216) `/way 오그리마 49.5 50.6` | 마지막 보스 욕망의 타라가만의 심장 |
+| 성난불길 협곡의 트로그 | [라하우로](https://www.wowhead.com/forever/ko/npc=11833) `/way 썬더 블러프 70.1 29.5` | 성난불길 트로그 8, 성난불길일족 주술사 8 |
+| 잃어버린 가방 찾기 | 라하우로 (같은 곳) | 던전 안 마우르 그림토템의 시체에서 가방, 이어서 **잃어버린 가방 돌려주기** |
+| 파괴해야 할 힘 | [바리마트라스](https://www.wowhead.com/forever/ko/npc=2425) `/way 언더시티 56.3 92.2` | 던전 안 책 2권 |
+| 내부의 배신자 | [스랄](https://www.wowhead.com/forever/ko/npc=4949) `/way 오그리마 31.7 37.8` | 바잘란, 기원사 제로쉬 (부관의 휘장으로 시작하는 연계) |
 
-- 썬더 블러프 퀘스트는 타우렌·스카이본만 지나가는 길에 받습니다. 오크·트롤은 Neeru 퀘스트만 들고 가도 됩니다.
-- Varimathras 퀘스트는 언데드가 3단계 때 언더시티에서 받아 옵니다.
-- Taragaman은 용암 쪽으로 쳐올리기를 쓰니 탱커가 벽을 등지고 잡습니다.
+- 라하우로 퀘스트는 타우렌·스카이본이 지나가는 길에 받습니다. 오크·트롤은 네루와 스랄 퀘스트만 들고 가도 됩니다.
+- 바리마트라스 퀘스트는 언데드가 3단계 때 언더시티에서 받아 옵니다.
+- 욕망의 타라가만은 쳐올리기로 띄우니 탱커가 벽을 등지고 잡습니다.
+
+파티를 기다리는 동안 오그리마 신규 심부름 퀘스트(모두 15)를 끝냅니다.
+
+- [ ] [코르겔드](https://www.wowhead.com/forever/ko/npc=3348) `/way 오그리마 56.1 34.1` · **옐마크의 특별 배합**: 명예의 골짜기 물가 풀 채집
+- [ ] [옐마크](https://www.wowhead.com/forever/ko/npc=3347) `/way 오그리마 56.8 33.0` · **뭐가 그리 급해**: 물약을 옆의 우트에게
+- [ ] [타토그](https://www.wowhead.com/forever/ko/npc=268701) `/way 오그리마 55.6 72.1` · **밥보다 놀이** → [보르스탄](https://www.wowhead.com/forever/ko/npc=3368) `/way 오그리마 57.2 53.3` · **제일 좋아하는 음식**: 도시락을 그롬마쉬 요새 뒤 미기에게
+- [ ] [트라](https://www.wowhead.com/forever/ko/npc=268684) `/way 오그리마 34.9 29.0` · **바위 쉼터**: 매끈한 바위 8개
 
 ## 3단계 · 로데론의 폐허 { #step-3 }
 
-**레벨 15~16 → 18** · 오그리마에서 비행선을 타고 언더시티로 올라갑니다. 포에버 신규 던전이고, 호드는 퀘스트를 밖에서 4개 받고 안에서 2개를 더 얻습니다.
+**레벨 16 → 18** · 오그리마에서 비행선을 타고 언더시티로 올라갑니다. 포에버 신규 던전이고, 호드는 퀘스트를 밖에서 4개 받고 안에서 2개를 더 얻습니다.
 
-- [ ] 언더시티 Michael Garrett `/way 언더시티 63.2 48.6` · **비행경로 열기**
-- [ ] [Deathguard Kristof](https://www.wowhead.com/forever/ko/search?q=Deathguard%20Kristof) `/way 티리스팔 숲 65.2 60.1` · **The Wrath of Rath'mael** (전문기술 야영지, 보상 Forsaken Greataxe 또는 Gnarled Necromancer's Staff)
-- [ ] [Morbin Lightbane](https://www.wowhead.com/forever/ko/search?q=Morbin%20Lightbane) `/way 언더시티 58.3 89.7` · **Light's Justice** (왕실 지구)
-- [ ] [Theodore Griffs](https://www.wowhead.com/forever/ko/search?q=Theodore%20Griffs) `/way 언더시티 46.5 71.6` · **The New Plague** (연금술 실험실, 16레벨부터)
-- [ ] 공동묘지 Karos Razok `/way 은빛소나무 숲 45.6 42.6` · **비행경로 열기**
-- [ ] [Tabitha Heartweaver](https://www.wowhead.com/forever/ko/search?q=Tabitha%20Heartweaver) `/way 은빛소나무 숲 44.5 43.0` · **A Frightened Request**
-- [ ] 던전 안: The Baron을 잡은 뒤 머리를 눌러 **Unending Torment**(5단계 연계), Bjork 탑 근처 문장으로 **Crest of Lordaeron**
+- [ ] 언더시티 [마이클 가레트](https://www.wowhead.com/forever/ko/npc=4551) `/way 언더시티 63.3 48.6` · **비행경로 열기**
+- [ ] 브릴 남동쪽 천막 야영지 [죽음경비병 크리스토프](https://www.wowhead.com/forever/ko/npc=251001) `/way 티리스팔 숲 65.2 60.2` · **라스마엘의 격노**: 보스 라스마엘 처치 (보상 포세이큰 거대도끼 또는 강령술사의 옹이진 지팡이)
+- [ ] 실바나스 옆 [모빈 라이트베인](https://www.wowhead.com/forever/ko/npc=266484) `/way 언더시티 57.8 89.5` · **빛의 정의**: 던전에서 온전한 사지 25개
+- [ ] 연금술 실험실 [시어도어 그리프스](https://www.wowhead.com/forever/ko/npc=11835) `/way 언더시티 46.3 71.9` · **새로운 역병**(16레벨부터): 보스 쇠퇴송곳니의 퀘스트 아이템
+- [ ] [알렉산드로 루카](https://www.wowhead.com/forever/ko/npc=7683) `/way 언더시티 58.6 54.7` · 신규 **물약 특급 배송**(16): 제한 시간 안에 연금술 실험실 [박사 마틴 펠벤](https://www.wowhead.com/forever/ko/npc=11044) `/way 언더시티 46.6 74.1`에게
+- [ ] 공동묘지 [카로스 라조크](https://www.wowhead.com/forever/ko/npc=2226) `/way 은빛소나무 숲 45.6 42.6` · **비행경로 열기**
+- [ ] [타비사 하트위버](https://www.wowhead.com/forever/ko/npc=250686) `/way 은빛소나무 숲 44.5 43.0` · **두려움에 찬 부탁**: 에드워드 하트위버는 던전 묘지 구역, 라스마엘 근처에 있습니다.
+- [ ] 던전 안: 보스 남작이 떨구는 흉측한 머리로 **끝없는 고통** 연계를 시작합니다. 언더시티 [수석 연금술사 파라넬](https://www.wowhead.com/forever/ko/npc=2055) `/way 언더시티 48.8 69.3`에게 가져가면 언더시티 안 심부름으로 이어집니다.
+- [ ] 던전 안: 로데론의 문장(밴시가 나오는 문 뒤 방, 탑 위, 북서쪽 묘실 북쪽 벽 중 한 곳)을 주우면 **로데론의 문장** → 언더시티 [오란 스네이크레이드](https://www.wowhead.com/forever/ko/npc=7825) `/way 언더시티 73.1 32.9`
 - [ ] 은빛소나무 숲 공동묘지 퀘스트가 남아 있으면 18까지 같이 합니다.
 
-!!! tip "보상"
-    오크 주술사·전사는 Forsaken Greataxe를 고르세요. 보스 Witherfang은 무기 Segmented Spider Leg와 가죽 손목을 떨굽니다.
+!!! tip "로데론의 폐허"
+    15레벨부터 들어갈 수 있지만 17 이상이 편합니다. 오크 주술사·전사는 라스마엘의 격노 보상으로 포세이큰 거대도끼를 고르세요.
 
 ## 4단계 · 크로스로드 2차와 통곡의 동굴 { #step-4 }
 
-**레벨 18 → 21** · 비행선으로 오그리마에 내려와 크로스로드 2차 퀘스트를 하고, 통곡의 동굴 퀘스트를 모두 모아 들어갑니다.
+**레벨 18 → 21** · 비행선으로 오그리마에 내려와 불모의 땅 2차 퀘스트를 하고, 썬더 블러프를 들러 통곡의 동굴 퀘스트를 모두 모아 들어갑니다.
 
-- [ ] [Regthar Deathgate](https://www.wowhead.com/forever/ko/search?q=Regthar%20Deathgate) `/way 불모의 땅 45.4 28.4` · **Kolkar Leaders**, **Centaur Bracers**
-- [ ] 1단계에서 받은 Samophlange 연계와 Southsea Freebooters 마무리
-- [ ] 신규 퀘스트 **WANTED: Bruuz**(20), **Chol'aruk the Ravener**(21)가 보이면 받기 (주는 NPC 미확인)
-- [ ] [Nara Wildmane](https://www.wowhead.com/forever/ko/search?q=Nara%20Wildmane) `/way 썬더 블러프 75.6 31.0` · **Leaders of the Fang** (보상 지팡이 Crescent Staff, 도끼 Hammerbone 등)
-- [ ] [Apothecary Zamah](https://www.wowhead.com/forever/ko/search?q=Apothecary%20Zamah) `/way 썬더 블러프 22.8 21.0` · **Serpentbloom** (영혼의 봉우리 아래 동굴)
-- [ ] 오아시스 위 동굴의 [날팍](https://www.wowhead.com/forever/ko/search?q=Nalpak)·[에브루](https://www.wowhead.com/forever/ko/search?q=Ebru) `/way 불모의 땅 46.0 36.0` · **돌연변이 가죽**, **돌연변이 박멸** 받기
-- [ ] **통곡의 동굴** 파티 클리어. 1단계의 **똑똑한 음료**도 같이 끝냅니다.
+- [ ] 1단계에서 받은 사모플랜지 연계와 남쪽바다 해적단 마무리. 진흙늪 [위즐크랭크의 벌목기](https://www.wowhead.com/forever/ko/npc=3439) `/way 불모의 땅 56.5 7.5` · **시동** → **탈출**(18)
+- [ ] 톱니항 [메보크 미지릭스](https://www.wowhead.com/forever/ko/npc=3446) `/way 불모의 땅 62.4 37.6` · **랩터 뿔**(18) → **영리해지는 음료**(통곡의 동굴)
+- [ ] [기중기 기사 비글퍼즈](https://www.wowhead.com/forever/ko/npc=3665) `/way 불모의 땅 63.1 37.6` · **99년 묵은 와인**(통곡의 동굴)
+- [ ] 톱니항 현상수배! 게시판 `/way 불모의 땅 62.6 37.5` · 신규 **현상 수배: 브루즈**(20) → 가즈로에게 반납
+- [ ] 크로스로드 [구라크](https://www.wowhead.com/forever/ko/npc=267310) `/way 불모의 땅 52.6 29.1` · 신규 **강탈자 촐라루크**(21)
+- [ ] [만크릭](https://www.wowhead.com/forever/ko/npc=3432) `/way 불모의 땅 52.0 31.6` · **전쟁으로 잃은 아내**, **타오르는 증오**, 신규 **그 이름은 올그라**(모두 20)
+- [ ] 북서쪽 메마른 언덕 근처 [브랑 와일드고어](https://www.wowhead.com/forever/ko/npc=3682) `/way 불모의 땅 43.8 12.2` · 신규 **상처 입은 자존심과 사자 가죽**, **브랑의 사냥감**, **은둔자 무두장이**(모두 18)
+- [ ] 산등성이의 [월튼](https://www.wowhead.com/forever/ko/npc=261366) `/way 불모의 땅 42.0 11.4` · 은둔자 무두장이 반납, 신규 **환영받지 못한 손님**, **골짜기의 불청객**(18)
+- [ ] 오크·트롤은 크로스로드에서 남쪽 타우라조 야영지 [오무사 썬더혼](https://www.wowhead.com/forever/ko/npc=10378) `/way 불모의 땅 44.5 59.2`, 서쪽 멀고어를 지나 썬더 블러프 [탈](https://www.wowhead.com/forever/ko/npc=2995) `/way 썬더 블러프 47.0 49.8`까지 걸어가며 비행경로를 엽니다.
+- [ ] 썬더 블러프 [대드루이드 하뮬 룬토템](https://www.wowhead.com/forever/ko/npc=5769) `/way 썬더 블러프 78.6 28.6` · **하뮬 룬토템** 반납 → **나라 와일드메인** → [나라 와일드메인](https://www.wowhead.com/forever/ko/npc=5770) `/way 썬더 블러프 75.7 31.6` · **송곳니의 드루이드 우두머리**(22)
+- [ ] [연금술사 자마](https://www.wowhead.com/forever/ko/npc=3419) `/way 썬더 블러프 22.8 20.9` · 버섯 포자 연계의 **연금술사 자마** 반납, **불뱀꽃**(통곡의 동굴 안 채집)
+- [ ] [타흐 윈터후프](https://www.wowhead.com/forever/ko/npc=3024) `/way 썬더 블러프 54.1 47.1` · 신규 **그림을 물들일 안료**(26, 5단계 돌발톱 산맥에서)
+- [ ] 동굴 입구 위 [날팍](https://www.wowhead.com/forever/ko/npc=5767) `/way 불모의 땅 46.0 35.7` · **돌연변이 통가죽**, 옆의 [에브루](https://www.wowhead.com/forever/ko/npc=5768) · **돌연변이 짐승 섬멸**
+- [ ] **통곡의 동굴** 파티 클리어. 걸신들린 무타누스가 떨구는 빛나는 조각으로 **빛나는 조각**을 시작해, 동굴 위 언덕 [팔라 세이지윈드](https://www.wowhead.com/forever/ko/npc=8418) `/way 불모의 땅 48.2 32.8`에게 반납합니다.
 
 !!! tip "통곡의 동굴"
-    드루이드는 송곳니 세트(독사의 포옹)를 노리고 여러 번 돌게 되니, 퀘스트는 첫 판에 모두 끝냅니다. 날팍·에브루 동굴 좌표는 추정치입니다.
+    드루이드는 송곳니 세트(독사의 포옹)를 노리고 여러 번 돌게 되니, 퀘스트는 첫 판에 모두 끝냅니다.
 
 ## 5단계 · 돌발톱 산맥 { #step-5 }
 
-**레벨 21 → 22** · 불모의 땅 북서쪽 경계에서 시작 퀘스트를 받고 돌발톱 산맥 남쪽 해바위 야영지로 들어갑니다.
+**레벨 21 → 23** · 불모의 땅 북서쪽 경계에서 시작 퀘스트를 받고 돌발톱 산맥 해바위 야영지로 들어갑니다.
 
-- [ ] [Seereth Stonebreak](https://www.wowhead.com/forever/ko/search?q=Seereth%20Stonebreak) `/way 불모의 땅 35.2 27.8` · **Goblin Invaders** (돌발톱 산맥 벤처 사 벌목장)
-- [ ] 같은 야영지 [Makaba Flathoof](https://www.wowhead.com/forever/ko/search?q=Makaba%20Flathoof) `/way 불모의 땅 35.2 27.8` · **Avenge My Village**
-- [ ] 해바위 야영지 [Tharm](https://www.wowhead.com/forever/ko/search?q=Tharm) `/way 돌발톱 산맥 45.1 59.8` · **비행경로 열기**
-- [ ] 해바위 야영지 퀘스트를 전부 받고 22까지. 다 못 끝낸 퀘스트는 8단계에 잿빛 골짜기로 갈 때 다시 들릅니다.
-- [ ] 신규 퀘스트 **Wrongly Blamed, Justly Corrected**(불모의 땅, 23)를 받았다면 이 근처에서 같이 끝냅니다.
+- [ ] [시리스 스톤브레이크](https://www.wowhead.com/forever/ko/npc=4049) `/way 불모의 땅 35.3 27.9` · **고블린 침략자** → **벌목기**(23), **원로 마가타**(썬더 블러프)
+- [ ] 같은 야영지 [마카바 플랫후프](https://www.wowhead.com/forever/ko/npc=11857) `/way 불모의 땅 35.2 27.8` · **침략에 대한 복수** → **그룬디히 다크클라우드 처치**
+- [ ] 해바위 야영지 [타름](https://www.wowhead.com/forever/ko/npc=4312) `/way 돌발톱 산맥 45.1 59.8` · **비행경로 열기**
+- [ ] 야영지 남쪽 언덕 위 [모르로갈](https://www.wowhead.com/forever/ko/npc=11861) `/way 돌발톱 산맥 47.2 64.0` · **구릉바위 협곡** → **토석인이여 깨어나라**(20)
+- [ ] 같은 언덕 [츄나만](https://www.wowhead.com/forever/ko/npc=11862) `/way 돌발톱 산맥 47.4 64.3` · **검은심연의 나락으로...**(22, 8단계 던전 퀘스트의 선행), **정령들의 전쟁**(25)
+- [ ] [탐라 윈드필드](https://www.wowhead.com/forever/ko/npc=11864) `/way 돌발톱 산맥 47.5 58.4` · **생태계의 순환**(23) → **새로운 생명**
+- [ ] [마그그랜 어스바인더](https://www.wowhead.com/forever/ko/npc=11860) `/way 돌발톱 산맥 47.2 61.2` · **하피의 위협**(26) → **혈폭풍일족의 혈통**
+- [ ] 신규 **혈폭풍의 장신구**(26): 반짝이는 태양석 15개를 모르로갈에게
+- [ ] 4단계에서 받은 **그림을 물들일 안료**: 땅거미 호수에서 땅거미풀 깍지 30개
+- [ ] 다 못 끝낸 퀘스트는 8단계에 잿빛 골짜기로 갈 때 다시 들릅니다.
 
-!!! note "건너뛰어도 되는 단계"
-    파티가 잘 구해지면 이 단계를 줄이고 바로 6단계 그림자송곳니 성채로 가도 됩니다.
+!!! note "줄여도 되는 단계"
+    파티가 잘 구해지면 이 단계를 줄이고 바로 6단계 그림자송곳니 성채로 가도 됩니다. 츄나만의 **검은심연의 나락으로...**만은 꼭 받아 둡니다.
 
 ## 6단계 · 그림자송곳니 성채 { #step-6 }
 
-**레벨 22 → 24** · 다시 비행선으로 언더시티에 올라갑니다. 퀘스트 3개를 들고 한 번 돌고, 은빛소나무 숲 신규 퀘스트를 같이 합니다.
+**레벨 23 → 25** · 다시 비행선으로 언더시티에 올라갑니다. 퀘스트 3개를 들고 한 번 돌고, 은빛소나무 숲 신규 퀘스트를 같이 합니다.
 
 | 퀘스트 | 받는 곳 | 목표 |
 | --- | --- | --- |
-| The Book of Ur | [Keeper Bel'dugur](https://www.wowhead.com/forever/ko/search?q=Keeper%20Bel%27dugur) `/way 언더시티 53.6 54.0` | 던전 안 책 |
-| Deathstalkers in Shadowfang | [High Executor Hadrec](https://www.wowhead.com/forever/ko/search?q=High%20Executor%20Hadrec) `/way 은빛소나무 숲 43.4 40.8` | 갇힌 죽음의 추적자 구출 |
-| Arugal Must Die | [Dalar Dawnweaver](https://www.wowhead.com/forever/ko/search?q=Dalar%20Dawnweaver) `/way 은빛소나무 숲 44.2 39.8` | 마지막 보스 Arugal |
+| 우르의 책 | [관리인 벨두거](https://www.wowhead.com/forever/ko/npc=2934) `/way 언더시티 53.7 54.5` | 던전 안 책 |
+| 그림자송곳니 성채의 죽음의추적자 | [고위집행관 하드렉](https://www.wowhead.com/forever/ko/npc=1952) `/way 은빛소나무 숲 43.4 40.9` | 던전 안 죽음의추적자 아다만트와 빈센트 찾기 |
+| 아루갈의 최후 | [달라 던위버](https://www.wowhead.com/forever/ko/npc=1938) `/way 은빛소나무 숲 44.2 39.8` | 마지막 보스 대마법사 아루갈 |
 
-- [ ] 은빛소나무 숲 신규 퀘스트 **Watching the Roads**(20), **The Offering Stone**(23)이 보이면 받기 (주는 NPC 미확인)
+- [ ] 달라 던위버 · 신규 **확산 저지**(20): 병든 피난민 5, 초췌한 피난민 5
+- [ ] [어둠의사제 알리스터](https://www.wowhead.com/forever/ko/npc=2121) `/way 은빛소나무 숲 44.0 40.9` · 신규 **길목의 파수꾼**(20): 달라란 마법사 8, 달라란 감시자 8. **베렌의 동굴**(21)도 같이 받습니다.
+- [ ] 베렌의 동굴에서 주운 물건으로 신규 **공물석**(23) → **The Tortured Soul**, **The Offering of Blood**(23, 한글 미확인)
 - [ ] **그림자송곳니 성채** 파티 클리어
 - [ ] 공동묘지에서 남쪽 길을 따라 힐스브래드 구릉지로 걸어갑니다.
 
 !!! tip "저주 해제"
-    그림자송곳니 성채는 저주를 거는 늑대인간이 많습니다. 드루이드·마법사가 저주 해제를 맡고, 오크는 Shatter Curse(한글 미확인)로 직접 풀 수 있습니다.
+    그림자송곳니 성채는 저주를 거는 몹이 많습니다. 드루이드·마법사가 저주 해제를 맡고, 오크는 신규 종족 기술 Shatter Curse(한글 미확인)로 자기 저주를 풉니다.
 
 ## 7단계 · 힐스브래드 구릉지 { #step-7 }
 
-**레벨 24 → 26** · 타렌 밀농장 퀘스트를 몰아서 합니다. 남쪽 사우스쇼어는 얼라이언스 마을이라 경비병을 피해 다닙니다.
+**레벨 25 → 27** · 타렌 밀농장 퀘스트를 몰아서 합니다. 남쪽 사우스쇼어는 얼라이언스 마을이라 경비병을 피해 다닙니다.
 
-- [ ] 타렌 밀농장 [Zarise](https://www.wowhead.com/forever/ko/search?q=Zarise) `/way 힐스브래드 구릉지 60.2 18.6` · **비행경로 열기**
-- [ ] [High Executor Darthalia](https://www.wowhead.com/forever/ko/search?q=High%20Executor%20Darthalia) `/way 힐스브래드 구릉지 62.4 20.2` · **Battle of Hillsbrad** 연계 (힐스브래드 농장 인간들)
-- [ ] [Apothecary Lydon](https://www.wowhead.com/forever/ko/search?q=Apothecary%20Lydon) `/way 힐스브래드 구릉지 61.6 19.2` · 연금술 재료 퀘스트들
-- [ ] 마을 퀘스트를 전부 받고 26까지. 다 끝나면 비행선으로 오그리마에 돌아갑니다.
+- [ ] 타렌 밀농장 [자라이즈](https://www.wowhead.com/forever/ko/npc=2389) `/way 힐스브래드 구릉지 60.1 18.6` · **비행경로 열기**
+- [ ] [고위집행관 다살리아](https://www.wowhead.com/forever/ko/npc=2215) `/way 힐스브래드 구릉지 62.3 20.5` · **힐스브래드 전투** 연계 (힐스브래드 농장 인간들)
+- [ ] 다살리아 · 신규 **Scout Support**(25, 한글 미확인) → 남쪽 던 가록 근처의 Deathstalker Masoj(한글 미확인) · **Valuable Vantages**(25, 한글 미확인): 힐스브래드 봉우리 세 곳에 약병 놓기
+- [ ] [연금술사 라이던](https://www.wowhead.com/forever/ko/npc=2216) `/way 힐스브래드 구릉지 61.4 19.1` · **괴로움의 비약**(22), **고통의 비약**(24)
+- [ ] [크루스크](https://www.wowhead.com/forever/ko/npc=2229) `/way 힐스브래드 구릉지 63.2 20.7` · **포로 구출**(22)
+- [ ] [죽음의경비병 삼사](https://www.wowhead.com/forever/ko/npc=2418) `/way 힐스브래드 구릉지 62.1 19.7` · **죽음의 전리품**(25, 힐스브래드 전투 다음)
+- [ ] 마을 퀘스트를 전부 받고 27까지. 다 끝나면 비행선으로 오그리마에 돌아갑니다.
 
 !!! note "주술사"
     물의 부름 물주머니 하나를 타렌 밀농장 우물 `/way 힐스브래드 구릉지 62.0 20.0`에서 채웁니다.
 
 ## 8단계 · 잿빛 골짜기와 검은심연의 나락 { #step-8 }
 
-**레벨 26 → 28** · 크로스로드에서 북쪽 모르샨 성벽을 지나 잿빛 골짜기로 올라갑니다. 동쪽 토막나무 주둔지를 정리한 뒤 서쪽 끝 조람가르 전초기지에서 던전 퀘스트를 받습니다.
+**레벨 27 → 29** · 크로스로드에서 북쪽 몰샨의 망루를 지나 잿빛 골짜기로 올라갑니다. 동쪽 토막나무 주둔지를 정리한 뒤 서쪽 끝 조람가르 전초기지에서 던전 퀘스트를 받습니다.
 
-- [ ] 토막나무 주둔지 [Vhulgra](https://www.wowhead.com/forever/ko/search?q=Vhulgra) `/way 잿빛 골짜기 73.2 61.6` · **비행경로 열기**, 주둔지 퀘스트 받기
-- [ ] [Bashana Runetotem](https://www.wowhead.com/forever/ko/search?q=Bashana%20Runetotem) `/way 썬더 블러프 70.6 31.6` · **Blackfathom Villainy** (지나갈 때 받기, 사제는 마법봉 Gravestone Scepter)
-- [ ] 조람가르 전초기지 [Andruk](https://www.wowhead.com/forever/ko/search?q=Andruk) `/way 잿빛 골짜기 12.2 33.8` · **비행경로 열기**
-- [ ] [Je'neu Sancrea](https://www.wowhead.com/forever/ko/search?q=Je%27neu%20Sancrea) `/way 잿빛 골짜기 11.6 34.2` · **The Essence of Aku'Mai** (던전 입구 근처 사파이어 수집, 후속 **Amongst the Ruins**)
-- [ ] 던전 안 Damp Note를 주우면 **Allegiance to the Old Gods**
+- [ ] 토막나무 주둔지 [불그라](https://www.wowhead.com/forever/ko/npc=12616) `/way 잿빛 골짜기 73.2 61.6` · **비행경로 열기**
+- [ ] [픽셀](https://www.wowhead.com/forever/ko/npc=12724) `/way 잿빛 골짜기 73.1 61.5` · **사티로스의 뿔**(26), **전쟁노래부족 톱날**(27)
+- [ ] [마스토크 윌리히스](https://www.wowhead.com/forever/ko/npc=12737) `/way 잿빛 골짜기 73.7 60.0` · **돌발톱 산맥의 정체 해결**(25): 남서쪽 미스트랄 호수
+- [ ] 남쪽 [쿠레이빈](https://www.wowhead.com/forever/ko/npc=12867) `/way 잿빛 골짜기 71.1 68.1` · **잿빛골짜기 정찰꾼**(24), [토렉](https://www.wowhead.com/forever/ko/npc=12858) `/way 잿빛 골짜기 68.3 75.3` · **토렉의 공격**(24, 호위)
+- [ ] 서쪽 끝 조람가르 전초기지까지 걸어가 [안드루크](https://www.wowhead.com/forever/ko/npc=11901) `/way 잿빛 골짜기 12.2 33.8` · **비행경로 열기**. 가운데 아스트라나르는 얼라이언스 마을이라 피해 갑니다.
+- [ ] [제네우 생크리](https://www.wowhead.com/forever/ko/npc=12736) `/way 잿빛 골짜기 11.6 34.3` · 츄나만 퀘스트 반납 → **아쿠마이의 정수**(던전 입구 근처 사파이어), **폐허 사이로**(27)
+- [ ] [카랑 아마카르](https://www.wowhead.com/forever/ko/npc=12757) `/way 잿빛 골짜기 11.9 34.5` · **엉겅퀴 마을 침공**(24) → **썩은나무일족의 왕**(26), [미쑤와](https://www.wowhead.com/forever/ko/npc=12721) `/way 잿빛 골짜기 11.7 34.9` · **트롤 부적**(24)
+- [ ] 던전 안: 주운 쪽지로 **고대 신들에 대한 충성**, 은빛경비병 타엘리드에게서 **검은심연의 음모**(썬더 블러프 [바샤나 룬토템](https://www.wowhead.com/forever/ko/npc=9087) `/way 썬더 블러프 71.1 34.2`에게 반납)
 - [ ] **검은심연의 나락** 파티 클리어
 
 !!! tip "물속 구간"
@@ -229,26 +273,27 @@
 
 ## 9단계 · 버섯구름 봉우리와 가시덩굴 우리 { #step-9 }
 
-**레벨 28 → 30** · 불모의 땅 남쪽을 지나 버섯구름 봉우리에서 비행경로를 열고, 30 직전에 가시덩굴 우리를 한 번 돕니다.
+**레벨 29 → 30** · 불모의 땅 남쪽을 지나 버섯구름 봉우리에서 비행경로를 열고, 30 직전에 가시덩굴 우리를 한 번 돕니다.
 
-- [ ] 바람길 봉우리 [Nyse](https://www.wowhead.com/forever/ko/search?q=Nyse) `/way 버섯구름 봉우리 45.1 49.1` · **비행경로 열기**, 봉우리 퀘스트 받기
-- [ ] [Auld Stonespire](https://www.wowhead.com/forever/ko/search?q=Auld%20Stonespire) `/way 썬더 블러프 36.0 59.6` · **A Vengeful Fate** (가시덩굴 우리)
-- [ ] [Master Apothecary Faranell](https://www.wowhead.com/forever/ko/search?q=Master%20Apothecary%20Faranell) `/way 언더시티 48.8 69.2` · **Going, Going, Guano!** (언더시티에 갈 일이 있을 때)
+- [ ] 타우라조 야영지 [그런트 로그마르](https://www.wowhead.com/forever/ko/npc=5911) `/way 불모의 땅 44.6 59.3` · 신규 **억울한 누명, 정당한 응징**(23): 먼지진흙 습지대 경계의 얼라이언스 병사 처치
+- [ ] 구름 승강장 아래 [용사 문혼](https://www.wowhead.com/forever/ko/npc=10079) `/way 버섯구름 봉우리 32.2 22.2` · **높새바람 봉우리**(25)
+- [ ] 높새바람 봉우리 [니세](https://www.wowhead.com/forever/ko/npc=4317) `/way 버섯구름 봉우리 45.1 49.1` · **비행경로 열기**
+- [ ] [절벽파수꾼 롱혼](https://www.wowhead.com/forever/ko/npc=10537) `/way 버섯구름 봉우리 45.7 50.7` · 높새바람 봉우리 반납 → **켄타우로스 처치** → **그림토템부족 염탐**(28)
+- [ ] [하가르 라이트닝후프](https://www.wowhead.com/forever/ko/npc=10539) `/way 버섯구름 봉우리 44.6 50.3` · **괴상한 알**(26) → **뱀의 복수**
+- [ ] [엘루](https://www.wowhead.com/forever/ko/npc=10377) `/way 버섯구름 봉우리 44.9 48.9` · **와이번 조련사**(29)
+- [ ] 가시덩굴 우리 퀘스트: [아울드 스톤스파이어](https://www.wowhead.com/forever/ko/npc=4451) `/way 썬더 블러프 36.0 59.9` · **운명의 복수**(29레벨부터), 메보크 미지릭스 `/way 불모의 땅 62.4 37.6` · **청엽수 줄기**, 언더시티 [수석 연금술사 파라넬](https://www.wowhead.com/forever/ko/npc=2055) `/way 언더시티 48.8 69.3` · **조분석을 나에게!**(30레벨부터, 언더시티에 갈 일이 있을 때). 던전 안에서 **수입업자 윌릭스**(호위)
 - [ ] **가시덩굴 우리** 파티 클리어. 레벨이 낮으면 첫 구간만 돌고 나옵니다.
 
 !!! tip "만렙 30에서"
-    베타 만렙 30에 닿으면 끝낸 퀘스트는 반납하지 말고 쌓아 두었다가 다음 개방 직후 한꺼번에 반납합니다.
+    만렙 30에 닿은 뒤 끝낸 퀘스트는 반납하지 말고 쌓아 두면, 만렙이 오를 때 한꺼번에 반납해 바로 레벨을 올릴 수 있습니다.
 
 ---
 
 ## 게임에서 확인할 것
 
-퀘스트·NPC 한글 이름은 아직 대부분 확인하지 못했습니다. 좌표는 클래식 기준이라 일부 어긋날 수 있습니다.
-
-- [ ] 신규 퀘스트를 주는 NPC: Beasts of Thunder Ridge(듀로타), Hides for the Forsaken·Rear Guard Patrol(티리스팔 숲), Return to Quinn (Again)·Watching the Roads·The Offering Stone(은빛소나무 숲), Parts and Pieces·WANTED: Bruuz·Chol'aruk the Ravener·Wrongly Blamed, Justly Corrected(불모의 땅)
-- [ ] 스카이본(호드)이 제프라스 섬에서 나오는 길: Valanaar 비행선, Skywatcher Plateau 한글 지명, 크로스로드로 보내는 퀘스트 이름
-- [ ] 로데론의 폐허 입구 정확한 위치와 Deathguard Kristof가 있는 전문기술 야영지 좌표
-- [ ] 성난불길 협곡·그림자송곳니 성채·가시덩굴 우리의 포에버 권장 레벨
-- [ ] Razor Hill, Far Watch Post, Thunder Ridge, Skywatcher Plateau 한글 지명
-- [ ] 날팍·에브루 동굴, Seereth Stonebreak 야영지, Auld Stonespire 좌표
+- [ ] 한글 이름을 확인하지 못한 신규 퀘스트: Stormy Potential, A Simmering Storm, This Is Spinal Axe, Halikor's Hoof(듀로타·오그리마), Thunderhorn's Report(멀고어), Tomb Weed, A Righteous Cause, Leonid's Letter(티리스팔 숲), Arugal's Folly, The Tortured Soul, The Offering of Blood(은빛소나무 숲), Scout Support, Valuable Vantages(힐스브래드), What Comes Next, The Earthen Ring, Exploring the Horde(스카이본)
+- [ ] 힐스브래드 Deathstalker Masoj의 한글 이름과 위치
+- [ ] 로데론의 폐허 입구 좌표 (로데론 왕궁 터 안뜰 동쪽)
+- [ ] 스카이본이 내리는 멀고어 고지대(Skywatcher Plateau)의 한글 지명
+- [ ] 오크 신규 종족 기술 Shatter Curse의 한글 이름
 - [ ] 단계별 도착 레벨 (던전 퀘스트 경험치가 바뀌면 단계 끝 레벨이 달라짐)
