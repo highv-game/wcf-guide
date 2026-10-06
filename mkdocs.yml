@@ -85,6 +85,7 @@ nav:
   - 직업 공략:
       - classes/index.md
       - 야성 드루이드 (스카이본): classes/druid.md
+      - 야성 드루이드 (타우렌): classes/druid-tauren.md
       - 고양 주술사 (드워프): classes/shaman.md
       - 고양 주술사 (오크): classes/shaman-orc.md
       - 고통 흑마법사 (노움): classes/warlock.md
