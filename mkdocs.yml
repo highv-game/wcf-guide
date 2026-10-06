@@ -94,7 +94,8 @@ nav:
       - 냉기 마법사 (노움): classes/mage.md
       - 방어 전사 (드워프): classes/warrior.md
   - 레벨링:
-      - 빠른 레벨링 14~27: leveling/fast-route-14-27.md
+      - 빠른 레벨링 14~27 (얼라이언스): leveling/fast-route-14-27.md
+      - 빠른 레벨링 12~30 (호드): leveling/fast-route-horde.md
       - 얼라이언스 1~20 (인터랙티브): tools/alliance-leveling.html
   - 도구:
       - 매크로 교본: tools/macro-guide.html
