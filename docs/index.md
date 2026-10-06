@@ -37,6 +37,14 @@ hide:
 
     [:octicons-arrow-right-24: 1~30 공략](classes/shaman.md)
 
+-   :material-axe: **고양 주술사 (오크, 호드)**
+
+    ---
+
+    무두질 + 가죽세공. 피의 격노와 양손 도끼, 호드 토템 퀘스트(대지 4 / 불 10 / 물 20 / 바람 30).
+
+    [:octicons-arrow-right-24: 1~30 공략](classes/shaman-orc.md)
+
 -   :material-skull: **고통 흑마법사 (노움)**
 
     ---
