@@ -31,7 +31,7 @@
 | 던전 | 레벨 | 입구 | 이 동선에서 |
 | --- | --- | --- | --- |
 | 성난불길 협곡 | 13~18 | 오그리마 어둠의 틈 `/way 오그리마 52.6 49.0` | 2단계 |
-| 로데론의 폐허 (신규) | 15~20 | 언더시티 입구가 있는 로데론 왕궁 터, 안뜰 동쪽 | 3단계 |
+| 로데론의 폐허 (신규) | 15~20 | 언더시티 입구가 있는 로데론 왕궁 터, 안뜰 동쪽 `/way 티리스팔 숲 63.0 67.5` | 3단계 |
 | 통곡의 동굴 | 15~24 | 크로스로드 남서쪽 언덕 동굴 `/way 불모의 땅 46.0 36.5` | 4단계 |
 | 그림자송곳니 성채 | 20~30 | 은빛소나무 숲 남쪽 `/way 은빛소나무 숲 44.8 67.8` | 6단계 |
 | 검은심연의 나락 | 24~32 | 잿빛 골짜기 서해안 조람 해안 `/way 잿빛 골짜기 14.5 14.2` | 8단계 |
@@ -237,7 +237,7 @@
 - [ ] 공동묘지에서 남쪽 길을 따라 힐스브래드 구릉지로 걸어갑니다.
 
 !!! tip "저주 해제"
-    그림자송곳니 성채는 저주를 거는 몹이 많습니다. 드루이드·마법사가 저주 해제를 맡고, 오크는 신규 종족 기술 Shatter Curse(한글 미확인)로 자기 저주를 풉니다.
+    그림자송곳니 성채는 저주를 거는 몹이 많습니다. 드루이드·마법사가 저주 해제를 맡고, 오크는 신규 종족 기술 저주 분쇄로 자기 저주를 풉니다.
 
 ## 7단계 · 힐스브래드 구릉지 { #step-7 }
 
@@ -245,7 +245,7 @@
 
 - [ ] 타렌 밀농장 [자라이즈](https://www.wowhead.com/forever/ko/npc=2389) `/way 힐스브래드 구릉지 60.1 18.6` · **비행경로 열기**
 - [ ] [고위집행관 다살리아](https://www.wowhead.com/forever/ko/npc=2215) `/way 힐스브래드 구릉지 62.3 20.5` · **힐스브래드 전투** 연계 (힐스브래드 농장 인간들)
-- [ ] 다살리아 · 신규 **Scout Support**(25, 한글 미확인) → 남쪽 던 가록 근처의 Deathstalker Masoj(한글 미확인) · **Valuable Vantages**(25, 한글 미확인): 힐스브래드 봉우리 세 곳에 약병 놓기
+- [ ] 다살리아 · 신규 **Scout Support**(25, 한글 미확인) → 타렌 밀농장 남쪽 Deathstalker Masoj(한글 미확인) `/way 힐스브래드 구릉지 64.2 54.0` · **Valuable Vantages**(25, 한글 미확인): 힐스브래드 봉우리 세 곳에 약병 놓기
 - [ ] [연금술사 라이던](https://www.wowhead.com/forever/ko/npc=2216) `/way 힐스브래드 구릉지 61.4 19.1` · **괴로움의 비약**(22), **고통의 비약**(24)
 - [ ] [크루스크](https://www.wowhead.com/forever/ko/npc=2229) `/way 힐스브래드 구릉지 63.2 20.7` · **포로 구출**(22)
 - [ ] [죽음의경비병 삼사](https://www.wowhead.com/forever/ko/npc=2418) `/way 힐스브래드 구릉지 62.1 19.7` · **죽음의 전리품**(25, 힐스브래드 전투 다음)
@@ -292,8 +292,7 @@
 ## 게임에서 확인할 것
 
 - [ ] 한글 이름을 확인하지 못한 신규 퀘스트: Stormy Potential, A Simmering Storm, This Is Spinal Axe, Halikor's Hoof(듀로타·오그리마), Thunderhorn's Report(멀고어), Tomb Weed, A Righteous Cause, Leonid's Letter(티리스팔 숲), Arugal's Folly, The Tortured Soul, The Offering of Blood(은빛소나무 숲), Scout Support, Valuable Vantages(힐스브래드), What Comes Next, The Earthen Ring, Exploring the Horde(스카이본)
-- [ ] 힐스브래드 Deathstalker Masoj의 한글 이름과 위치
-- [ ] 로데론의 폐허 입구 좌표 (로데론 왕궁 터 안뜰 동쪽)
+- [ ] 힐스브래드 Deathstalker Masoj의 한글 이름
+- [ ] 로데론의 폐허 입구가 안뜰 동쪽 좌표 자리에 있는지
 - [ ] 스카이본이 내리는 멀고어 고지대(Skywatcher Plateau)의 한글 지명
-- [ ] 오크 신규 종족 기술 Shatter Curse의 한글 이름
 - [ ] 단계별 도착 레벨 (던전 퀘스트 경험치가 바뀌면 단계 끝 레벨이 달라짐)
