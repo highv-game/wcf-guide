@@ -96,6 +96,8 @@ nav:
   - 레벨링:
       - 빠른 레벨링 14~27 (얼라이언스): leveling/fast-route-14-27.md
       - 빠른 레벨링 12~30 (호드): leveling/fast-route-horde.md
+      - 필드 퀘스트 1~30 (얼라이언스): leveling/field-route-alliance.md
+      - 필드 퀘스트 1~30 (호드): leveling/field-route-horde.md
       - 얼라이언스 1~20 (인터랙티브): tools/alliance-leveling.html
   - 도구:
       - 매크로 교본: tools/macro-guide.html
