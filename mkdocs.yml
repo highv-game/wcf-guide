@@ -99,6 +99,8 @@ nav:
       - 필드 퀘스트 1~30 (얼라이언스): leveling/field-route-alliance.md
       - 필드 퀘스트 1~30 (호드): leveling/field-route-horde.md
       - 얼라이언스 1~20 (인터랙티브): tools/alliance-leveling.html
+  - 전문기술:
+      - 가죽세공 돈벌이·상인의 호의: professions/leatherworking.md
   - 도구:
       - 매크로 교본: tools/macro-guide.html
       - 약초 지도: tools/herb-atlas.html
