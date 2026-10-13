@@ -53,6 +53,14 @@ hide:
 
     [:octicons-arrow-right-24: 1~30 공략](classes/warlock.md)
 
+-   :material-skull-outline: **고통 흑마법사 (언데드)**
+
+    ---
+
+    호드 흑마. 포세이큰의 의지로 공포를 풀고 시체 먹기로 쉬는 시간을 줄인다.
+
+    [:octicons-arrow-right-24: 1~30 공략](classes/warlock-undead.md)
+
 -   :material-eye: **암흑 사제 (노움)**
 
     ---
