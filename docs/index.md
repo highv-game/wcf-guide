@@ -98,6 +98,7 @@ hide:
 | [얼라이언스 1~20](tools/alliance-leveling.html) | 종족별 시작 지역 루트, 퀘스트 할지 말지 기준 |
 | [매크로 교본](tools/macro-guide.html) | 매크로 문법과 직업별 예시, 연습 문제 |
 | [약초 지도](tools/herb-atlas.html) | 약초채집 1~150 지역·시세, 연금술 용도 |
+| [통곡의 동굴 퀘스트 지도 (호드)](tools/wailing-caverns-horde.html) | 사전 퀘스트 위치와 방문 순서 |
 
 ## 공통 단축키 규칙
 
