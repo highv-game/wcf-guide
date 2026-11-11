@@ -95,7 +95,22 @@ tr:last-child td{border-bottom:none}
 .chip[aria-pressed="true"] .coin{color:var(--bg)}
 .advice{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
 @media (prefers-reduced-motion:no-preference){.zone rect{transition:fill .2s}}
+.embed body{background:transparent}
+.embed body>a[href="../"],.embed .wrap>header,.embed .wrap>section,.embed #picker+.note,.embed .main .panel>.note{display:none!important}
+.embed .wrap{padding:4px;margin:0;max-width:none}
 </style>
+<script>
+// 공략 페이지 안에 iframe으로 넣을 때(?embed): 지도만 보이기, 사이트 테마 따라가기, 높이 알려 주기
+(function(){
+  if(!new URLSearchParams(location.search).has("embed")) return;
+  var d=document.documentElement; d.classList.add("embed");
+  function sync(){try{var s=parent.document.body.getAttribute("data-md-color-scheme");d.setAttribute("data-theme",s==="slate"?"dark":"light")}catch(e){}}
+  sync(); try{new MutationObserver(sync).observe(parent.document.body,{attributes:true,attributeFilter:["data-md-color-scheme"]})}catch(e){}
+  function post(){parent.postMessage({wcfMapHeight:Math.ceil(d.getBoundingClientRect().height)},"*")}
+  addEventListener("load",post); addEventListener("resize",post);
+  if(window.ResizeObserver) new ResizeObserver(post).observe(d);
+})();
+</script>
 
 <div class="wrap">
   <header style="display:grid;gap:8px">

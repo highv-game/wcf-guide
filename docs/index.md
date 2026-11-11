@@ -126,7 +126,7 @@ hide:
 
         ---
 
-        [시작 지역 1~20](tools/alliance-leveling.html) · [빠른 레벨링 14~27](leveling/fast-route-14-27.md) · [필드 퀘스트 1~30](leveling/field-route-alliance.md)
+        [시작 지역 1~20](leveling/alliance-1-20.md) · [빠른 레벨링 14~27](leveling/fast-route-14-27.md) · [필드 퀘스트 1~30](leveling/field-route-alliance.md)
 
     </div>
 
