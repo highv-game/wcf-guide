@@ -88,7 +88,22 @@ code.way{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(
 .zname{font-family:"Gowun Batang",serif;font-size:13px;fill:var(--muted);text-anchor:middle;paint-order:stroke;stroke:var(--land);stroke-width:3px}
 .travel{fill:none;stroke:var(--muted);stroke-width:2;stroke-dasharray:2 5;stroke-linecap:round;opacity:.9}
 .danger{fill:none;stroke:#3E64A8;stroke-width:1.5;stroke-dasharray:4 3}
+.embed body{padding:4px;background:transparent}
+.embed .home,.embed header h1,.embed header .lede,.embed .sumcard{display:none}
+@media (min-width:640px){.embed .grid{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}}
 </style>
+<script>
+// 공략 페이지 안에 iframe으로 넣을 때(?embed): 머리말 숨김, 사이트 테마 따라가기, 높이 알려 주기
+(function(){
+  if(!new URLSearchParams(location.search).has("embed")) return;
+  var d=document.documentElement; d.classList.add("embed");
+  function sync(){try{var s=parent.document.body.getAttribute("data-md-color-scheme");d.setAttribute("data-theme",s==="slate"?"dark":"light")}catch(e){}}
+  sync(); try{new MutationObserver(sync).observe(parent.document.body,{attributes:true,attributeFilter:["data-md-color-scheme"]})}catch(e){}
+  function post(){parent.postMessage({wcfMapHeight:Math.ceil(d.getBoundingClientRect().height)},"*")}
+  addEventListener("load",post); addEventListener("resize",post);
+  if(window.ResizeObserver) new ResizeObserver(post).observe(d);
+})();
+</script>
 </head>
 <body>
 <a class="home" href="../">← 공략 홈</a>
@@ -123,7 +138,7 @@ code.way{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(
     <div class="steps" id="steps"></div>
   </div>
 
-  <section class="card" style="display:grid;gap:10px">
+  <section class="card sumcard" style="display:grid;gap:10px">
     <h2>단계 요약</h2>
     <div class="table-wrap">
     <table class="sum">
