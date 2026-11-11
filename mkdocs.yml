@@ -100,6 +100,7 @@ nav:
       - 필드 퀘스트 1~30 (얼라이언스): leveling/field-route-alliance.md
       - 필드 퀘스트 1~30 (호드): leveling/field-route-horde.md
       - 통곡의 동굴 사전 퀘스트 (호드): leveling/wailing-caverns-horde.md
+      - 아늑한 침낭 + 죽음의 폐광 (호드): leveling/sleeping-bag-deadmines-horde.md
       - 얼라이언스 1~20 (인터랙티브): tools/alliance-leveling.html
   - 전문기술:
       - 가죽세공 돈벌이·상인의 호의: professions/leatherworking.md
@@ -109,6 +110,7 @@ nav:
       - 매크로 교본: tools/macro-guide.html
       - 약초 지도: tools/herb-atlas.html
       - 통곡의 동굴 퀘스트 지도 (호드): tools/wailing-caverns-horde.html
+      - 침낭퀘·죽음의 폐광 지도 (호드): tools/sleeping-bag-horde.html
   - 업데이트 기록: changelog.md
   - 지난 문서:
       - archive/index.md
