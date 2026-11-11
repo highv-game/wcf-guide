@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>침낭퀘·죽음의 폐광 지도</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F3EFE6; --surface:#FFFDF8; --ink:#231D16; --muted:#6B6153; --line:#DCD3C2;
+  --land:#E8DCC2; --land-line:#C9B48B; --water:#BFD6D9; --water-line:#8DB2B7;
+  --road:#B29766; --cliff:#CDBB98; --horde:#A8362F; --horde-soft:#F4DEDA;
+  --gold:#9A6E14; --gold-soft:#F4EAD2; --green:#3E7A4E; --route:#A8362F; --dungeon:#5A3E8C;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#16130F; --surface:#1F1B16; --ink:#EDE5D8; --muted:#A99D8B; --line:#3A3329;
+    --land:#2E281F; --land-line:#54483A; --water:#1E3438; --water-line:#3C6268;
+    --road:#7D6A48; --cliff:#3D352A; --horde:#E5847C; --horde-soft:#3A2220;
+    --gold:#E0B85C; --gold-soft:#332A15; --green:#86C796; --route:#E5847C; --dungeon:#B79AE8;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#16130F; --surface:#1F1B16; --ink:#EDE5D8; --muted:#A99D8B; --line:#3A3329;
+  --land:#2E281F; --land-line:#54483A; --water:#1E3438; --water-line:#3C6268;
+  --road:#7D6A48; --cliff:#3D352A; --horde:#E5847C; --horde-soft:#3A2220;
+  --gold:#E0B85C; --gold-soft:#332A15; --green:#86C796; --route:#E5847C; --dungeon:#B79AE8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,sans-serif;font-size:15px;line-height:1.6;padding:28px 16px 60px}
+.home{position:fixed;top:8px;left:8px;z-index:20;padding:4px 10px;border-radius:999px;background:rgba(20,20,20,.75);color:#fff;font:13px/1.4 system-ui,sans-serif;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;display:grid;gap:22px}
+h1,h2{font-family:"Gowun Batang",serif;margin:0;line-height:1.3;text-wrap:balance}
+h1{font-size:30px}
+h2{font-size:20px}
+p{margin:0}
+.lede{color:var(--muted);max-width:70ch}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:14px;height:14px;border-radius:50%;display:inline-block;border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px}
+.maps{display:grid;gap:14px}
+svg{display:block;width:100%;height:auto}
+.maptitle{font-family:"Gowun Batang",serif;font-size:15px;margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline}
+.maptitle small{font-family:"Noto Sans KR",sans-serif;font-size:12px;color:var(--muted);font-weight:400}
+.mk{cursor:pointer}
+.mk circle.b{stroke:var(--surface);stroke-width:2.5}
+.mk text{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.mk .lab{fill:var(--ink);font-weight:500;font-size:11.5px;paint-order:stroke;stroke:var(--land);stroke-width:3.5px;text-anchor:start}
+.mk.on circle.b{stroke:var(--gold);stroke-width:4}
+.mk:focus{outline:none}
+.mk:focus-visible circle.b{stroke:var(--gold);stroke-width:4}
+.area{fill:var(--green);opacity:.16;stroke:var(--green);stroke-dasharray:3 3;stroke-width:1.2}
+.area.on{opacity:.32}
+.place{font-size:11px;fill:var(--muted);font-style:italic;text-anchor:middle;paint-order:stroke;stroke:var(--land);stroke-width:3px}
+.route{fill:none;stroke:var(--route);stroke-width:2.2;stroke-dasharray:6 5;opacity:.75}
+.steps{display:grid;gap:8px;counter-reset:s}
+.step{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--surface);cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+.step:hover{border-color:var(--land-line)}
+.step.on{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-soft)}
+.num{width:28px;height:28px;border-radius:50%;background:var(--horde);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums}
+.step.dun .num{background:var(--dungeon)}
+.step h3{margin:0;font-size:15px}
+.step .where{font-size:12.5px;color:var(--muted)}
+.step ul{margin:6px 0 0;padding-left:18px;font-size:13.5px}
+.step li{margin:2px 0}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:0 6px;border-radius:999px;margin-left:4px;vertical-align:1px}
+.t-get{background:var(--horde-soft);color:var(--horde)}
+.t-do{background:var(--gold-soft);color:var(--gold)}
+.t-end{background:color-mix(in srgb,var(--green) 18%,transparent);color:var(--green)}
+code.way{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(--gold-soft);color:var(--ink);border:1px solid var(--gold);border-radius:6px;padding:0 5px;cursor:pointer;white-space:nowrap}
+.sum{width:100%;border-collapse:collapse;font-size:13.5px}
+.sum th,.sum td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.sum th{font-size:12px;color:var(--muted);font-weight:500}
+.need{font-weight:700;color:var(--horde)}
+.note{font-size:12.5px;color:var(--muted)}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:6px 14px;border-radius:999px;font-size:13px;opacity:0;transition:.2s;pointer-events:none;z-index:30}
+#toast.show{opacity:1;transform:translateX(-50%)}
+.table-wrap{overflow-x:auto}
+.zone{stroke:var(--land-line);stroke-width:2;fill:var(--land)}
+.zone.ally{fill:color-mix(in srgb,#3E64A8 12%,var(--land))}
+.zname{font-family:"Gowun Batang",serif;font-size:13px;fill:var(--muted);text-anchor:middle;paint-order:stroke;stroke:var(--land);stroke-width:3px}
+.travel{fill:none;stroke:var(--muted);stroke-width:2;stroke-dasharray:2 5;stroke-linecap:round;opacity:.9}
+.danger{fill:none;stroke:#3E64A8;stroke-width:1.5;stroke-dasharray:4 3}
+</style>
+</head>
+<body>
+<a class="home" href="../">← 공략 홈</a>
+<div class="wrap">
+  <header style="display:grid;gap:8px">
+    <h1>침낭퀘 · 죽음의 폐광 지도 <span style="font-size:16px;color:var(--horde)">호드</span></h1>
+    <p class="lede">아늑한 침낭 연계 6단계를 죽음의 폐광과 묶어 방문 순서대로 찍었습니다. 번호나 오른쪽 단계를 누르면 서로 강조되고, 노란 좌표는 누르면 복사됩니다. 14레벨부터 받을 수 있고, 4~6단계는 30레벨대 지역을 지납니다.</p>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--horde)"></i>누르는 물건·장소 (번호 = 방문 순서)</span>
+      <span><i class="dot" style="background:var(--dungeon)"></i>던전</span>
+      <span><svg width="28" height="8" style="display:inline;width:28px"><line x1="0" y1="4" x2="28" y2="4" class="route"/></svg>걷거나 헤엄치는 길</span>
+      <span><svg width="28" height="8" style="display:inline;width:28px"><line x1="0" y1="4" x2="28" y2="4" class="travel"/></svg>비행선·귀환석</span>
+      <span><i class="dot" style="background:color-mix(in srgb,#3E64A8 30%,var(--land))"></i>얼라이언스 지역</span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <div class="maps">
+      <div class="card">
+        <p class="maptitle">칼림도어 <small>지역 배치는 그림, 좌표는 게임 지도 기준</small></p>
+        <svg id="kal" viewBox="0 0 560 500" role="img" aria-label="칼림도어 침낭 퀘스트 위치"></svg>
+      </div>
+      <div class="card">
+        <p class="maptitle">동부 왕국 <small>지역 배치는 그림, 좌표는 게임 지도 기준</small></p>
+        <svg id="ek" viewBox="0 0 560 720" role="img" aria-label="동부 왕국 침낭 퀘스트 위치"></svg>
+      </div>
+      <div class="card">
+        <p class="maptitle">서부 몰락지대 <small>죽음의 폐광 + 침낭 2단계</small></p>
+        <svg id="wf" viewBox="0 0 560 660" role="img" aria-label="서부 몰락지대 죽음의 폐광과 알렉스턴 농장 위치"></svg>
+      </div>
+    </div>
+    <div class="steps" id="steps"></div>
+  </div>
+
+  <section class="card" style="display:grid;gap:10px">
+    <h2>단계 요약</h2>
+    <div class="table-wrap">
+    <table class="sum">
+      <thead><tr><th>단계</th><th>퀘스트 (레벨)</th><th>받는 물건</th><th>반납 물건</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>…그때 찾은 그 기록 (22)</td><td>불모의 땅 불타버린 잔해</td><td>서부 몰락지대 불타버린 잔해</td></tr>
+        <tr><td>2</td><td>디딤돌 (24)</td><td>서부 몰락지대 못으로 고정한 판자</td><td>돌발톱 산맥 휴대용 쓰레기통</td></tr>
+        <tr><td>3</td><td>허겁지겁 (24)</td><td>휴대용 쓰레기통</td><td>흙무더기</td></tr>
+        <tr><td>4</td><td>손 더럽히는 일 (32)</td><td>흙무더기</td><td>모단 호수 조각상</td></tr>
+        <tr><td>5</td><td>독수리의 주먹 (32)</td><td>조각상</td><td>소라딘의 성벽 배낭</td></tr>
+        <tr><td>6</td><td>여기가 분명해 (32)</td><td>배낭</td><td class="need">황급히 만 주머니 → 아늑한 침낭</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note">죽음의 폐광에는 호드 퀘스트가 없습니다. 침낭 효과는 침낭 위에서 1분마다 경험치 +1%, 최대 3번(+3%), 재사용 대기시간 1시간입니다. 물건을 눌러 받는 퀘스트라 파티원에게 공유되지 않습니다. 지형 모양은 위치를 알아보기 위한 그림이고 실제 지도와 다릅니다.</p>
+  </section>
+</div>
+<div id="toast">복사됨</div>
+
+<script>
+const W=(z,x,y)=>`/way ${z} ${x} ${y}`;
+// 서부 몰락지대 지도 좌표(0~100) → SVG
+const F={x0:20,y0:26,s:10};
+const wp=(x,y)=>[(x-F.x0)*F.s,(y-F.y0)*F.s];
+const id=(x,y)=>[x,y];
+const PROJ={kal:id,ek:id,wf:wp};
+
+// 칼림도어·동부 왕국은 SVG 위치(그림), 서부 몰락지대는 게임 좌표
+const STEPS=[
+ {n:1,map:"kal",p:[318,420],lab:"불타버린 잔해",title:"불모의 땅에서 시작",where:"타우라조 야영지 남쪽 거인의 들판, 불탄 탑 옆",
+  items:[["get","<b>…그때 찾은 그 기록</b> (14레벨부터)",W("불모의 땅",46.4,73.9)]]},
+ {n:2,map:"ek",p:[176,664],lab:"그롬골 주둔지",title:"오그리마 비행선 → 그롬골",where:"가시덤불 골짜기",
+  items:[["do","오그리마 비행선 탑에서 <b>그롬골 주둔지</b>행"],["do","그롬골 비행 경로 열기"],["do","서쪽 바다로 나가 해안 따라 북쪽으로 수영 → 서부 몰락지대 남쪽 해안"]]},
+ {n:3,map:"wf",p:[42.6,71.8],lab:"달빛시내 마을 · 죽음의 폐광",dungeon:1,title:"죽음의 폐광",where:"달빛시내 마을 광산 (권장 18~21)",
+  items:[["do","광산 입구",W("서부 몰락지대",42.6,71.8)],["do","던전 포털은 광산 안쪽",W("서부 몰락지대",38.2,77.5)],["do","호드 퀘스트 없음. 장비·몹 경험치만"]]},
+ {n:4,map:"wf",p:[37.4,50.7],lab:"알렉스턴 농장",title:"침낭 1단계 반납 · 2단계 수락",where:"서부 몰락지대 알렉스턴 농장",
+  items:[["end","불타버린 잔해에 <b>…그때 찾은 그 기록</b>",W("서부 몰락지대",37.4,50.7)],["get","바로 옆 못으로 고정한 판자에서 <b>디딤돌</b>",W("서부 몰락지대",37.4,50.9)],["do","귀환석 또는 그롬골 비행선으로 오그리마"]]},
+ {n:5,map:"kal",p:[196,196],lab:"산길 입구",title:"돌발톱 산맥 산길",where:"해바위 야영지 북동쪽",
+  items:[["do","해바위 야영지 비행 경로 열기"],["do","북동쪽 산길 입구에서 서쪽으로 산 넘기 (입구 좌표는 대략)",W("돌발톱 산맥",54.6,52.4)]]},
+ {n:6,map:"kal",p:[112,206],lab:"휴대용 쓰레기통",left:1,title:"버려진 야영지",where:"산길 끝, 상자 위",
+  items:[["end","<b>디딤돌</b> 반납 (튼튼한 도시락 등)",W("돌발톱 산맥",40.7,52.4)],["get","<b>허겁지겁</b>"],["do","(선택) 모닥불에 장작나무·부싯돌 → 모닥불 퀘스트"]]},
+ {n:7,map:"kal",p:[104,170],lab:"흙무더기",left:1,title:"흙무더기",where:"북쪽 가파른 절벽 아래 (틈 뛰어 건너기)",
+  items:[["end","<b>허겁지겁</b> 반납",W("돌발톱 산맥",39.6,49.9)],["get","<b>손 더럽히는 일</b> (32)"]]},
+ {n:8,map:"ek",p:[392,352],lab:"돌다지 댐 조각상",title:"모단 호수 돌다지 댐",where:"언더시티 → 은빛소나무 → 힐스브래드 → 아라시 → 탄돌 교각 → 저습지",
+  items:[["do","댐 위 경비병이 지나간 직후 가운데로 → 드워프 얼굴 조각 쪽 턱으로 내려가기"],["end","조각상에 <b>손 더럽히는 일</b>",W("모단 호수",49.4,12.9)],["get","<b>독수리의 주먹</b>"]]},
+ {n:9,map:"ek",p:[262,196],lab:"소라딘의 성벽",title:"소라딘의 성벽 → 아늑한 침낭",where:"힐스브래드 던홀드 요새 남동쪽",
+  items:[["do","성벽 틈에 기댄 수레를 밟고 성벽 위로",W("힐스브래드 구릉지",87.3,49.6)],["end","안쪽 방 지나 오른쪽 벽 배낭에 <b>독수리의 주먹</b>",W("아라시 고원",22.4,24.2)],["get","<b>여기가 분명해</b> → 바로 아래 황급히 만 주머니에 반납 → <b>아늑한 침낭</b>"]]},
+];
+
+const ns="http://www.w3.org/2000/svg";
+const el=(t,a,p)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e};
+const label=(svg,t,x,y)=>{el("text",{x,y,class:"zname"},svg).textContent=t};
+const zone=(svg,cx,cy,rx,ry,name,ally,ly)=>{el("ellipse",{cx,cy,rx,ry,class:"zone"+(ally?" ally":"")},svg);if(name)label(svg,name,cx,ly??cy+ry-12)};
+const line=(svg,pts,cls)=>el("polyline",{points:pts.map(p=>p.join(",")).join(" "),class:cls},svg);
+
+// ── 칼림도어
+const sk=document.getElementById("kal");
+el("rect",{x:0,y:0,width:560,height:500,fill:"var(--water)"},sk);
+el("path",{d:"M40 20 L520 20 L540 120 L520 300 L470 470 L80 480 L30 330 Z",fill:"var(--cliff)",opacity:.6},sk);
+zone(sk,265,60,150,42,"잿빛 골짜기",1,52);
+zone(sk,150,200,105,90,"돌발톱 산맥",0,282);
+zone(sk,330,280,80,190,"불모의 땅",0,470);
+zone(sk,470,170,50,90,"듀로타",0,250);
+zone(sk,200,400,72,60,"멀고어",0,450);
+const KP={org:[462,104],xr:[340,206],tj:[318,360],tb:[178,392],sun:[150,240]};
+[["오그리마",KP.org],["크로스로드",KP.xr],["타우라조 야영지",KP.tj],["썬더 블러프",KP.tb],["해바위 야영지",KP.sun]].forEach(([t,[x,y]])=>{el("circle",{cx:x,cy:y,r:4,fill:"var(--ink)",opacity:.6},sk);el("text",{x:x+8,y:y+4,class:"place","text-anchor":"start",style:"text-anchor:start"},sk).textContent=t});
+line(sk,[[318,420],KP.tj,KP.xr,KP.org],"travel");
+line(sk,[KP.org,[540,60]],"travel");
+el("text",{x:440,y:40,class:"place"},sk).textContent="비행선 → 그롬골·언더시티";
+line(sk,[KP.xr,[260,215],KP.sun,[196,196],[150,212],[112,206],[104,170]],"route");
+
+// ── 동부 왕국
+const se=document.getElementById("ek");
+el("rect",{x:0,y:0,width:560,height:720,fill:"var(--water)"},se);
+el("path",{d:"M80 20 L470 20 L500 160 L470 300 L460 440 L420 560 L300 700 L150 700 L110 600 L120 480 L170 330 L60 160 Z",fill:"var(--cliff)",opacity:.6},se);
+zone(se,170,70,80,40,"티리스팔 숲",0,98);
+zone(se,120,160,55,55,"은빛소나무 숲",0,212);
+zone(se,200,215,58,40,"힐스브래드 구릉지",1,250);
+zone(se,330,190,68,48,"아라시 고원",1,236);
+zone(se,330,300,62,44,"저습지",1,342);
+zone(se,280,400,62,42,"던 모로",1,438);
+zone(se,400,385,52,42,"모단 호수",1,424);
+zone(se,270,500,58,36,"엘윈 숲",1,534);
+zone(se,170,540,52,48,"서부 몰락지대",1,585);
+zone(se,270,590,56,30,"그늘숲",1,616);
+zone(se,220,672,70,36,"가시덤불 골짜기",0,704);
+const EP={uc:[176,74],thandol:[328,252],wf:[170,535]};
+[["언더시티",EP.uc],["탄돌 교각",EP.thandol]].forEach(([t,[x,y]])=>{el("circle",{cx:x,cy:y,r:4,fill:"var(--ink)",opacity:.6},se);el("text",{x:x+8,y:y+4,class:"place",style:"text-anchor:start"},se).textContent=t});
+el("rect",{x:120,y:500,width:100,height:72,rx:8,class:"danger"},se);
+el("text",{x:170,y:496,class:"place"},se).textContent="3·4 → 아래 서부 몰락지대 지도";
+line(se,[[176,664],[120,620],[118,560],EP.wf],"route");
+line(se,[[40,664],[176,664]],"travel");
+line(se,[[40,74],EP.uc],"travel");
+el("text",{x:46,y:62,class:"place",style:"text-anchor:start"},se).textContent="오그리마 비행선";
+line(se,[EP.uc,[130,150],[200,215],[300,190],EP.thandol,[340,320],[392,352]],"route");
+line(se,[[392,352],[340,320],EP.thandol,[300,195],[262,196]],"route");
+
+// ── 서부 몰락지대
+const sw=document.getElementById("wf");
+el("rect",{x:0,y:0,width:560,height:660,fill:"var(--water)"},sw);
+const coast=[[33,30],[66,30],[68,50],[64,64],[58,74],[52,79],[44,80],[38,80.5],[34,76],[32,66],[31,56],[32,44]];
+el("polygon",{points:coast.map(p=>wp(...p).join(",")).join(" "),class:"zone ally"},sw);
+const sent=wp(56.3,47.5);
+el("circle",{cx:sent[0],cy:sent[1],r:34,class:"danger"},sw);
+el("text",{x:sent[0],y:sent[1]+4,class:"place"},sw).textContent="감시의 언덕 (경비병)";
+const portal=wp(38.2,77.5);
+el("circle",{cx:portal[0],cy:portal[1],r:6,fill:"var(--dungeon)",stroke:"var(--surface)","stroke-width":2},sw);
+el("text",{x:portal[0]-10,y:portal[1]+18,class:"place"},sw).textContent="포털 (광산 안쪽)";
+[["엘윈 숲 방향 →",64,36],["그늘숲 방향 →",63,70],["그롬골에서 헤엄쳐 옴 ↑",44,86]].forEach(([t,x,y])=>{const [px,py]=wp(x,y);el("text",{x:px,y:py,class:"place"},sw).textContent=t});
+line(sw,[wp(46,90),wp(44,79),wp(42.6,71.8),wp(36,62),wp(37.4,50.7)],"route");
+
+// ── 마커
+const mkEls={}, stepEls={};
+const svgs={kal:sk,ek:se,wf:sw};
+STEPS.forEach(s=>{
+  const svg=svgs[s.map]; const [x,y]=PROJ[s.map](...s.p);
+  const g=el("g",{class:"mk",tabindex:0,role:"button","aria-label":`${s.n}. ${s.title}`},svg);
+  el("circle",{class:"b",cx:x,cy:y,r:11,fill:s.dungeon?"var(--dungeon)":"var(--horde)"},g);
+  el("text",{x,y},g).textContent=s.n;
+  const t=el("text",{x:s.left?x-16:x+16,y:y+4,class:"lab",style:s.left?"text-anchor:end":""},g);t.textContent=s.lab;
+  g.addEventListener("click",()=>pick(s.n,true));
+  g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pick(s.n,true)}});
+  mkEls[s.n]=g;
+});
+
+// ── 단계 목록
+const box=document.getElementById("steps");
+const tagTxt={get:"수락",do:"진행",end:"반납"};
+STEPS.forEach(s=>{
+  const b=document.createElement("button");
+  b.className="step"+(s.dungeon?" dun":""); b.type="button";
+  b.innerHTML=`<span class="num">${s.n}</span><span><h3>${s.title}</h3><span class="where">${s.where}</span><ul>${s.items.map(([k,t,w])=>`<li><span class="tag t-${k}">${tagTxt[k]}</span> ${t}${w?` <code class="way">${w}</code>`:""}</li>`).join("")}</ul></span>`;
+  b.addEventListener("click",e=>{if(e.target.closest("code.way"))return;pick(s.n,false)});
+  box.appendChild(b); stepEls[s.n]=b;
+});
+let cur=null;
+function pick(n,scroll){
+  if(cur){mkEls[cur].classList.remove("on");stepEls[cur].classList.remove("on")}
+  cur=n; mkEls[n].classList.add("on"); stepEls[n].classList.add("on");
+  if(scroll) stepEls[n].scrollIntoView({block:"nearest",behavior:"smooth"});
+}
+// ── 좌표 복사
+const toast=document.getElementById("toast");
+document.addEventListener("click",e=>{
+  const c=e.target.closest("code.way"); if(!c) return;
+  const txt=c.textContent;
+  const done=()=>{toast.classList.add("show");clearTimeout(toast._h);toast._h=setTimeout(()=>toast.classList.remove("show"),1300)};
+  try{ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(done,done)} else {const t=document.createElement("textarea");t.value=txt;document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();done()} }catch(_){done()}
+});
+pick(1,false);
+</script>
+</body>
+</html>
