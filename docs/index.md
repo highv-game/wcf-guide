@@ -8,108 +8,154 @@ hide:
 
 # 하파의 WoW 포에버 공략
 
-직업별 1~30 육성, 단축키와 매크로, 던전, 전문기술까지 한곳에 모았습니다.
+직업별 1~30 육성, 레벨링 동선, 던전 퀘스트, 전문기술, 단축키 설정을 한곳에 모았습니다.
 
-베타 만렙 30 · 이름 선점 10월 28일 · **정식 출시 11월 4일**
+베타 만렙 30 · **정식 출시 11월 4일**
 
-[직업 공략 보기](classes/index.md){ .md-button .md-button--primary }
-[빠른 레벨링 14~27](leveling/fast-route-14-27.md){ .md-button }
+[직업 공략](classes/index.md){ .md-button .md-button--primary }
+[레벨링](leveling/index.md){ .md-button }
+[던전·퀘스트](dungeons/index.md){ .md-button }
 
 </div>
 
-## 내 캐릭터
+## 진영별 바로가기
+
+=== "호드"
+
+    <div class="grid cards" markdown>
+
+    -   :material-paw: **야성 드루이드 (타우렌)** · 본캐
+
+        ---
+
+        곰 탱커 + 표범 딜. 무두질 + 가죽세공, 통곡의 동굴 송곳니 세트.
+
+        [:octicons-arrow-right-24: 1~30 공략](classes/druid-tauren.md)
+
+    -   :material-axe: **고양 주술사 (오크)**
+
+        ---
+
+        피의 격노와 양손 도끼, 호드 토템 퀘스트. 무두질 + 가죽세공.
+
+        [:octicons-arrow-right-24: 1~30 공략](classes/shaman-orc.md)
+
+    -   :material-skull-outline: **고통 흑마법사 (언데드)**
+
+        ---
+
+        포세이큰의 의지와 시체 먹기. 재봉술 + 마법부여.
+
+        [:octicons-arrow-right-24: 1~30 공략](classes/warlock-undead.md)
+
+    -   :material-eye-outline: **암흑 사제 (언데드)**
+
+        ---
+
+        지속 피해와 마법봉 자급자족. 재봉술 + 마법부여.
+
+        [:octicons-arrow-right-24: 1~30 공략](classes/priest-undead.md)
+
+    -   :material-map-marker-path: **레벨링 동선**
+
+        ---
+
+        [빠른 레벨링 12~30](leveling/fast-route-horde.md) · [필드 퀘스트 1~30](leveling/field-route-horde.md)
+
+    -   :material-castle: **던전·퀘스트**
+
+        ---
+
+        [통곡의 동굴 사전 퀘스트](leveling/wailing-caverns-horde.md) · [아늑한 침낭 + 죽음의 폐광](leveling/sleeping-bag-deadmines-horde.md)
+
+    </div>
+
+=== "얼라이언스"
+
+    <div class="grid cards" markdown>
+
+    -   :material-paw: **야성 드루이드 (스카이본)**
+
+        ---
+
+        무두질 + 가죽세공. 독사의 포옹 세트, 싸움꾼의 가죽 다리보호대.
+
+        [:octicons-arrow-right-24: 1~30 공략](classes/druid.md)
+
+    -   :material-lightning-bolt: **고양 주술사 (드워프)**
+
+        ---
+
+        약초채집 + 연금술. 드워프 토템 퀘스트(대지 4 / 불 10 / 물 20).
+
+        [:octicons-arrow-right-24: 1~30 공략](classes/shaman.md)
+
+    -   :material-skull: **고통 흑마법사 (노움)**
+
+        ---
+
+        재봉술 + 마법부여. 다른 캐릭터의 녹템 마력 추출 담당.
+
+        [:octicons-arrow-right-24: 1~30 공략](classes/warlock.md)
+
+    -   :material-eye: **암흑 사제 (노움)**
+
+        ---
+
+        수양 2 + 암흑 19 빌드. 마법봉과 지속 피해로 쉬지 않고 사냥.
+
+        [:octicons-arrow-right-24: 1~30 공략](classes/priest.md)
+
+    -   :material-snowflake: **냉기 마법사 (노움)**
+
+        ---
+
+        얼음창·서리의 손가락 0/0/21 빌드. 기계공학 + 채광.
+
+        [:octicons-arrow-right-24: 1~30 공략](classes/mage.md)
+
+    -   :material-shield: **방어 전사 (드워프)**
+
+        ---
+
+        처음 시작한 캐릭터. 약초채집.
+
+        [:octicons-arrow-right-24: 1~20 공략](classes/warrior.md)
+
+    -   :material-map-marker-path: **레벨링 동선**
+
+        ---
+
+        [시작 지역 1~20](tools/alliance-leveling.html) · [빠른 레벨링 14~27](leveling/fast-route-14-27.md) · [필드 퀘스트 1~30](leveling/field-route-alliance.md)
+
+    </div>
+
+## 카테고리
 
 <div class="grid cards" markdown>
 
--   :material-paw: **야성 드루이드 (스카이본)**
+-   :material-account-group: **[직업 공략](classes/index.md)**
 
-    ---
+    특성, 단축키·매크로, 솔로·던전 운영, 장비, 종족 특성
 
-    무두질 + 가죽세공. 통곡의 동굴 독사의 포옹 세트, 싸움꾼의 가죽 다리보호대.
+-   :material-map-marker-path: **[레벨링](leveling/index.md)**
 
-    [:octicons-arrow-right-24: 1~30 공략](classes/druid.md)
+    진영별 빠른 레벨링(던전 포함)과 필드 퀘스트 동선
 
--   :material-lightning-bolt: **고양 주술사 (드워프)**
+-   :material-castle: **[던전·퀘스트](dungeons/index.md)**
 
-    ---
+    던전 사전 퀘스트와 연계 퀘스트, 지도 포함
 
-    약초채집 + 연금술. 드워프 토템 퀘스트(대지 4 / 불 10 / 물 20).
+-   :material-hammer-wrench: **[전문기술](professions/index.md)**
 
-    [:octicons-arrow-right-24: 1~30 공략](classes/shaman.md)
+    가죽세공 돈벌이, 약초채집 지도
 
--   :material-axe: **고양 주술사 (오크, 호드)**
+-   :material-keyboard: **[설정·UI](settings/index.md)**
 
-    ---
+    공통 단축키 규칙, 매크로 교본, 그래픽 설정
 
-    무두질 + 가죽세공. 피의 격노와 양손 도끼, 호드 토템 퀘스트(대지 4 / 불 10 / 물 20 / 바람 30).
+-   :material-history: **[업데이트 기록](changelog.md)**
 
-    [:octicons-arrow-right-24: 1~30 공략](classes/shaman-orc.md)
-
--   :material-skull: **고통 흑마법사 (노움)**
-
-    ---
-
-    재봉술 + 마법부여. 다른 캐릭터의 녹템 마력 추출 담당.
-
-    [:octicons-arrow-right-24: 1~30 공략](classes/warlock.md)
-
--   :material-skull-outline: **고통 흑마법사 (언데드)**
-
-    ---
-
-    호드 흑마. 포세이큰의 의지로 공포를 풀고 시체 먹기로 쉬는 시간을 줄인다.
-
-    [:octicons-arrow-right-24: 1~30 공략](classes/warlock-undead.md)
-
--   :material-eye: **암흑 사제 (노움)**
-
-    ---
-
-    수양 2 + 암흑 19 빌드. 마법봉과 지속 피해로 쉬지 않고 사냥.
-
-    [:octicons-arrow-right-24: 1~30 공략](classes/priest.md)
-
--   :material-snowflake: **냉기 마법사 (노움)**
-
-    ---
-
-    얼음창·서리의 손가락 0/0/21 빌드. 기계공학 + 채광.
-
-    [:octicons-arrow-right-24: 1~30 공략](classes/mage.md)
-
--   :material-shield: **방어 전사 (드워프)**
-
-    ---
-
-    처음 시작한 캐릭터. 약초채집.
-
-    [:octicons-arrow-right-24: 1~20 공략](classes/warrior.md)
+    사이트에 새로 들어온 내용
 
 </div>
-
-## 레벨링과 도구
-
-| 페이지 | 내용 |
-| --- | --- |
-| [빠른 레벨링 14~27 (얼라이언스)](leveling/fast-route-14-27.md) | 던 모로 → 영주의 전당 → 서부 몰락지대 → 로데론의 폐허 → 데드마인 → 통곡의 동굴 → 검은심연 → 스톰윈드 지하감옥 |
-| [빠른 레벨링 12~30 (호드)](leveling/fast-route-horde.md) | 종족별 시작 지역 → 크로스로드 → 성난불길 협곡 → 로데론의 폐허 → 통곡의 동굴 → 그림자송곳니 성채 → 힐스브래드 → 검은심연의 나락 → 가시덩굴 우리 |
-| [필드 퀘스트 1~30 (얼라이언스)](leveling/field-route-alliance.md) | 던전 없이 필드 퀘스트만. 모단 호수·서부 몰락지대·붉은마루 또는 어둠의 해안·잿빛 골짜기 → 저습지 → 붉은마루 → 그늘숲 |
-| [필드 퀘스트 1~30 (호드)](leveling/field-route-horde.md) | 던전 없이 필드 퀘스트만. 불모의 땅 → 돌발톱 산맥 → 불모의 땅 → 잿빛 골짜기 → 힐스브래드 → 버섯구름 봉우리 |
-| [얼라이언스 1~20](tools/alliance-leveling.html) | 종족별 시작 지역 루트, 퀘스트 할지 말지 기준 |
-| [매크로 교본](tools/macro-guide.html) | 매크로 문법과 직업별 예시, 연습 문제 |
-| [약초 지도](tools/herb-atlas.html) | 약초채집 1~150 지역·시세, 연금술 용도 |
-| [통곡의 동굴 사전 퀘스트 (호드)](leveling/wailing-caverns-horde.md) | 사전 퀘스트 위치와 방문 순서, 지도 포함 |
-| [아늑한 침낭 + 죽음의 폐광 (호드)](leveling/sleeping-bag-deadmines-horde.md) | 침낭 연계 6단계와 폐광 동선, 지도 포함 |
-
-## 공통 단축키 규칙
-
-모든 직업 공략은 같은 키 배치를 씁니다. 칸마다 기능 하나를 두고, 기본 바 위로 두 줄을 쌓아 같은 열은 같은 키에 수정키만 다르게 합니다.
-
-- **기본 바**: 1~5, Q E R F G Z T
-- **한 칸 위(2번 바)**: 숫자 위는 **Ctrl**(1~4 마우스오버 치유·해제), 알파벳 위는 **Shift**(비전투·변형 기술)
-- **두 칸 위(3번 바)**: **Alt** + 같은 키(변형 기술)
-- **5번 바(2번 바 왼쪽)**: 따라치기(`` ` ``), 공격대 징표(Caps Lock / Alt+Caps / Ctrl+Caps), 단축키 표를 여는 ? 버튼(`/wcfkeys`). 모든 캐릭터 공용
-- **Shift+숫자와 Ctrl+알파벳은 쓰지 않습니다.** 기본 단축키의 Shift+1~6(행동 단축바 넘기기)은 해제합니다.
-- **T**: 전투 부활 / 던전 부활
-- WcfSetup 애드온이 있는 직업은 `/wcfsetup` 한 번으로 매크로·칸·단축키·바 위치를 설정합니다. 공략이 있는 모든 직업(고양 주술사, 야성 드루이드, 고통 흑마법사, 암흑 사제, 냉기 마법사, 방어 전사)을 지원합니다.
-- Alt+Shift 조합은 한글 입력 전환과 겹쳐서 쓰지 않습니다.

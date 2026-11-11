@@ -83,40 +83,54 @@ markdown_extensions:
 
 nav:
   - 홈: index.md
-  - 직업 공략:
+  - 직업:
       - classes/index.md
-      - 야성 드루이드 (스카이본): classes/druid.md
-      - 야성 드루이드 (타우렌): classes/druid-tauren.md
-      - 고양 주술사 (드워프): classes/shaman.md
-      - 고양 주술사 (오크): classes/shaman-orc.md
-      - 고통 흑마법사 (노움): classes/warlock.md
-      - 고통 흑마법사 (언데드): classes/warlock-undead.md
-      - 암흑 사제 (노움): classes/priest.md
-      - 암흑 사제 (언데드): classes/priest-undead.md
-      - 냉기 마법사 (노움): classes/mage.md
-      - 방어 전사 (드워프): classes/warrior.md
+      - 드루이드:
+          - 야성 · 타우렌 (호드): classes/druid-tauren.md
+          - 야성 · 스카이본 (얼라이언스): classes/druid.md
+          - 지난 문서:
+              - archive/index.md
+              - 스카이본 드루이드 1~20: archive/druid-skyborne-1-20.md
+              - 드루이드 솔로·매크로: archive/druid-solo-macros.md
+              - 드루이드 던전: archive/druid-dungeon.md
+              - 나이트엘프 드루이드 1~20: archive/druid-nightelf-1-20.md
+      - 주술사:
+          - 고양 · 오크 (호드): classes/shaman-orc.md
+          - 고양 · 드워프 (얼라이언스): classes/shaman.md
+      - 흑마법사:
+          - 고통 · 언데드 (호드): classes/warlock-undead.md
+          - 고통 · 노움 (얼라이언스): classes/warlock.md
+      - 사제:
+          - 암흑 · 언데드 (호드): classes/priest-undead.md
+          - 암흑 · 노움 (얼라이언스): classes/priest.md
+      - 마법사:
+          - 냉기 · 노움 (얼라이언스): classes/mage.md
+      - 전사:
+          - 방어 · 드워프 (얼라이언스): classes/warrior.md
   - 레벨링:
-      - 빠른 레벨링 14~27 (얼라이언스): leveling/fast-route-14-27.md
-      - 빠른 레벨링 12~30 (호드): leveling/fast-route-horde.md
-      - 필드 퀘스트 1~30 (얼라이언스): leveling/field-route-alliance.md
-      - 필드 퀘스트 1~30 (호드): leveling/field-route-horde.md
-      - 통곡의 동굴 사전 퀘스트 (호드): leveling/wailing-caverns-horde.md
-      - 아늑한 침낭 + 죽음의 폐광 (호드): leveling/sleeping-bag-deadmines-horde.md
-      - 얼라이언스 1~20 (인터랙티브): tools/alliance-leveling.html
+      - leveling/index.md
+      - 호드:
+          - 빠른 레벨링 12~30: leveling/fast-route-horde.md
+          - 필드 퀘스트 1~30: leveling/field-route-horde.md
+      - 얼라이언스:
+          - 시작 지역 1~20: tools/alliance-leveling.html
+          - 빠른 레벨링 14~27: leveling/fast-route-14-27.md
+          - 필드 퀘스트 1~30: leveling/field-route-alliance.md
+  - 던전·퀘스트:
+      - dungeons/index.md
+      - 호드:
+          - 통곡의 동굴 사전 퀘스트: leveling/wailing-caverns-horde.md
+          - 아늑한 침낭 + 죽음의 폐광: leveling/sleeping-bag-deadmines-horde.md
   - 전문기술:
+      - professions/index.md
       - 가죽세공 돈벌이·상인의 호의: professions/leatherworking.md
-  - 설정:
-      - 4K 120프레임 그래픽: settings/graphics.md
-  - 도구:
+      - 약초채집 지도: tools/herb-atlas.html
+  - 설정·UI:
+      - settings/index.md
+      - 공통 단축키 규칙: settings/keybinds.md
       - 매크로 교본: tools/macro-guide.html
-      - 약초 지도: tools/herb-atlas.html
+      - 4K 120프레임 그래픽: settings/graphics.md
   - 업데이트 기록: changelog.md
-  - 지난 문서:
-      - archive/index.md
-      - 스카이본 드루이드 1~20: archive/druid-skyborne-1-20.md
-      - 드루이드 솔로·매크로: archive/druid-solo-macros.md
-      - 드루이드 던전: archive/druid-dungeon.md
-      - 나이트엘프 드루이드 1~20: archive/druid-nightelf-1-20.md
 
 validation:
   anchors: warn
