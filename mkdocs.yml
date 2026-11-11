@@ -108,6 +108,7 @@ nav:
   - 도구:
       - 매크로 교본: tools/macro-guide.html
       - 약초 지도: tools/herb-atlas.html
+      - 통곡의 동굴 퀘스트 지도 (호드): tools/wailing-caverns-horde.html
   - 업데이트 기록: changelog.md
   - 지난 문서:
       - archive/index.md

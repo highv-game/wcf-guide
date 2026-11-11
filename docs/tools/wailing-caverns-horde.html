@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>통곡의 동굴 퀘스트 지도</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F3EFE6; --surface:#FFFDF8; --ink:#231D16; --muted:#6B6153; --line:#DCD3C2;
+  --land:#E8DCC2; --land-line:#C9B48B; --water:#BFD6D9; --water-line:#8DB2B7;
+  --road:#B29766; --cliff:#CDBB98; --horde:#A8362F; --horde-soft:#F4DEDA;
+  --gold:#9A6E14; --gold-soft:#F4EAD2; --green:#3E7A4E; --route:#A8362F; --dungeon:#5A3E8C;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#16130F; --surface:#1F1B16; --ink:#EDE5D8; --muted:#A99D8B; --line:#3A3329;
+    --land:#2E281F; --land-line:#54483A; --water:#1E3438; --water-line:#3C6268;
+    --road:#7D6A48; --cliff:#3D352A; --horde:#E5847C; --horde-soft:#3A2220;
+    --gold:#E0B85C; --gold-soft:#332A15; --green:#86C796; --route:#E5847C; --dungeon:#B79AE8;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#16130F; --surface:#1F1B16; --ink:#EDE5D8; --muted:#A99D8B; --line:#3A3329;
+  --land:#2E281F; --land-line:#54483A; --water:#1E3438; --water-line:#3C6268;
+  --road:#7D6A48; --cliff:#3D352A; --horde:#E5847C; --horde-soft:#3A2220;
+  --gold:#E0B85C; --gold-soft:#332A15; --green:#86C796; --route:#E5847C; --dungeon:#B79AE8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,sans-serif;font-size:15px;line-height:1.6;padding:28px 16px 60px}
+.home{position:fixed;top:8px;left:8px;z-index:20;padding:4px 10px;border-radius:999px;background:rgba(20,20,20,.75);color:#fff;font:13px/1.4 system-ui,sans-serif;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;display:grid;gap:22px}
+h1,h2{font-family:"Gowun Batang",serif;margin:0;line-height:1.3;text-wrap:balance}
+h1{font-size:30px}
+h2{font-size:20px}
+p{margin:0}
+.lede{color:var(--muted);max-width:70ch}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:14px;height:14px;border-radius:50%;display:inline-block;border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px}
+.maps{display:grid;gap:14px}
+svg{display:block;width:100%;height:auto}
+.maptitle{font-family:"Gowun Batang",serif;font-size:15px;margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline}
+.maptitle small{font-family:"Noto Sans KR",sans-serif;font-size:12px;color:var(--muted);font-weight:400}
+.mk{cursor:pointer}
+.mk circle.b{stroke:var(--surface);stroke-width:2.5}
+.mk text{font-size:12px;font-weight:700;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.mk .lab{fill:var(--ink);font-weight:500;font-size:11.5px;paint-order:stroke;stroke:var(--land);stroke-width:3.5px;text-anchor:start}
+.mk.on circle.b{stroke:var(--gold);stroke-width:4}
+.mk:focus{outline:none}
+.mk:focus-visible circle.b{stroke:var(--gold);stroke-width:4}
+.area{fill:var(--green);opacity:.16;stroke:var(--green);stroke-dasharray:3 3;stroke-width:1.2}
+.area.on{opacity:.32}
+.place{font-size:11px;fill:var(--muted);font-style:italic;text-anchor:middle;paint-order:stroke;stroke:var(--land);stroke-width:3px}
+.route{fill:none;stroke:var(--route);stroke-width:2.2;stroke-dasharray:6 5;opacity:.75}
+.steps{display:grid;gap:8px;counter-reset:s}
+.step{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--surface);cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+.step:hover{border-color:var(--land-line)}
+.step.on{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-soft)}
+.num{width:28px;height:28px;border-radius:50%;background:var(--horde);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums}
+.step.dun .num{background:var(--dungeon)}
+.step h3{margin:0;font-size:15px}
+.step .where{font-size:12.5px;color:var(--muted)}
+.step ul{margin:6px 0 0;padding-left:18px;font-size:13.5px}
+.step li{margin:2px 0}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:0 6px;border-radius:999px;margin-left:4px;vertical-align:1px}
+.t-get{background:var(--horde-soft);color:var(--horde)}
+.t-do{background:var(--gold-soft);color:var(--gold)}
+.t-end{background:color-mix(in srgb,var(--green) 18%,transparent);color:var(--green)}
+code.way{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(--gold-soft);color:var(--ink);border:1px solid var(--gold);border-radius:6px;padding:0 5px;cursor:pointer;white-space:nowrap}
+.sum{width:100%;border-collapse:collapse;font-size:13.5px}
+.sum th,.sum td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+.sum th{font-size:12px;color:var(--muted);font-weight:500}
+.need{font-weight:700;color:var(--horde)}
+.note{font-size:12.5px;color:var(--muted)}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:6px 14px;border-radius:999px;font-size:13px;opacity:0;transition:.2s;pointer-events:none;z-index:30}
+#toast.show{opacity:1;transform:translateX(-50%)}
+.table-wrap{overflow-x:auto}
+</style>
+</head>
+<body>
+<a class="home" href="../">← 공략 홈</a>
+<div class="wrap">
+  <header style="display:grid;gap:8px">
+    <h1>통곡의 동굴 사전 퀘스트 지도 <span style="font-size:16px;color:var(--horde)">호드</span></h1>
+    <p class="lede">던전에 들어가기 전에 받아 둘 퀘스트 7개를 불모의 땅·썬더 블러프 지도에 순서대로 찍었습니다. 번호나 오른쪽 단계를 누르면 서로 강조되고, 노란 좌표는 누르면 복사됩니다.</p>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--horde)"></i>퀘스트 NPC·장소 (번호 = 방문 순서)</span>
+      <span><i class="dot" style="background:var(--dungeon)"></i>던전·입구</span>
+      <span><i class="dot" style="background:var(--green);opacity:.5"></i>사냥·채집 구역</span>
+      <span><svg width="28" height="8" style="display:inline;width:28px"><line x1="0" y1="4" x2="28" y2="4" class="route"/></svg>동선</span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <div class="maps">
+      <div class="card">
+        <p class="maptitle">불모의 땅 (크로스로드 주변) <small>좌표는 게임 지도 기준</small></p>
+        <svg id="barrens" viewBox="0 0 560 700" role="img" aria-label="불모의 땅 북부 퀘스트 위치 지도"></svg>
+      </div>
+      <div class="card">
+        <p class="maptitle">썬더 블러프 <small>타우라조 야영지 → 멀고어 북쪽</small></p>
+        <svg id="tb" viewBox="0 0 560 300" role="img" aria-label="썬더 블러프 퀘스트 NPC 지도"></svg>
+      </div>
+    </div>
+    <div class="steps" id="steps"></div>
+  </div>
+
+  <section class="card" style="display:grid;gap:10px">
+    <h2>들어가기 전 체크</h2>
+    <div class="table-wrap">
+    <table class="sum">
+      <thead><tr><th>퀘스트</th><th>레벨</th><th>받는 곳</th><th>입장 전 상태</th></tr></thead>
+      <tbody>
+        <tr><td>송곳니의 드루이드 우두머리</td><td>22</td><td>썬더 블러프 나라 와일드메인</td><td class="need">연계 6단계 끝까지 → 수락</td></tr>
+        <tr><td>영리해지는 음료</td><td>18</td><td>톱니항 메보크 미지릭스</td><td class="need">랩터 뿔 반납 → 수락</td></tr>
+        <tr><td>불뱀꽃</td><td>18</td><td>썬더 블러프 연금술사 자마</td><td>수락 (입구 협곡에서 미리 채집 가능)</td></tr>
+        <tr><td>99년 묵은 와인</td><td>18</td><td>톱니항 기중기 기사 비글퍼즈</td><td>수락</td></tr>
+        <tr><td>돌연변이 통가죽</td><td>17</td><td>입구 날팍</td><td>입구에서 수락</td></tr>
+        <tr><td>돌연변이 짐승 섬멸</td><td>21</td><td>입구 에브루</td><td>입구에서 수락</td></tr>
+        <tr><td>빛나는 조각</td><td>26</td><td>걸신들린 무타누스 드롭</td><td>던전 안에서 시작</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note">포에버는 던전 퀘스트의 추가 경험치가 절반으로 줄었지만, 여전히 일반 퀘스트보다 많이 줍니다. 드루이드는 송곳니 세트 때문에 여러 번 돌게 되니 퀘스트는 첫 판에 모두 끝내세요. 지형 모양은 위치를 알아보기 위한 그림이고 실제 지도와 다릅니다.</p>
+  </section>
+</div>
+<div id="toast">복사됨</div>
+
+<script>
+// 지도 좌표(0~100) → SVG 좌표
+const B={x0:38,y0:15,s:20};         // 불모의 땅: x 38~66, y 15~50
+const bp=(x,y)=>[(x-B.x0)*B.s,(y-B.y0)*B.s];
+const T={x0:10,y0:5,s:5.6};         // 썬더 블러프
+const tp=(x,y)=>[(x-T.x0)*T.s,(y-T.y0)*T.s];
+
+const W=(z,x,y)=>`/way ${z} ${x} ${y}`;
+const STEPS=[
+ {n:1,map:"b",x:52.3,y:31.9,lab:"크로스로드",title:"크로스로드에서 시작",where:"통가 룬토템 · 연금술사 헬브림",
+  items:[["get","통가 룬토템 <b>잊혀진 웅덩이</b>",W("불모의 땅",52.3,31.9)],["get","연금술사 헬브림 <b>버섯 포자</b>",W("불모의 땅",51.4,30.2)]]},
+ {n:2,map:"b",x:45.1,y:22.5,lab:"잊혀진 웅덩이",area:[45,23,2.6,2],title:"잊혀진 웅덩이",where:"크로스로드 북서쪽",
+  items:[["do","물가에 도착하면 <b>잊혀진 웅덩이</b> 완료",W("불모의 땅",45.1,22.5)],["do","주변 버섯에서 <b>버섯 포자</b> 4개"]]},
+ {n:3,map:"b",x:52.3,y:31.9,dup:1,title:"크로스로드 1차 반납",where:"통가 룬토템",
+  items:[["end","<b>잊혀진 웅덩이</b> 반납"],["get","<b>죽은 오아시스</b>"]]},
+ {n:4,map:"b",x:62.4,y:37.6,lab:"톱니항",title:"톱니항에서 두 개 받기",where:"메보크 미지릭스 · 기중기 기사 비글퍼즈",
+  items:[["get","메보크 미지릭스 <b>랩터 뿔</b>",W("불모의 땅",62.4,37.6)],["get","기중기 기사 비글퍼즈 <b>99년 묵은 와인</b>",W("불모의 땅",63.1,37.6)]]},
+ {n:5,map:"b",x:55.6,y:42.8,lab:"죽은 오아시스",area:[52.5,46.5,3.6,2.2],title:"죽은 오아시스 + 랩터 사냥",where:"크로스로드 남동쪽",
+  items:[["do","물속 <b>거품이 이는 균열</b> 조사",W("불모의 땅",55.6,42.8)],["do","주변 평원 갈퀴발톱 열대초원랩터 → <b>온전한 랩터 뿔</b> 5개"]]},
+ {n:6,map:"b",x:62.4,y:37.6,dup:1,title:"톱니항 반납",where:"메보크 미지릭스",
+  items:[["end","<b>랩터 뿔</b> 반납"],["get","<b>영리해지는 음료</b> (던전 안 세포괴물 → 통곡의 정수 6)"]]},
+ {n:7,map:"b",x:52.3,y:31.9,dup:1,title:"크로스로드 2차 반납",where:"통가 룬토템",
+  items:[["end","<b>죽은 오아시스</b> 반납"],["get","<b>변화된 생물</b>"]]},
+ {n:8,map:"b",x:45.0,y:40.0,lab:"큰 오아시스",left:1,area:[45,40,2.2,1.8],title:"오아시스 무쇠턱거북",where:"동굴 위쪽 큰 오아시스",
+  items:[["do","<b>변형된 무쇠턱거북 등껍질</b> 8개",W("불모의 땅",45.0,40.0)]]},
+ {n:9,map:"b",x:52.3,y:31.9,dup:1,title:"크로스로드 3차 반납",where:"통가 룬토템 · 연금술사 헬브림",
+  items:[["end","<b>변화된 생물</b> 반납 → <b>하뮬 룬토템</b> 수락"],["end","<b>버섯 포자</b> 반납 → <b>연금술사 자마</b> 수락 (제한 시간 있음, 바로 출발)"]]},
+ {n:10,map:"t",x:78.6,y:28.6,lab:"하뮬",title:"썬더 블러프",where:"장로의 봉우리 · 정기의 봉우리",
+  items:[["end","대드루이드 하뮬 룬토템 <b>하뮬 룬토템</b> → <b>나라 와일드메인</b>",W("썬더 블러프",78.6,28.6)],["get","나라 와일드메인 <b>송곳니의 드루이드 우두머리</b>",W("썬더 블러프",75.7,31.6)],["end","연금술사 자마 <b>연금술사 자마</b> 반납 → <b>불뱀꽃</b> 수락",W("썬더 블러프",22.8,20.9)]]},
+ {n:11,map:"b",x:46.0,y:35.7,lab:"입구 · 날팍/에브루",dungeon:1,area:[46,35.2,1.4,1],title:"동굴 입구",where:"협곡 안, 입구 바로 위 동굴 방",
+  items:[["do","협곡에서 <b>불뱀꽃</b> 10개 미리 채집",W("불모의 땅",46.0,35.0)],["get","날팍 <b>돌연변이 통가죽</b>",W("불모의 땅",46.0,35.7)],["get","에브루 <b>돌연변이 짐승 섬멸</b>"]]},
+ {n:12,map:"b",x:44.9,y:37.4,lab:"통곡의 동굴",left:1,dungeon:1,noLab:0,title:"던전 클리어",where:"통곡의 동굴",
+  items:[["do","송곳니 군주 4명 보석, 통곡의 정수, 광기의 매글리시(은신 고블린)의 와인"],["do","걸신들린 무타누스 → <b>빛나는 조각</b> 시작"]]},
+ {n:13,map:"b",x:48.2,y:32.8,lab:"팔라 세이지윈드",left:1,title:"나와서 반납",where:"동굴 위 언덕 꼭대기 · 입구",
+  items:[["end","팔라 세이지윈드 <b>빛나는 조각</b> → <b>악몽</b>(25) 수락",W("불모의 땅",48.2,32.8)],["end","날팍·에브루 반납, 이후 톱니항·썬더 블러프 반납 (악몽은 하뮬에게)"]]},
+];
+
+const ns="http://www.w3.org/2000/svg";
+const el=(t,a,p)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e};
+const pts=(arr,f)=>arr.map(([x,y])=>f(x,y).join(",")).join(" ");
+
+// ── 불모의 땅 지형
+const sb=document.getElementById("barrens");
+el("rect",{x:0,y:0,width:560,height:700,fill:"var(--water)"},sb);
+const barrens=[[38,4],[56,4],[60,9],[63,16],[66,24],[68,31],[67,36],[64,38],[65,42],[63,48],[60,54],[58,62],[40,62],[39,54],[38,46],[37,38],[35,30],[35,20],[36,10]];
+const west=[[30,4],[38,4],[36,10],[35,20],[35,30],[37,38],[38,46],[39,54],[40,62],[30,62]];
+el("polygon",{points:pts(west,bp),fill:"var(--cliff)",opacity:.7},sb);
+el("polygon",{points:pts(barrens,bp),fill:"var(--land)",stroke:"var(--land-line)","stroke-width":2},sb);
+// 오아시스 물
+[[45,22.6,1.3,0.9],[45,40.3,1.2,0.9],[55.6,42.8,1.1,0.8]].forEach(([x,y,rx,ry])=>{const [cx,cy]=bp(x,y);el("ellipse",{cx,cy,rx:rx*B.s,ry:ry*B.s,fill:"var(--water)",stroke:"var(--water-line)","stroke-width":1.2},sb)});
+// 협곡
+el("path",{d:`M${bp(44.2,37.6)} Q${bp(45.2,36.2)} ${bp(46.3,35.6)} T${bp(47.6,34.8)}`,fill:"none",stroke:"var(--land-line)","stroke-width":16,"stroke-linecap":"round",opacity:.6},sb);
+// 도로
+const road=(a)=>el("polyline",{points:pts(a,bp),fill:"none",stroke:"var(--road)","stroke-width":3,"stroke-linecap":"round","stroke-linejoin":"round",opacity:.8},sb);
+road([[52,4],[52.3,20],[52,30.5],[50.5,40],[48,52],[45,59],[44.5,62]]);
+road([[52.6,31],[57,34],[62.4,37.2]]);
+road([[51.6,30.6],[46,28.5],[38,28],[35,27.5]]);
+// 지명
+[["오그리마 방향 ↑",54.6,16.4],["멀고어 방향 ←",41,27.2],["타우라조 야영지 ↓",47,49.3],["남쪽 바다",62.8,46.5],["랩터 사냥터",52.5,46.8]].forEach(([t,x,y])=>{const [px,py]=bp(x,y);el("text",{x:px,y:py,class:"place"},sb).textContent=t});
+
+// ── 썬더 블러프 지형
+const st=document.getElementById("tb");
+el("rect",{x:0,y:0,width:560,height:300,fill:"var(--cliff)",opacity:.55},st);
+const mesa=(x,y,rx,ry,name)=>{const [cx,cy]=tp(x,y);el("ellipse",{cx,cy,rx:rx*T.s,ry:ry*T.s,fill:"var(--land)",stroke:"var(--land-line)","stroke-width":2},st);const t=el("text",{x:cx,y:cy+ry*T.s+14,class:"place"},st);t.textContent=name};
+mesa(45,36,14,9,"중앙 봉우리");
+mesa(24,22,9,8,"정기의 봉우리");
+mesa(76,30,10,10,"장로의 봉우리");
+[[[33,30],[24,22]],[[57,34],[76,30]]].forEach(([a,b])=>el("line",{x1:tp(...a)[0],y1:tp(...a)[1],x2:tp(...b)[0],y2:tp(...b)[1],stroke:"var(--road)","stroke-width":2,"stroke-dasharray":"2 4"},st));
+const nara=tp(75.7,31.6), zam=tp(22.8,20.9);
+
+// ── 동선
+const order=STEPS.filter(s=>s.map==="b").map(s=>bp(s.x,s.y));
+el("polyline",{points:order.map(p=>p.join(",")).join(" "),class:"route"},sb);
+
+// ── 구역·마커
+const mkEls={}, stepEls={};
+const groups={};
+STEPS.forEach(s=>{
+  const svg=s.map==="b"?sb:st, f=s.map==="b"?bp:tp, sc=s.map==="b"?B.s:T.s;
+  if(s.area){const [x,y,rx,ry]=s.area;const [cx,cy]=f(x,y);s.areaEl=el("ellipse",{cx,cy,rx:rx*sc,ry:ry*sc,class:"area"},svg)}
+  const key=s.map+s.x+","+s.y;
+  (groups[key]=groups[key]||[]).push(s);
+});
+Object.values(groups).forEach(list=>{
+  const s0=list[0], svg=s0.map==="b"?sb:st, f=s0.map==="b"?bp:tp;
+  list.forEach((s,i)=>{
+    const [x,y]=f(s.x,s.y); const ox=i*22, oy=0;
+    const g=el("g",{class:"mk",tabindex:0,role:"button","aria-label":`${s.n}. ${s.title}`},svg);
+    el("circle",{class:"b",cx:x+ox,cy:y+oy,r:11,fill:s.dungeon?"var(--dungeon)":"var(--horde)"},g);
+    el("text",{x:x+ox,y:y+oy},g).textContent=s.n;
+    if(i===list.length-1&&(s0.lab)){const t=el("text",{x:s0.left?x-16:x+ox+16,y:y+4,class:"lab","text-anchor":s0.left?"end":"start",style:s0.left?"text-anchor:end":""},g);t.textContent=s0.lab}
+    g.addEventListener("click",()=>pick(s.n,true));
+    g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pick(s.n,true)}});
+    mkEls[s.n]=g;
+  });
+});
+// 썬더 블러프 보조 표시(나라·자마)
+[[nara,"나라"],[zam,"자마"]].forEach(([[x,y],t])=>{el("circle",{cx:x,cy:y,r:6,fill:"var(--horde)",stroke:"var(--surface)","stroke-width":2},st);const l=el("text",{x:x+10,y:y+4,class:"mk lab",style:"font-size:11.5px;fill:var(--ink);paint-order:stroke;stroke:var(--land);stroke-width:3.5px"},st);l.textContent=t});
+el("line",{x1:tp(78.6,28.6)[0],y1:tp(78.6,28.6)[1],x2:zam[0],y2:zam[1],class:"route"},st);
+
+// ── 단계 목록
+const box=document.getElementById("steps");
+const tagTxt={get:"수락",do:"진행",end:"반납"};
+STEPS.forEach(s=>{
+  const b=document.createElement("button");
+  b.className="step"+(s.dungeon?" dun":""); b.type="button";
+  b.innerHTML=`<span class="num">${s.n}</span><span><h3>${s.title}</h3><span class="where">${s.where}</span><ul>${s.items.map(([k,t,w])=>`<li><span class="tag t-${k}">${tagTxt[k]}</span> ${t}${w?` <code class="way">${w}</code>`:""}</li>`).join("")}</ul></span>`;
+  b.addEventListener("click",e=>{if(e.target.closest("code.way"))return;pick(s.n,false)});
+  box.appendChild(b); stepEls[s.n]=b;
+});
+let cur=null;
+function pick(n,scroll){
+  if(cur){mkEls[cur]?.classList.remove("on");stepEls[cur].classList.remove("on");STEPS[cur-1].areaEl?.classList.remove("on")}
+  cur=n; mkEls[n]?.classList.add("on"); stepEls[n].classList.add("on"); STEPS[n-1].areaEl?.classList.add("on");
+  if(scroll) stepEls[n].scrollIntoView({block:"nearest",behavior:"smooth"});
+}
+// ── 좌표 복사
+const toast=document.getElementById("toast");
+document.addEventListener("click",e=>{
+  const c=e.target.closest("code.way"); if(!c) return;
+  const txt=c.textContent;
+  const done=()=>{toast.classList.add("show");clearTimeout(toast._h);toast._h=setTimeout(()=>toast.classList.remove("show"),1300)};
+  try{ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(done,done)} else {const t=document.createElement("textarea");t.value=txt;document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();done()} }catch(_){done()}
+});
+pick(1,false);
+</script>
+</body>
+</html>
