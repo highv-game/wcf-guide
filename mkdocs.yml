@@ -113,7 +113,7 @@ nav:
           - 빠른 레벨링 12~30: leveling/fast-route-horde.md
           - 필드 퀘스트 1~30: leveling/field-route-horde.md
       - 얼라이언스:
-          - 시작 지역 1~20: tools/alliance-leveling.html
+          - 시작 지역 1~20: leveling/alliance-1-20.md
           - 빠른 레벨링 14~27: leveling/fast-route-14-27.md
           - 필드 퀘스트 1~30: leveling/field-route-alliance.md
   - 던전·퀘스트:
@@ -124,11 +124,11 @@ nav:
   - 전문기술:
       - professions/index.md
       - 가죽세공 돈벌이·상인의 호의: professions/leatherworking.md
-      - 약초채집 지도: tools/herb-atlas.html
+      - 약초채집 지도와 시세: professions/herbalism.md
   - 설정·UI:
       - settings/index.md
       - 공통 단축키 규칙: settings/keybinds.md
-      - 매크로 교본: tools/macro-guide.html
+      - 매크로 교본: settings/macros.md
       - 4K 120프레임 그래픽: settings/graphics.md
   - 업데이트 기록: changelog.md
 
