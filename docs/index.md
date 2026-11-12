@@ -66,7 +66,7 @@ hide:
 
         ---
 
-        [통곡의 동굴 사전 퀘스트](leveling/wailing-caverns-horde.md) · [아늑한 침낭 + 죽음의 폐광](leveling/sleeping-bag-deadmines-horde.md)
+        [통곡의 동굴 사전 퀘스트](leveling/wailing-caverns-horde.md) · [그림자송곳니 성채](leveling/shadowfang-keep-horde.md) · [아늑한 침낭 + 죽음의 폐광](leveling/sleeping-bag-deadmines-horde.md)
 
     </div>
 

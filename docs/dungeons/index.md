@@ -7,6 +7,7 @@
     | 페이지 | 레벨 | 내용 |
     | --- | :-: | --- |
     | [통곡의 동굴 사전 퀘스트](../leveling/wailing-caverns-horde.md) | 19~22 | 던전 퀘스트 7개, 선행 연계, 방문 순서 지도 |
+    | [그림자송곳니 성채](../leveling/shadowfang-keep-horde.md) | 23~26 | 던전 퀘스트 3개, 우두머리 순서, 주요 드랍, 지도 |
     | [아늑한 침낭 + 죽음의 폐광](../leveling/sleeping-bag-deadmines-horde.md) | 14~ | 침낭 숨은 연계 6단계와 폐광 동선 지도 |
 
 === "얼라이언스"
